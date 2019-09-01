@@ -39,7 +39,6 @@
 *.app
 *.i*86
 *.x86_64
-*.elf
 *.hex
 
 # Debug files
@@ -70,3 +69,5 @@ codegentemp/
 *.lst
 *.cyacd
 *.txt
+!Bootloader.hex
+!Bootloader.elf

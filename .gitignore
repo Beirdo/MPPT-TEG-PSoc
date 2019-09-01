@@ -1,3 +1,8 @@
+# Temp files
+*.swp
+*.bak
+*~
+
 # Prerequisites
 *.d
 
@@ -34,6 +39,7 @@
 *.app
 *.i*86
 *.x86_64
+*.elf
 *.hex
 
 # Debug files
@@ -50,3 +56,17 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# PSoc Creator output
+/Archive
+*.cyfit
+*.log
+*.rpt
+Generated_Source/
+*.Administrator
+codegentemp/
+.deps/
+*.deps
+*.lst
+*.cyacd
+*.txt

@@ -10,7 +10,7 @@
         <Data key="derive_type" value="NAMED_FREQ" />
         <Data key="desired_freq" value="8" />
         <Data key="desired_unit" value="6" />
-        <Data key="divider" value="8" />
+        <Data key="divider" value="4" />
         <Data key="domain" value="DIGITAL" />
         <Data key="enabled" value="True" />
         <Data key="minus_accuracy" value="1" />
@@ -34,7 +34,7 @@
         <Data key="derive_type" value="NAMED_FREQ" />
         <Data key="desired_freq" value="2" />
         <Data key="desired_unit" value="6" />
-        <Data key="divider" value="32" />
+        <Data key="divider" value="16" />
         <Data key="domain" value="DIGITAL" />
         <Data key="enabled" value="True" />
         <Data key="minus_accuracy" value="1" />
@@ -82,7 +82,7 @@
         <Data key="derive_type" value="AUTO" />
         <Data key="desired_freq" value="16" />
         <Data key="desired_unit" value="6" />
-        <Data key="divider" value="4" />
+        <Data key="divider" value="2" />
         <Data key="domain" value="DIGITAL" />
         <Data key="enabled" value="True" />
         <Data key="minus_accuracy" value="1" />
@@ -116,8 +116,8 @@
         <Data key="plus_accuracy" value="1" />
         <Data key="plus_tolerance" value="3" />
         <Data key="scope" value="LOCAL" />
-        <Data key="src_clk_id" value="61737EF6-3B74-48f9-8B91-F7473A442AE7" />
-        <Data key="src_clk_name" value="MASTER_CLK" />
+        <Data key="src_clk_id" value="39D5E4C2-EBFC-44ab-AE3D-19F9BBFD674D" />
+        <Data key="src_clk_name" value="PLL_OUT" />
         <Data key="start_on_reset" value="True" />
         <Data key="sync_with_bus_clk" value="True" />
         <Data key="user_set_domain" value="False" />
@@ -270,7 +270,7 @@
         <Data key="derive_type" value="AUTO" />
         <Data key="desired_freq" value="1599984" />
         <Data key="desired_unit" value="0" />
-        <Data key="divider" value="40" />
+        <Data key="divider" value="20" />
         <Data key="domain" value="DIGITAL" />
         <Data key="enabled" value="True" />
         <Data key="minus_accuracy" value="1" />
@@ -340,7 +340,7 @@
         <Data key="derive_type" value="NAMED_FREQ" />
         <Data key="desired_freq" value="2.199" />
         <Data key="desired_unit" value="6" />
-        <Data key="divider" value="29" />
+        <Data key="divider" value="15" />
         <Data key="domain" value="DIGITAL" />
         <Data key="enabled" value="True" />
         <Data key="minus_accuracy" value="1" />
@@ -410,7 +410,7 @@
         <Data key="derive_type" value="AUTO" />
         <Data key="desired_freq" value="100" />
         <Data key="desired_unit" value="3" />
-        <Data key="divider" value="640" />
+        <Data key="divider" value="320" />
         <Data key="domain" value="DIGITAL" />
         <Data key="enabled" value="True" />
         <Data key="minus_accuracy" value="1" />
@@ -539,13 +539,13 @@
       </Group>
       <Group key="75C2148C-3656-4d8a-846D-0CAE99AB6FF7">
         <Data key="check_tolerance" value="True" />
-        <Data key="clk_key_bus_usedivider" value="True" />
+        <Data key="clk_key_bus_usedivider" value="False" />
         <Data key="clock_version" value="v1" />
         <Data key="derive_type" value="BUILTIN" />
-        <Data key="desired_freq" value="0" />
-        <Data key="desired_unit" value="0" />
+        <Data key="desired_freq" value="32" />
+        <Data key="desired_unit" value="6" />
         <Data key="divider" value="1" />
-        <Data key="domain" value="DIGITAL" />
+        <Data key="domain" value="0" />
         <Data key="enabled" value="True" />
         <Data key="minus_accuracy" value="1" />
         <Data key="minus_tolerance" value="0" />
@@ -567,7 +567,7 @@
         <Data key="derive_type" value="BUILTIN" />
         <Data key="desired_freq" value="0" />
         <Data key="desired_unit" value="0" />
-        <Data key="divider" value="1" />
+        <Data key="divider" value="2" />
         <Data key="domain" value="0" />
         <Data key="enabled" value="True" />
         <Data key="master_divider_used" value="True" />

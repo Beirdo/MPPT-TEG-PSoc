@@ -4193,7 +4193,7 @@
         <register>
           <name>RX_UART_1_RX_ADDRESS1</name>
           <description>RX Address1 Register</description>
-          <addressOffset>0x40006424</addressOffset>
+          <addressOffset>0x40006426</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -4202,7 +4202,7 @@
         <register>
           <name>RX_UART_1_RX_ADDRESS2</name>
           <description>RX Address2 Register</description>
-          <addressOffset>0x40006434</addressOffset>
+          <addressOffset>0x40006436</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -4211,16 +4211,7 @@
         <register>
           <name>RX_UART_1_RX_DATA</name>
           <description>RX Data Register</description>
-          <addressOffset>0x40006444</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>TX_UART_1_TX_DATA</name>
-          <description>TX Data Register</description>
-          <addressOffset>0x40006548</addressOffset>
+          <addressOffset>0x40006446</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -4229,7 +4220,7 @@
         <register>
           <name>RX_UART_1_RX_STATUS</name>
           <description>RX status register</description>
-          <addressOffset>0x40006567</addressOffset>
+          <addressOffset>0x40006461</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -4287,9 +4278,18 @@
           </fields>
         </register>
         <register>
+          <name>TX_UART_1_TX_DATA</name>
+          <description>TX Data Register</description>
+          <addressOffset>0x40006545</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
           <name>TX_UART_1_TX_STATUS</name>
           <description>TX status register</description>
-          <addressOffset>0x40006568</addressOffset>
+          <addressOffset>0x40006567</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -5042,7 +5042,7 @@
         <register>
           <name>SPIS_1_TX_DATA</name>
           <description>SPIS TX Data</description>
-          <addressOffset>0x4000640B</addressOffset>
+          <addressOffset>0x4000640A</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -5051,7 +5051,7 @@
         <register>
           <name>SPIS_1_RX_DATA</name>
           <description>SPIS RX Data</description>
-          <addressOffset>0x4000640B</addressOffset>
+          <addressOffset>0x4000640A</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -5060,7 +5060,7 @@
         <register>
           <name>SPIS_1_TXSTATUS</name>
           <description>SPIS TX Status Register</description>
-          <addressOffset>0x40006463</addressOffset>
+          <addressOffset>0x40006464</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -5106,7 +5106,7 @@
         <register>
           <name>SPIS_1_RXSTATUS</name>
           <description>SPIS RX Status Register</description>
-          <addressOffset>0x4000646D</addressOffset>
+          <addressOffset>0x4000646A</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -5285,7 +5285,7 @@
     <peripheral>
       <name>BACKLIGHT_CONTROL_REG</name>
       <description>No description available</description>
-      <baseAddress>0x40006476</baseAddress>
+      <baseAddress>0x4000647C</baseAddress>
       <addressBlock>
         <offset>0</offset>
         <size>0x0</size>

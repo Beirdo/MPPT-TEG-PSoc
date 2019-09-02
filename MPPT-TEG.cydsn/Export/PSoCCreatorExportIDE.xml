@@ -311,12 +311,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\SPI_1_ss0_m.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\SPI_1_ss0_m_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\SPI_1_ss0_m_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\nRESET.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\nRESET.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\nRESET_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\nRESET_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\EXTERNAL_RESET.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\EXTERNAL_RESET.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_RESET.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_RESET.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_RESET_aliases.h</File>

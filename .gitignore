@@ -69,5 +69,5 @@ codegentemp/
 *.lst
 *.cyacd
 *.txt
-!Bootloader.hex
-!Bootloader.elf
+!Bootloader*.hex
+!Bootloader*.elf

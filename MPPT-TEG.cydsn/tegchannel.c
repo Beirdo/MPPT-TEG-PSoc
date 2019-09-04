@@ -17,6 +17,13 @@
 
 teg_channel_t teg_channels[TEG_CHANNEL_COUNT];
 uint8 enables = 0;
+uint16 Imax = 10000;
+uint16 Vmax = 15400;
+uint16 deltaPMax = 1500;
+uint16 huntDeltaI = 100;
+
+#define PWM_MAX_COUNT 256
+#define ABS(x)  ((x) < 0 ? -(x) : (x))
 
 typedef void timerPWMFunc_t(uint32);
 timerPWMFunc_t *writeCompareBufFunc[] = {
@@ -40,8 +47,6 @@ void initializeChannel(int index) {
     teg_channel_t *ch = &teg_channels[index];
     memset(ch, 0x00, sizeof(teg_channel_t));
     ch->index = index;
-    ch->ADCVoff = (index * 2) + 1;
-    ch->ADCVon = index * 2;
 }
 
 int processChannel(teg_channel_t *ch, uint8 newEnables) {
@@ -49,6 +54,10 @@ int processChannel(teg_channel_t *ch, uint8 newEnables) {
     uint8 enableMask = 1 << i;
     uint8 oldEnableBit = ch->enabled & enableMask;
     uint8 newEnabledBit = newEnables & enableMask;
+    uint8 oldPWM;
+    double slope;
+    int16 deltaI;
+    int16 deltaP;
     
     // Channel just got turned on or turned off
     if (oldEnableBit != newEnabledBit) {               
@@ -69,7 +78,7 @@ int processChannel(teg_channel_t *ch, uint8 newEnables) {
     
     if (ch->state == STATE_IDLE) {
         INA219_initialize(ch->index);
-        ch->PWMval = 50;  // about 20%, should be "safe"
+        ch->PWMval = currentToPWM(huntDeltaI);
         setPWMLevel(i, ch->PWMval);
         ch->state = STATE_FIRST_POINT;
         return 1;
@@ -86,13 +95,75 @@ int processChannel(teg_channel_t *ch, uint8 newEnables) {
     INA219_read(INA219_OUTPUT_ADDR, i, &ch->Vout, &ch->Pout, &ch->Iout);
     INA219_disconnect();
     
-    // We also need to read our Von and Voff from the ADC
-    ch->Voff = ADC_1_GetResult16(ch->ADCVoff);
-    ch->Von = ADC_1_GetResult16(ch->ADCVon);
+    // Calculate the deltas
+    deltaI = ch->Iin - ch->prevIin;
+    deltaP = ch->Pin - ch->prevPin;
+    
+    oldPWM = ch->PWMval;
     
     // Now need the FSM states (other than IDLE which is covered above)
+    switch(ch->state) {
+        case STATE_FIRST_POINT:
+            ch->state = STATE_SECOND_POINT;
+            break;
+        case STATE_SECOND_POINT:
+            // calculate the Open-Circuit voltage and Short-Circuit current
+            if(ch->prevIin == ch->Iin || ch->prevVin == ch->Vin) {
+                // OK, admit defeat, this gives a vertical line or horizontal line, try another point!
+                ch->PWMval = currentToPWM(ch->Iin + huntDeltaI);
+                break;
+            }
+            slope = (double)(ch->Vin - ch->prevVin) / (double)(ch->Iin - ch->prevIin);
+            ch->Ishort = ch->prevIin - (uint16)((double)(ch->prevVin) / slope);
+            ch->Vopen = ch->prevIin - (uint16)((double)(ch->prevIin) * slope);
+            
+            // pick a point at half of Short-Circuit current, which is approx the optimum
+            ch->PWMval = currentToPWM(ch->Ishort / 2);
+            ch->state = STATE_HUNT;
+            break;
+        case STATE_HUNT:
+            // Check for large delta, if so, stop hunting
+            if (deltaP >= deltaPMax || deltaP <= -deltaPMax) {
+                ch->PWMval = currentToPWM(ch->Iin + deltaI);
+                ch->state = STATE_SECOND_POINT;
+                break;
+            }
+            // move delta up or down towards the peak
+            if (deltaP > 0) {
+                if (deltaI > 0) {
+                    deltaI = huntDeltaI;
+                } else {
+                    deltaI = -huntDeltaI;
+                }
+            } else {
+                if (deltaI > 0) {
+                    deltaI = -huntDeltaI;
+                } else {
+                    deltaI = huntDeltaI;
+                }
+            }
+            ch->PWMval = currentToPWM(ch->Iin + deltaI);
+            break;
+        default:
+            // This should never happen!!!
+            initializeChannel(i);
+            ch->state = STATE_IDLE;
+            break;
+    }
+    
+    // Update the PWM value if we changed it.
+    if (ch->PWMval != oldPWM) {
+        setPWMLevel(i, ch->PWMval);
+    }
     
     return 1;
+}
+
+uint8 currentToPWM(uint16 current) {
+    if (current > Imax) {
+        current = Imax;
+    }
+    return (uint8)((uint32)(PWM_MAX_COUNT) * (uint32)(current) / Imax);
 }
 
 void setPWMLevel(int index, uint16 value) {

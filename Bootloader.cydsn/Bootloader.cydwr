@@ -1114,24 +1114,25 @@
   <Group key="Pin2">
     <Group key="43ec2fa1-bf22-4b71-9477-b6ca7b97f0b0/23b8206d-1c77-4e61-be4a-b4037d5de5fc">
       <Group key="0">
-        <Data key="Port Format" value="3,1" />
+        <Data key="Port Format" value="0,5" />
       </Group>
     </Group>
     <Group key="43ec2fa1-bf22-4b71-9477-b6ca7b97f0b0/78e33e5d-45ea-4b75-88d5-73274e8a7ce4">
       <Group key="0">
-        <Data key="Port Format" value="3,0" />
+        <Data key="Port Format" value="0,4" />
       </Group>
     </Group>
     <Group key="43ec2fa1-bf22-4b71-9477-b6ca7b97f0b0/b2cd7ba8-7018-4355-962d-598e7769bbf3">
       <Group key="0">
-        <Data key="Port Format" value="3,3" />
+        <Data key="Port Format" value="0,7" />
       </Group>
     </Group>
     <Group key="43ec2fa1-bf22-4b71-9477-b6ca7b97f0b0/d6cdce57-6174-4335-bfac-214115fde1eb">
       <Group key="0">
-        <Data key="Port Format" value="3,2" />
+        <Data key="Port Format" value="0,6" />
       </Group>
     </Group>
+    <Group key="Unlocked Pins" />
   </Group>
   <Group key="PlaceDir">
     <Data key="count" value="0" />
@@ -1147,9 +1148,11 @@
     <Data key="CYDEV_STACK_SIZE" value="0x0400" />
     <Data key="CYDEV_SYSTEM_PRB_SOURCE" value="0" />
     <Data key="CYDEV_SYSTEM_PRB_VALUE" value="15" />
+    <Data key="CYDEV_TEMPERATURE" value="-40C - 85C" />
     <Data key="CYDEV_USE_BUNDLED_CMSIS" value="True" />
     <Data key="CYDEV_VARIABLE_VDDA" value="True" />
     <Data key="CYDEV_VDDA" value="3.3" />
     <Data key="CYDEV_VDDD" value="3.3" />
+    <Data key="CYDEV_VDDIO" value="3.3" />
   </Group>
 </DesignWideResources>

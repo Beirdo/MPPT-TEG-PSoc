@@ -117,14 +117,14 @@
 <CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="cyfitter_cfg.c" persistent="Generated_Source\PSoC4\cyfitter_cfg.c">
 <Hidden v="False" />
 </CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
-<build_action v="SOURCE_C;CortexM0p;;;" />
+<build_action v="SOURCE_C;CortexM0;;;" />
 <PropertyDeltas />
 </CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b>
 <CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtFileSerialize" version="3" xml_contents_version="1">
 <CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="cymetadata.c" persistent="Generated_Source\PSoC4\cymetadata.c">
 <Hidden v="False" />
 </CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
-<build_action v="SOURCE_C;CortexM0p;;;" />
+<build_action v="SOURCE_C;CortexM0;;;" />
 <PropertyDeltas />
 </CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b>
 <CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtFileSerialize" version="3" xml_contents_version="1">
@@ -208,7 +208,7 @@
 <CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="Bootloader_1.c" persistent="Generated_Source\PSoC4\Bootloader_1.c">
 <Hidden v="False" />
 </CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
-<build_action v="SOURCE_C;CortexM0p;;;" />
+<build_action v="SOURCE_C;CortexM0;;;" />
 <PropertyDeltas />
 </CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b>
 <CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtFileSerialize" version="3" xml_contents_version="1">
@@ -234,7 +234,7 @@
 <CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="UART_1.c" persistent="Generated_Source\PSoC4\UART_1.c">
 <Hidden v="False" />
 </CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
-<build_action v="SOURCE_C;CortexM0p;;;" />
+<build_action v="SOURCE_C;CortexM0;;;" />
 <PropertyDeltas />
 </CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b>
 <CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtFileSerialize" version="3" xml_contents_version="1">
@@ -255,42 +255,42 @@
 <CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="UART_1_SPI_UART.c" persistent="Generated_Source\PSoC4\UART_1_SPI_UART.c">
 <Hidden v="False" />
 </CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
-<build_action v="SOURCE_C;CortexM0p;;;" />
+<build_action v="SOURCE_C;CortexM0;;;" />
 <PropertyDeltas />
 </CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b>
 <CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtFileSerialize" version="3" xml_contents_version="1">
 <CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="UART_1_SPI_UART_INT.c" persistent="Generated_Source\PSoC4\UART_1_SPI_UART_INT.c">
 <Hidden v="False" />
 </CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
-<build_action v="SOURCE_C;CortexM0p;;;" />
+<build_action v="SOURCE_C;CortexM0;;;" />
 <PropertyDeltas />
 </CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b>
 <CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtFileSerialize" version="3" xml_contents_version="1">
 <CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="UART_1_PM.c" persistent="Generated_Source\PSoC4\UART_1_PM.c">
 <Hidden v="False" />
 </CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
-<build_action v="SOURCE_C;CortexM0p;;;" />
+<build_action v="SOURCE_C;CortexM0;;;" />
 <PropertyDeltas />
 </CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b>
 <CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtFileSerialize" version="3" xml_contents_version="1">
 <CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="UART_1_UART.c" persistent="Generated_Source\PSoC4\UART_1_UART.c">
 <Hidden v="False" />
 </CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
-<build_action v="SOURCE_C;CortexM0p;;;" />
+<build_action v="SOURCE_C;CortexM0;;;" />
 <PropertyDeltas />
 </CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b>
 <CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtFileSerialize" version="3" xml_contents_version="1">
 <CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="UART_1_BOOT.c" persistent="Generated_Source\PSoC4\UART_1_BOOT.c">
 <Hidden v="False" />
 </CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
-<build_action v="SOURCE_C;CortexM0p;;;" />
+<build_action v="SOURCE_C;CortexM0;;;" />
 <PropertyDeltas />
 </CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b>
 <CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtFileSerialize" version="3" xml_contents_version="1">
 <CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="UART_1_UART_BOOT.c" persistent="Generated_Source\PSoC4\UART_1_UART_BOOT.c">
 <Hidden v="False" />
 </CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
-<build_action v="SOURCE_C;CortexM0p;;;" />
+<build_action v="SOURCE_C;CortexM0;;;" />
 <PropertyDeltas />
 </CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b>
 <CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtFileSerialize" version="3" xml_contents_version="1">
@@ -328,58 +328,6 @@
 </CyGuid_ebc4f06d-207f-49c2-a540-72acf4adabc0>
 <CyGuid_ebc4f06d-207f-49c2-a540-72acf4adabc0 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtFolderSerialize" version="3">
 <CyGuid_2f73275c-45bf-46ba-b3b1-00a2fe0c8dd8 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtBaseContainerSerialize" version="1">
-<CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="DMA_2" persistent="">
-<Hidden v="True" />
-</CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
-<CyGuid_0820c2e7-528d-4137-9a08-97257b946089 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemListSerialize" version="2">
-<dependencies>
-<CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtFileSerialize" version="3" xml_contents_version="1">
-<CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="DMA_2.h" persistent="Generated_Source\PSoC4\DMA_2.h">
-<Hidden v="True" />
-</CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
-<build_action v="HEADER;;;;" />
-<PropertyDeltas />
-</CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b>
-<CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtFileSerialize" version="3" xml_contents_version="1">
-<CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="DMA_2.c" persistent="Generated_Source\PSoC4\DMA_2.c">
-<Hidden v="True" />
-</CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
-<build_action v="SOURCE_C;CortexM0p;;;" />
-<PropertyDeltas />
-</CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b>
-</dependencies>
-</CyGuid_0820c2e7-528d-4137-9a08-97257b946089>
-</CyGuid_2f73275c-45bf-46ba-b3b1-00a2fe0c8dd8>
-<filters />
-</CyGuid_ebc4f06d-207f-49c2-a540-72acf4adabc0>
-<CyGuid_ebc4f06d-207f-49c2-a540-72acf4adabc0 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtFolderSerialize" version="3">
-<CyGuid_2f73275c-45bf-46ba-b3b1-00a2fe0c8dd8 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtBaseContainerSerialize" version="1">
-<CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="DMA_3" persistent="">
-<Hidden v="True" />
-</CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
-<CyGuid_0820c2e7-528d-4137-9a08-97257b946089 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemListSerialize" version="2">
-<dependencies>
-<CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtFileSerialize" version="3" xml_contents_version="1">
-<CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="DMA_3.h" persistent="Generated_Source\PSoC4\DMA_3.h">
-<Hidden v="True" />
-</CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
-<build_action v="HEADER;;;;" />
-<PropertyDeltas />
-</CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b>
-<CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtFileSerialize" version="3" xml_contents_version="1">
-<CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="DMA_3.c" persistent="Generated_Source\PSoC4\DMA_3.c">
-<Hidden v="True" />
-</CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
-<build_action v="SOURCE_C;CortexM0p;;;" />
-<PropertyDeltas />
-</CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b>
-</dependencies>
-</CyGuid_0820c2e7-528d-4137-9a08-97257b946089>
-</CyGuid_2f73275c-45bf-46ba-b3b1-00a2fe0c8dd8>
-<filters />
-</CyGuid_ebc4f06d-207f-49c2-a540-72acf4adabc0>
-<CyGuid_ebc4f06d-207f-49c2-a540-72acf4adabc0 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtFolderSerialize" version="3">
-<CyGuid_2f73275c-45bf-46ba-b3b1-00a2fe0c8dd8 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtBaseContainerSerialize" version="1">
 <CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="UART_1_SCBCLK" persistent="">
 <Hidden v="False" />
 </CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
@@ -389,7 +337,7 @@
 <CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="UART_1_SCBCLK.c" persistent="Generated_Source\PSoC4\UART_1_SCBCLK.c">
 <Hidden v="False" />
 </CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
-<build_action v="SOURCE_C;CortexM0p;;;" />
+<build_action v="SOURCE_C;CortexM0;;;" />
 <PropertyDeltas />
 </CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b>
 <CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtFileSerialize" version="3" xml_contents_version="1">
@@ -415,7 +363,7 @@
 <CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="UART_1_tx.c" persistent="Generated_Source\PSoC4\UART_1_tx.c">
 <Hidden v="False" />
 </CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
-<build_action v="SOURCE_C;CortexM0p;;;" />
+<build_action v="SOURCE_C;CortexM0;;;" />
 <PropertyDeltas />
 </CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b>
 <CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtFileSerialize" version="3" xml_contents_version="1">
@@ -436,7 +384,7 @@
 <CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="UART_1_tx_PM.c" persistent="Generated_Source\PSoC4\UART_1_tx_PM.c">
 <Hidden v="False" />
 </CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
-<build_action v="SOURCE_C;CortexM0p;;;" />
+<build_action v="SOURCE_C;CortexM0;;;" />
 <PropertyDeltas />
 </CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b>
 </dependencies>
@@ -455,7 +403,7 @@
 <CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="UART_1_SCB_IRQ.c" persistent="Generated_Source\PSoC4\UART_1_SCB_IRQ.c">
 <Hidden v="False" />
 </CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
-<build_action v="SOURCE_C;CortexM0p;;;" />
+<build_action v="SOURCE_C;CortexM0;;;" />
 <PropertyDeltas />
 </CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b>
 <CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtFileSerialize" version="3" xml_contents_version="1">
@@ -481,7 +429,7 @@
 <CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="UART_1_rx.c" persistent="Generated_Source\PSoC4\UART_1_rx.c">
 <Hidden v="False" />
 </CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
-<build_action v="SOURCE_C;CortexM0p;;;" />
+<build_action v="SOURCE_C;CortexM0;;;" />
 <PropertyDeltas />
 </CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b>
 <CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtFileSerialize" version="3" xml_contents_version="1">
@@ -502,7 +450,7 @@
 <CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="UART_1_rx_PM.c" persistent="Generated_Source\PSoC4\UART_1_rx_PM.c">
 <Hidden v="False" />
 </CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
-<build_action v="SOURCE_C;CortexM0p;;;" />
+<build_action v="SOURCE_C;CortexM0;;;" />
 <PropertyDeltas />
 </CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b>
 </dependencies>
@@ -521,7 +469,7 @@
 <CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="UART_1_cts.c" persistent="Generated_Source\PSoC4\UART_1_cts.c">
 <Hidden v="False" />
 </CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
-<build_action v="SOURCE_C;CortexM0p;;;" />
+<build_action v="SOURCE_C;CortexM0;;;" />
 <PropertyDeltas />
 </CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b>
 <CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtFileSerialize" version="3" xml_contents_version="1">
@@ -542,7 +490,7 @@
 <CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="UART_1_cts_PM.c" persistent="Generated_Source\PSoC4\UART_1_cts_PM.c">
 <Hidden v="False" />
 </CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
-<build_action v="SOURCE_C;CortexM0p;;;" />
+<build_action v="SOURCE_C;CortexM0;;;" />
 <PropertyDeltas />
 </CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b>
 </dependencies>
@@ -561,7 +509,7 @@
 <CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="UART_1_rts.c" persistent="Generated_Source\PSoC4\UART_1_rts.c">
 <Hidden v="False" />
 </CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
-<build_action v="SOURCE_C;CortexM0p;;;" />
+<build_action v="SOURCE_C;CortexM0;;;" />
 <PropertyDeltas />
 </CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b>
 <CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtFileSerialize" version="3" xml_contents_version="1">
@@ -582,7 +530,7 @@
 <CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="UART_1_rts_PM.c" persistent="Generated_Source\PSoC4\UART_1_rts_PM.c">
 <Hidden v="False" />
 </CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
-<build_action v="SOURCE_C;CortexM0p;;;" />
+<build_action v="SOURCE_C;CortexM0;;;" />
 <PropertyDeltas />
 </CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b>
 </dependencies>
@@ -599,21 +547,21 @@
 <dependencies>
 <CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtFileSerialize" version="3" xml_contents_version="1">
 <CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="cm0plusgcc.ld" persistent="Generated_Source\PSoC4\cm0plusgcc.ld">
-<Hidden v="False" />
+<Hidden v="True" />
 </CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
 <build_action v="LINKER_SCRIPT;;;b98f980c-3bd1-4fc7-a887-c56a20a46fdd;" />
 <PropertyDeltas />
 </CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b>
 <CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtFileSerialize" version="3" xml_contents_version="1">
 <CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="Cm0plusRealView.scat" persistent="Generated_Source\PSoC4\Cm0plusRealView.scat">
-<Hidden v="False" />
+<Hidden v="True" />
 </CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
 <build_action v="LINKER_SCRIPT;;;fdb8e1ae-f83a-46cf-9446-1d703716f38a;" />
 <PropertyDeltas />
 </CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b>
 <CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtFileSerialize" version="3" xml_contents_version="1">
 <CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="Cm0plusStart.c" persistent="Generated_Source\PSoC4\Cm0plusStart.c">
-<Hidden v="False" />
+<Hidden v="True" />
 </CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
 <build_action v="SOURCE_C;CortexM0p;;;" />
 <PropertyDeltas />
@@ -629,7 +577,7 @@
 <CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="CyFlash.c" persistent="Generated_Source\PSoC4\CyFlash.c">
 <Hidden v="False" />
 </CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
-<build_action v="SOURCE_C;CortexM0p;;;" />
+<build_action v="SOURCE_C;CortexM0;;;" />
 <PropertyDeltas />
 </CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b>
 <CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtFileSerialize" version="3" xml_contents_version="1">
@@ -643,7 +591,7 @@
 <CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="CyLib.c" persistent="Generated_Source\PSoC4\CyLib.c">
 <Hidden v="False" />
 </CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
-<build_action v="SOURCE_C;CortexM0p;;;" />
+<build_action v="SOURCE_C;CortexM0;;;" />
 <PropertyDeltas />
 </CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b>
 <CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtFileSerialize" version="3" xml_contents_version="1">
@@ -657,7 +605,7 @@
 <CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="cyPm.c" persistent="Generated_Source\PSoC4\cyPm.c">
 <Hidden v="False" />
 </CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
-<build_action v="SOURCE_C;CortexM0p;;;" />
+<build_action v="SOURCE_C;CortexM0;;;" />
 <PropertyDeltas />
 </CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b>
 <CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtFileSerialize" version="3" xml_contents_version="1">
@@ -678,7 +626,7 @@
 <CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="cyutils.c" persistent="Generated_Source\PSoC4\cyutils.c">
 <Hidden v="False" />
 </CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
-<build_action v="SOURCE_C;CortexM0p;;;" />
+<build_action v="SOURCE_C;CortexM0;;;" />
 <PropertyDeltas />
 </CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b>
 <CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtFileSerialize" version="3" xml_contents_version="1">
@@ -704,7 +652,7 @@
 </CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b>
 <CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtFileSerialize" version="3" xml_contents_version="1">
 <CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="Cm0plusIar.icf" persistent="Generated_Source\PSoC4\Cm0plusIar.icf">
-<Hidden v="False" />
+<Hidden v="True" />
 </CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
 <build_action v="LINKER_SCRIPT;;;e9305a93-d091-4da5-bdc7-2813049dcdbf;" />
 <PropertyDeltas />
@@ -732,14 +680,14 @@
 </CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b>
 <CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtFileSerialize" version="3" xml_contents_version="1">
 <CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="core_cm0plus.h" persistent="Generated_Source\PSoC4\core_cm0plus.h">
-<Hidden v="False" />
+<Hidden v="True" />
 </CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
 <build_action v="HEADER;;;;" />
 <PropertyDeltas />
 </CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b>
 <CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtFileSerialize" version="3" xml_contents_version="1">
 <CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="core_cm0plus_psoc4.h" persistent="Generated_Source\PSoC4\core_cm0plus_psoc4.h">
-<Hidden v="False" />
+<Hidden v="True" />
 </CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
 <build_action v="HEADER;;;;" />
 <PropertyDeltas />
@@ -756,6 +704,48 @@
 <Hidden v="False" />
 </CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
 <build_action v="SOURCE_ASM;CortexM0,CortexM0p,CortexM3,CortexM4,CortexM7;;b98f980c-3bd1-4fc7-a887-c56a20a46fdd;" />
+<PropertyDeltas />
+</CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b>
+<CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtFileSerialize" version="3" xml_contents_version="1">
+<CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="cm0gcc.ld" persistent="Generated_Source\PSoC4\cm0gcc.ld">
+<Hidden v="False" />
+</CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
+<build_action v="LINKER_SCRIPT;;;b98f980c-3bd1-4fc7-a887-c56a20a46fdd;" />
+<PropertyDeltas />
+</CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b>
+<CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtFileSerialize" version="3" xml_contents_version="1">
+<CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="Cm0RealView.scat" persistent="Generated_Source\PSoC4\Cm0RealView.scat">
+<Hidden v="False" />
+</CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
+<build_action v="LINKER_SCRIPT;;;fdb8e1ae-f83a-46cf-9446-1d703716f38a;" />
+<PropertyDeltas />
+</CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b>
+<CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtFileSerialize" version="3" xml_contents_version="1">
+<CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="Cm0Start.c" persistent="Generated_Source\PSoC4\Cm0Start.c">
+<Hidden v="False" />
+</CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
+<build_action v="SOURCE_C;CortexM0;;;" />
+<PropertyDeltas />
+</CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b>
+<CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtFileSerialize" version="3" xml_contents_version="1">
+<CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="core_cm0.h" persistent="Generated_Source\PSoC4\core_cm0.h">
+<Hidden v="False" />
+</CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
+<build_action v="HEADER;;;;" />
+<PropertyDeltas />
+</CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b>
+<CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtFileSerialize" version="3" xml_contents_version="1">
+<CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="core_cm0_psoc4.h" persistent="Generated_Source\PSoC4\core_cm0_psoc4.h">
+<Hidden v="False" />
+</CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
+<build_action v="HEADER;;;;" />
+<PropertyDeltas />
+</CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b>
+<CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtFileSerialize" version="3" xml_contents_version="1">
+<CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="Cm0Iar.icf" persistent="Generated_Source\PSoC4\Cm0Iar.icf">
+<Hidden v="False" />
+</CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
+<build_action v="LINKER_SCRIPT;;;e9305a93-d091-4da5-bdc7-2813049dcdbf;" />
 <PropertyDeltas />
 </CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b>
 </dependencies>
@@ -781,7 +771,7 @@
 <CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="CyDMA.c" persistent="Generated_Source\PSoC4\CyDMA.c">
 <Hidden v="False" />
 </CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
-<build_action v="SOURCE_C;CortexM0p;;;" />
+<build_action v="SOURCE_C;CortexM0;;;" />
 <PropertyDeltas />
 </CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b>
 </dependencies>
@@ -800,7 +790,7 @@
 <CyGuid_31768f72-0253-412b-af77-e7dba74d1330 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtItemSerialize" version="2" name="CyLFClk.c" persistent="Generated_Source\PSoC4\CyLFClk.c">
 <Hidden v="False" />
 </CyGuid_31768f72-0253-412b-af77-e7dba74d1330>
-<build_action v="SOURCE_C;CortexM0p;;;" />
+<build_action v="SOURCE_C;CortexM0;;;" />
 <PropertyDeltas />
 </CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b>
 <CyGuid_8b8ab257-35d3-4473-b57b-36315200b38b type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtFileSerialize" version="3" xml_contents_version="1">
@@ -976,6 +966,92 @@
 <name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0p@Linker@Optimization@SHARED Fat LTO objects" v="" />
 <name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0p@User Commands@General@Pre Build Commands" v="" />
 <name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0p@User Commands@General@Post Build Commands" v="" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@General@Output Directory" v="${ProjectDir}\${ProcessorType}\${Platform}\${Config}" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@Assembly@General@Additional Include Directories" v="" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@Assembly@General@Create Listing File" v="True" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@Assembly@General@Generate Debugging Information" v="True" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@Assembly@General@Join Data and Text Sections" v="False" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@Assembly@General@Suppress Warnings" v="True" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@Assembly@Command Line@Command Line" v="" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@C/C++@General@Additional Include Directories" v="" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@C/C++@General@Create Listing File" v="True" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@C/C++@General@Default Char Unsigned" v="False" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@C/C++@General@Generate Debugging Information" v="True" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@C/C++@General@Preprocessor Definitions" v="DEBUG;CY_CORE_ID=0" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@C/C++@General@Pedantic Compilation" v="False" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@C/C++@General@Warning Level" v="High" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@C/C++@General@Warnings as Errors" v="False" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@C/C++@General@Struct Return Method" v="System Default" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@C/C++@General@Verbose Asm" v="False" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@C/C++@Optimization@Remove Unused Functions" v="True" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@C/C++@Optimization@Fat LTO objects" v="True" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@C/C++@Optimization@Inline Functions" v="False" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@C/C++@Optimization@Link Time Optimization" v="False" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@C/C++@Optimization@Optimization Level" v="Debug" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@C/C++@Command Line@Command Line" v="" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@Library Generation@Command Line@Command Line" v="" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@Linker@General@Additional Libraries" v="" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@Linker@General@Additional Library Directories" v="" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@Linker@General@Additional Link Files" v="" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@Linker@General@Generate Map File" v="True" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@Linker@General@Custom Linker Script" v="" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@Linker@General@Use Default Libs" v="True" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@Linker@General@Use Nano Lib" v="True" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@Linker@General@Enable Float printf" v="False" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@Linker@Optimization@Remove Unused Functions" v="True" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@Linker@Command Line@Command Line" v="" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@Linker@Optimization@SHARED Generate Debugging Information" v="" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@Linker@Optimization@SHARED Struct Return Method" v="" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@Linker@Optimization@SHARED Remove Unused Functions" v="" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@Linker@Optimization@SHARED Inline Functions" v="" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@Linker@Optimization@SHARED Optimization Level" v="" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@Linker@Optimization@SHARED Link Time Optimization" v="" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@Linker@Optimization@SHARED Fat LTO objects" v="" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@User Commands@General@Pre Build Commands" v="" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0@User Commands@General@Post Build Commands" v="" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@General@Output Directory" v="${ProjectDir}\${ProcessorType}\${Platform}\${Config}" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@Assembly@General@Additional Include Directories" v="" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@Assembly@General@Create Listing File" v="True" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@Assembly@General@Generate Debugging Information" v="True" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@Assembly@General@Join Data and Text Sections" v="False" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@Assembly@General@Suppress Warnings" v="True" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@Assembly@Command Line@Command Line" v="" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@C/C++@General@Additional Include Directories" v="" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@C/C++@General@Create Listing File" v="True" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@C/C++@General@Default Char Unsigned" v="False" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@C/C++@General@Generate Debugging Information" v="True" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@C/C++@General@Preprocessor Definitions" v="NDEBUG;CY_CORE_ID=0" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@C/C++@General@Pedantic Compilation" v="False" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@C/C++@General@Warning Level" v="High" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@C/C++@General@Warnings as Errors" v="False" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@C/C++@General@Struct Return Method" v="System Default" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@C/C++@General@Verbose Asm" v="False" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@C/C++@Optimization@Remove Unused Functions" v="True" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@C/C++@Optimization@Fat LTO objects" v="True" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@C/C++@Optimization@Inline Functions" v="False" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@C/C++@Optimization@Link Time Optimization" v="False" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@C/C++@Optimization@Optimization Level" v="Size" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@C/C++@Command Line@Command Line" v="" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@Library Generation@Command Line@Command Line" v="" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@Linker@General@Additional Libraries" v="" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@Linker@General@Additional Library Directories" v="" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@Linker@General@Additional Link Files" v="" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@Linker@General@Generate Map File" v="True" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@Linker@General@Custom Linker Script" v="" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@Linker@General@Use Default Libs" v="True" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@Linker@General@Use Nano Lib" v="True" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@Linker@General@Enable Float printf" v="False" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@Linker@Optimization@Remove Unused Functions" v="True" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@Linker@Command Line@Command Line" v="" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@Linker@Optimization@SHARED Generate Debugging Information" v="" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@Linker@Optimization@SHARED Struct Return Method" v="" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@Linker@Optimization@SHARED Remove Unused Functions" v="" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@Linker@Optimization@SHARED Inline Functions" v="" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@Linker@Optimization@SHARED Optimization Level" v="" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@Linker@Optimization@SHARED Link Time Optimization" v="" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@Linker@Optimization@SHARED Fat LTO objects" v="" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@User Commands@General@Pre Build Commands" v="" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM0@User Commands@General@Post Build Commands" v="" />
 </name>
 </platform>
 <platform>
@@ -1066,6 +1142,92 @@
 <name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0p@Linker@Optimization@SHARED Fat LTO objects" v="" />
 <name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0p@User Commands@General@Pre Build Commands" v="" />
 <name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0p@User Commands@General@Post Build Commands" v="" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@General@Output Directory" v="${ProjectDir}\${ProcessorType}\${Platform}\${Config}" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@Assembly@General@Additional Include Directories" v="" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@Assembly@General@Create Listing File" v="True" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@Assembly@General@Generate Debugging Information" v="True" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@Assembly@General@Join Data and Text Sections" v="False" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@Assembly@General@Suppress Warnings" v="True" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@Assembly@Command Line@Command Line" v="" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@C/C++@General@Additional Include Directories" v="" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@C/C++@General@Create Listing File" v="True" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@C/C++@General@Default Char Unsigned" v="False" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@C/C++@General@Generate Debugging Information" v="True" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@C/C++@General@Preprocessor Definitions" v="DEBUG;CY_CORE_ID=0" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@C/C++@General@Pedantic Compilation" v="False" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@C/C++@General@Warning Level" v="High" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@C/C++@General@Warnings as Errors" v="False" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@C/C++@General@Struct Return Method" v="System Default" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@C/C++@General@Verbose Asm" v="False" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@C/C++@Optimization@Remove Unused Functions" v="True" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@C/C++@Optimization@Fat LTO objects" v="True" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@C/C++@Optimization@Inline Functions" v="False" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@C/C++@Optimization@Link Time Optimization" v="False" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@C/C++@Optimization@Optimization Level" v="Debug" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@C/C++@Command Line@Command Line" v="" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@Library Generation@Command Line@Command Line" v="" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@Linker@General@Additional Libraries" v="" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@Linker@General@Additional Library Directories" v="" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@Linker@General@Additional Link Files" v="" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@Linker@General@Generate Map File" v="True" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@Linker@General@Custom Linker Script" v="" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@Linker@General@Use Default Libs" v="True" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@Linker@General@Use Nano Lib" v="True" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@Linker@General@Enable Float printf" v="False" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@Linker@Optimization@Remove Unused Functions" v="True" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@Linker@Command Line@Command Line" v="" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@Linker@Optimization@SHARED Generate Debugging Information" v="" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@Linker@Optimization@SHARED Struct Return Method" v="" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@Linker@Optimization@SHARED Remove Unused Functions" v="" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@Linker@Optimization@SHARED Inline Functions" v="" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@Linker@Optimization@SHARED Optimization Level" v="" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@Linker@Optimization@SHARED Link Time Optimization" v="" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@Linker@Optimization@SHARED Fat LTO objects" v="" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@User Commands@General@Pre Build Commands" v="" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Debug@CortexM0@User Commands@General@Post Build Commands" v="" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@General@Output Directory" v="${ProjectDir}\${ProcessorType}\${Platform}\${Config}" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@Assembly@General@Additional Include Directories" v="" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@Assembly@General@Create Listing File" v="True" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@Assembly@General@Generate Debugging Information" v="True" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@Assembly@General@Join Data and Text Sections" v="False" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@Assembly@General@Suppress Warnings" v="True" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@Assembly@Command Line@Command Line" v="" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@C/C++@General@Additional Include Directories" v="" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@C/C++@General@Create Listing File" v="True" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@C/C++@General@Default Char Unsigned" v="False" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@C/C++@General@Generate Debugging Information" v="True" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@C/C++@General@Preprocessor Definitions" v="NDEBUG;CY_CORE_ID=0" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@C/C++@General@Pedantic Compilation" v="False" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@C/C++@General@Warning Level" v="High" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@C/C++@General@Warnings as Errors" v="False" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@C/C++@General@Struct Return Method" v="System Default" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@C/C++@General@Verbose Asm" v="False" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@C/C++@Optimization@Remove Unused Functions" v="True" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@C/C++@Optimization@Fat LTO objects" v="True" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@C/C++@Optimization@Inline Functions" v="False" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@C/C++@Optimization@Link Time Optimization" v="False" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@C/C++@Optimization@Optimization Level" v="Size" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@C/C++@Command Line@Command Line" v="" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@Library Generation@Command Line@Command Line" v="" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@Linker@General@Additional Libraries" v="" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@Linker@General@Additional Library Directories" v="" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@Linker@General@Additional Link Files" v="" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@Linker@General@Generate Map File" v="True" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@Linker@General@Custom Linker Script" v="" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@Linker@General@Use Default Libs" v="True" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@Linker@General@Use Nano Lib" v="True" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@Linker@General@Enable Float printf" v="False" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@Linker@Optimization@Remove Unused Functions" v="True" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@Linker@Command Line@Command Line" v="" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@Linker@Optimization@SHARED Generate Debugging Information" v="" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@Linker@Optimization@SHARED Struct Return Method" v="" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@Linker@Optimization@SHARED Remove Unused Functions" v="" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@Linker@Optimization@SHARED Inline Functions" v="" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@Linker@Optimization@SHARED Optimization Level" v="" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@Linker@Optimization@SHARED Link Time Optimization" v="" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@Linker@Optimization@SHARED Fat LTO objects" v="" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@User Commands@General@Pre Build Commands" v="" />
+<name_val_pair name="b98f980c-3bd1-4fc7-a887-c56a20a46fdd@Release@CortexM0@User Commands@General@Post Build Commands" v="" />
 </name>
 </platform>
 <platform>
@@ -1128,6 +1290,64 @@
 <name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Release@CortexM0p@Linker@Command Line@Command Line" v="" />
 <name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Release@CortexM0p@User Commands@General@Pre Build Commands" v="" />
 <name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Release@CortexM0p@User Commands@General@Post Build Commands" v="" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Debug@CortexM0@General@Output Directory" v="${ProjectDir}\${ProcessorType}\${Platform}\${Config}" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Debug@CortexM0@Assembly@General@Additional Include Directories" v="" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Debug@CortexM0@Assembly@General@Generate Debugging Information" v="True" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Debug@CortexM0@Assembly@General@Suppress Warnings" v="False" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Debug@CortexM0@Assembly@General@Generate List Files" v="True" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Debug@CortexM0@Assembly@Command Line@Command Line" v="" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Debug@CortexM0@Assembly@General@SHARED Use MicroLib" v="" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Debug@CortexM0@C/C++@General@Additional Include Directories" v="" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Debug@CortexM0@C/C++@General@Generate List Files" v="True" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Debug@CortexM0@C/C++@General@Default Char Unsigned" v="False" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Debug@CortexM0@C/C++@General@Generate Debugging Information" v="True" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Debug@CortexM0@C/C++@General@Preprocessor Definitions" v="DEBUG;CY_CORE_ID=0" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Debug@CortexM0@C/C++@General@Strict Compilation" v="False" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Debug@CortexM0@C/C++@Optimization@Inline Functions" v="False" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Debug@CortexM0@C/C++@Optimization@Optimization Level" v="None" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Debug@CortexM0@C/C++@Optimization@Split Sections" v="True" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Debug@CortexM0@C/C++@Command Line@Command Line" v="" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Debug@CortexM0@C/C++@General@SHARED Use MicroLib" v="" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Debug@CortexM0@Library Generation@Command Line@Command Line" v="" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Debug@CortexM0@Linker@General@Additional Libraries" v="" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Debug@CortexM0@Linker@General@Additional Library Directories" v="" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Debug@CortexM0@Linker@General@Use MicroLib" v="True" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Debug@CortexM0@Linker@General@Generate Map File" v="True" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Debug@CortexM0@Linker@General@Custom Linker Script" v="" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Debug@CortexM0@Linker@General@Generate Debugging Information" v="True" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Debug@CortexM0@Linker@General@Use Default Libs" v="True" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Debug@CortexM0@Linker@Command Line@Command Line" v="" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Debug@CortexM0@User Commands@General@Pre Build Commands" v="" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Debug@CortexM0@User Commands@General@Post Build Commands" v="" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Release@CortexM0@General@Output Directory" v="${ProjectDir}\${ProcessorType}\${Platform}\${Config}" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Release@CortexM0@Assembly@General@Additional Include Directories" v="" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Release@CortexM0@Assembly@General@Generate Debugging Information" v="True" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Release@CortexM0@Assembly@General@Suppress Warnings" v="False" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Release@CortexM0@Assembly@General@Generate List Files" v="True" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Release@CortexM0@Assembly@Command Line@Command Line" v="" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Release@CortexM0@Assembly@General@SHARED Use MicroLib" v="" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Release@CortexM0@C/C++@General@Additional Include Directories" v="" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Release@CortexM0@C/C++@General@Generate List Files" v="True" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Release@CortexM0@C/C++@General@Default Char Unsigned" v="False" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Release@CortexM0@C/C++@General@Generate Debugging Information" v="True" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Release@CortexM0@C/C++@General@Preprocessor Definitions" v="NDEBUG;CY_CORE_ID=0" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Release@CortexM0@C/C++@General@Strict Compilation" v="False" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Release@CortexM0@C/C++@Optimization@Inline Functions" v="False" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Release@CortexM0@C/C++@Optimization@Optimization Level" v="Size" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Release@CortexM0@C/C++@Optimization@Split Sections" v="True" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Release@CortexM0@C/C++@Command Line@Command Line" v="" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Release@CortexM0@C/C++@General@SHARED Use MicroLib" v="" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Release@CortexM0@Library Generation@Command Line@Command Line" v="" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Release@CortexM0@Linker@General@Additional Libraries" v="" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Release@CortexM0@Linker@General@Additional Library Directories" v="" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Release@CortexM0@Linker@General@Use MicroLib" v="True" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Release@CortexM0@Linker@General@Generate Map File" v="True" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Release@CortexM0@Linker@General@Custom Linker Script" v="" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Release@CortexM0@Linker@General@Generate Debugging Information" v="True" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Release@CortexM0@Linker@General@Use Default Libs" v="True" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Release@CortexM0@Linker@Command Line@Command Line" v="" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Release@CortexM0@User Commands@General@Pre Build Commands" v="" />
+<name_val_pair name="fdb8e1ae-f83a-46cf-9446-1d703716f38a@Release@CortexM0@User Commands@General@Post Build Commands" v="" />
 </name>
 </platform>
 <platform>
@@ -1140,19 +1360,27 @@
 <name_val_pair name="e9305a93-d091-4da5-bdc7-2813049dcdbf@Debug@CortexM0p@Linker@Command Line@Command Line" v="--semihosting" />
 <name_val_pair name="e9305a93-d091-4da5-bdc7-2813049dcdbf@Debug@CortexM0p@User Commands@General@Pre Build Commands" v="" />
 <name_val_pair name="e9305a93-d091-4da5-bdc7-2813049dcdbf@Debug@CortexM0p@User Commands@General@Post Build Commands" v="" />
+<name_val_pair name="e9305a93-d091-4da5-bdc7-2813049dcdbf@Debug@CortexM0@General@Output Directory" v="${ProjectDir}\${ProcessorType}\${Platform}\${Config}" />
+<name_val_pair name="e9305a93-d091-4da5-bdc7-2813049dcdbf@Debug@CortexM0@Assembly@Command Line@Command Line" v="-s+ -M&lt;&gt; -w+ -r -DDEBUG --fpu None" />
+<name_val_pair name="e9305a93-d091-4da5-bdc7-2813049dcdbf@Debug@CortexM0@C/C++@General@Preprocessor Definitions" v="-D DEBUG -D CY_CORE_ID=0" />
+<name_val_pair name="e9305a93-d091-4da5-bdc7-2813049dcdbf@Debug@CortexM0@C/C++@Command Line@Command Line" v="-D DEBUG -D CY_CORE_ID=0 --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little -e --fpu=None -On --no_wrap_diagnostics" />
+<name_val_pair name="e9305a93-d091-4da5-bdc7-2813049dcdbf@Debug@CortexM0@Library Generation@Command Line@Command Line" v="" />
+<name_val_pair name="e9305a93-d091-4da5-bdc7-2813049dcdbf@Debug@CortexM0@Linker@Command Line@Command Line" v="--semihosting" />
+<name_val_pair name="e9305a93-d091-4da5-bdc7-2813049dcdbf@Debug@CortexM0@User Commands@General@Pre Build Commands" v="" />
+<name_val_pair name="e9305a93-d091-4da5-bdc7-2813049dcdbf@Debug@CortexM0@User Commands@General@Post Build Commands" v="" />
 </name>
 </platform>
 </platforms>
 <project_current_platform v="c9323d49-d323-40b8-9b59-cc008d68a989" />
 <last_selected_tab v="Cypress" />
-<WriteAppVersionLastSavedWith v="4.1.0.3210" />
-<WriteAppMarketingVersionLastSavedWith v=" 4.1 Update 1" />
+<WriteAppVersionLastSavedWith v="4.1.0.2686" />
+<WriteAppMarketingVersionLastSavedWith v=" 4.1" />
 <project_id v="be916806-c623-43d0-94aa-632bc2a026c6" />
 <GenerateDescriptionFiles v="False" />
 </CyGuid_49cfd574-032a-4a64-b7be-d4eeeaf25e43>
 </CyGuid_60697ce6-dce2-4816-8680-4de0635742eb>
 <top_block v="TopDesign" />
-<selected_device v="CY8C4A45AZI-483" />
+<selected_device v="CY8C4246AZI-M443" />
 <CyGuid_495451fe-d201-4d01-b22d-5d3f5609ac37 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtComponentMgrSerialize" version="4" xml_contents_version="1">
 <library_deps>
 <library_dep persistent="${CyRoot}\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj" />

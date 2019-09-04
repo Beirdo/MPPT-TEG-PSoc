@@ -32,16 +32,6 @@ typedef struct _teg_channel {
     // State of the MPPT FSM for this channel
     mppt_state_t state;
     
-    // ADC channel for Von
-    uint8 ADCVon;
-    
-    // ADC channel for Voff
-    uint8 ADCVoff;
-    
-    // From ADC
-    uint16 Von;
-    uint16 Voff;
-    
     // From INA219 at I2C 0x40
     uint16 Vin;
     uint16 Iin;
@@ -55,10 +45,6 @@ typedef struct _teg_channel {
     // Calculated via linear regression
     uint16 Vopen;
     uint16 Ishort;
-    
-    // Calculated
-    uint16 Vl;
-    uint16 Io;
     
     // output value (0-256)
     uint8 PWMval;
@@ -81,6 +67,7 @@ void initializeChannels(void);
 void initializeChannel(int index);
 int processChannel(teg_channel_t *ch, uint8 newEnables);
 void setPWMLevel(int index, uint16 value);
+uint8 currentToPWM(uint16 current);
 
 #endif // __teg_channel_h__
 

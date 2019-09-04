@@ -49,10 +49,10 @@ int main(void)
         // Now we want to send the entire teg_channel block to the CPU for display and upstream to IOT
         
         // And finally, wait for the 100ms timer to tick, and do it all again
-        while(lastTimer == CySysTimerGetCount(1)) {
-           CySysPmSleep();
-        }
-        lastTimer = CySysTimerGetCount(1);
+        //while(lastTimer == CySysTimerGetCount(1)) {
+        //   CySysPmSleep();
+        //}
+        //lastTimer = CySysTimerGetCount(1);
     }
 }
 

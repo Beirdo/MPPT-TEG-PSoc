@@ -17,6 +17,8 @@
 
 uint8 INA219_address[] = {INA219_INPUT_ADDR, INA219_MID_ADDR, INA219_OUTPUT_ADDR};
 uint16 INA219_calibration[] = {4194, 4194, 0x0000};
+// +/- 320mV, avg 16 samples (8.51ms sample time), voltage and current
+uint16 INA219_configuration[] = {0x3E67, 0x3E67, 0x3E67};
 int connected = 0;
 
 void INA219_initialize(int index) {
@@ -29,6 +31,9 @@ void INA219_initialize(int index) {
         
         // Send 0x8000 to the config register (0x00) - hard reset
         INA219_write_register(addr, 0x00, 0x8000);
+        
+        // Send the configuration value
+        INA219_write_register(addr, 0x00, INA219_configuration[i]);
 
         // Send the calibration value for this chip to calibration register (0x05)
         INA219_write_register(addr, 0x05, calibration);

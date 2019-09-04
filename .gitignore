@@ -58,11 +58,14 @@ dkms.conf
 
 # PSoc Creator output
 /Archive
+/Backup
 *.cyfit
 *.log
 *.rpt
 Generated_Source/
 *.Administrator
+*.hurlbutg
+*.gjhurlbu
 codegentemp/
 .deps/
 *.deps

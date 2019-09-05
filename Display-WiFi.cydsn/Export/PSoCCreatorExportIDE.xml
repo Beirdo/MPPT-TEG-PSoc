@@ -155,12 +155,12 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LCDScreen_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LCD_BUS_CLK.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LCD_BUS_CLK.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\TMP05_CLK.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\TMP05_CLK.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\I2C_LCD_1.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\I2C_LCD_1.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\EEPROM_1.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\EEPROM_1.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPI_2M_CLK.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPI_2M_CLK.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPI_8M_CLK.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPI_8M_CLK.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\UART_1.c</File>
@@ -281,8 +281,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\tmp05_out_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\tmp05_out.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\tmp05_out.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Clock_1.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Clock_1.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\TMP05_1.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\TMP05_1.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\TMP05_1_PM.c</File>
@@ -290,6 +288,8 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\TMP05_1_PVT.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\TMP05_1_EOC_ISR.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\TMP05_1_EOC_ISR.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPI_4M_CLK.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPI_4M_CLK.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="D:\Workspace\MPPT-TEG-PSoc\Display-WiFi.cydsn\Export\ARM_GCC_Generic">

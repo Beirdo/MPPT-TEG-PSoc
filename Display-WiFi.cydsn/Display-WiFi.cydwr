@@ -743,6 +743,7 @@
       <Data key="63bde9ac-9e27-4f9a-b1cd-7a2aba8b6076" value="ncs" />
       <Data key="64aeaa6e-fb52-4b87-bfc3-eef89db88f49" value="d_c" />
       <Data key="71b8da57-2166-4d68-b756-214f3c2234b9" value="NTC1n" />
+      <Data key="077a6688-547f-4fc0-8755-e3ea25ab9651" value="LCD_RESET" />
       <Data key="083ab5e3-e386-4e6b-8a67-4287048a57e6" value="NTC0p" />
       <Data key="83b2fde2-60ad-45b6-9e5c-cb3baa6e3f9a" value="SCLK_1" />
       <Data key="264be2d3-9481-494b-8d9c-c1905a45e9cc" value="SDA" />
@@ -3948,6 +3949,11 @@
     <Group key="64aeaa6e-fb52-4b87-bfc3-eef89db88f49">
       <Group key="0">
         <Data key="Port Format" value="4,3" />
+      </Group>
+    </Group>
+    <Group key="077a6688-547f-4fc0-8755-e3ea25ab9651">
+      <Group key="0">
+        <Data key="Port Format" value="3,0" />
       </Group>
     </Group>
     <Group key="83b2fde2-60ad-45b6-9e5c-cb3baa6e3f9a">

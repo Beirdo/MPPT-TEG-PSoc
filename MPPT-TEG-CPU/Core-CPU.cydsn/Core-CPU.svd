@@ -9,7 +9,7 @@
     <peripheral>
       <name>PWM_ENABLE_REG</name>
       <description>No description available</description>
-      <baseAddress>0x40006578</baseAddress>
+      <baseAddress>0x0</baseAddress>
       <addressBlock>
         <offset>0</offset>
         <size>0x0</size>
@@ -19,11 +19,158 @@
         <register>
           <name>PWM_ENABLE_REG_CONTROL_REG</name>
           <description>No description available</description>
-          <addressOffset>0x0</addressOffset>
+          <addressOffset>0x40006578</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
           <resetMask>0</resetMask>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
+      <name>UART</name>
+      <description>UART</description>
+      <baseAddress>0x0</baseAddress>
+      <addressBlock>
+        <offset>0</offset>
+        <size>0x0</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+        <register>
+          <name>RX_UART_RX_ADDRESS1</name>
+          <description>RX Address1 Register</description>
+          <addressOffset>0x40006425</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>RX_UART_RX_ADDRESS2</name>
+          <description>RX Address2 Register</description>
+          <addressOffset>0x40006435</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>RX_UART_RX_DATA</name>
+          <description>RX Data Register</description>
+          <addressOffset>0x40006445</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>TX_UART_TX_DATA</name>
+          <description>TX Data Register</description>
+          <addressOffset>0x4000644E</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>RX_UART_RX_STATUS</name>
+          <description>RX status register</description>
+          <addressOffset>0x40006464</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>UART_RX_STS_MRKSPC</name>
+              <description>No description available</description>
+              <lsb>0</lsb>
+              <msb>0</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>UART_RX_STS_BREAK</name>
+              <description>No description available</description>
+              <lsb>1</lsb>
+              <msb>1</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>UART_RX_STS_PAR_ERROR</name>
+              <description>No description available</description>
+              <lsb>2</lsb>
+              <msb>2</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>UART_RX_STS_STOP_ERROR</name>
+              <description>No description available</description>
+              <lsb>3</lsb>
+              <msb>3</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>UART_RX_STS_OVERRUN</name>
+              <description>No description available</description>
+              <lsb>4</lsb>
+              <msb>4</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>UART_RX_STS_FIFO_NOTEMPTY</name>
+              <description>No description available</description>
+              <lsb>5</lsb>
+              <msb>5</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>UART_RX_STS_ADDR_MATCH</name>
+              <description>No description available</description>
+              <lsb>6</lsb>
+              <msb>6</msb>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TX_UART_TX_STATUS</name>
+          <description>TX status register</description>
+          <addressOffset>0x4000646E</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>UART_TX_STS_COMPLETE</name>
+              <description>No description available</description>
+              <lsb>0</lsb>
+              <msb>0</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>UART_TX_STS_FIFO_EMPTY</name>
+              <description>No description available</description>
+              <lsb>1</lsb>
+              <msb>1</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>UART_TX_STS_FIFO_FULL</name>
+              <description>No description available</description>
+              <lsb>2</lsb>
+              <msb>2</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>UART_TX_STS_FIFO_NOT_FULL</name>
+              <description>No description available</description>
+              <lsb>3</lsb>
+              <msb>3</msb>
+              <access>read-only</access>
+            </field>
+          </fields>
         </register>
       </registers>
     </peripheral>
@@ -4055,153 +4202,6 @@
       </registers>
     </peripheral>
     <peripheral>
-      <name>UART</name>
-      <description>UART</description>
-      <baseAddress>0x0</baseAddress>
-      <addressBlock>
-        <offset>0</offset>
-        <size>0x0</size>
-        <usage>registers</usage>
-      </addressBlock>
-      <registers>
-        <register>
-          <name>RX_UART_RX_ADDRESS1</name>
-          <description>RX Address1 Register</description>
-          <addressOffset>0x40006425</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>RX_UART_RX_ADDRESS2</name>
-          <description>RX Address2 Register</description>
-          <addressOffset>0x40006435</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>RX_UART_RX_DATA</name>
-          <description>RX Data Register</description>
-          <addressOffset>0x40006445</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>TX_UART_TX_DATA</name>
-          <description>TX Data Register</description>
-          <addressOffset>0x4000644E</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>RX_UART_RX_STATUS</name>
-          <description>RX status register</description>
-          <addressOffset>0x40006464</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>UART_RX_STS_MRKSPC</name>
-              <description>No description available</description>
-              <lsb>0</lsb>
-              <msb>0</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>UART_RX_STS_BREAK</name>
-              <description>No description available</description>
-              <lsb>1</lsb>
-              <msb>1</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>UART_RX_STS_PAR_ERROR</name>
-              <description>No description available</description>
-              <lsb>2</lsb>
-              <msb>2</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>UART_RX_STS_STOP_ERROR</name>
-              <description>No description available</description>
-              <lsb>3</lsb>
-              <msb>3</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>UART_RX_STS_OVERRUN</name>
-              <description>No description available</description>
-              <lsb>4</lsb>
-              <msb>4</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>UART_RX_STS_FIFO_NOTEMPTY</name>
-              <description>No description available</description>
-              <lsb>5</lsb>
-              <msb>5</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>UART_RX_STS_ADDR_MATCH</name>
-              <description>No description available</description>
-              <lsb>6</lsb>
-              <msb>6</msb>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>TX_UART_TX_STATUS</name>
-          <description>TX status register</description>
-          <addressOffset>0x4000646E</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>UART_TX_STS_COMPLETE</name>
-              <description>No description available</description>
-              <lsb>0</lsb>
-              <msb>0</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>UART_TX_STS_FIFO_EMPTY</name>
-              <description>No description available</description>
-              <lsb>1</lsb>
-              <msb>1</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>UART_TX_STS_FIFO_FULL</name>
-              <description>No description available</description>
-              <lsb>2</lsb>
-              <msb>2</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>UART_TX_STS_FIFO_NOT_FULL</name>
-              <description>No description available</description>
-              <lsb>3</lsb>
-              <msb>3</msb>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-      </registers>
-    </peripheral>
-    <peripheral>
       <name>DESULFATE_PWMGEN</name>
       <description>No description available</description>
       <baseAddress>0x0</baseAddress>
@@ -4672,9 +4672,9 @@
       </registers>
     </peripheral>
     <peripheral>
-      <name>FAN_STATUS_REG</name>
+      <name>TMP05_TMP05_STS</name>
       <description>No description available</description>
-      <baseAddress>0x4000646C</baseAddress>
+      <baseAddress>0x0</baseAddress>
       <addressBlock>
         <offset>0</offset>
         <size>0x0</size>
@@ -4682,27 +4682,27 @@
       </addressBlock>
       <registers>
         <register>
-          <name>FAN_STATUS_REG_STATUS_REG</name>
+          <name>TMP05_TMP05_STS_STATUS_REG</name>
           <description>No description available</description>
-          <addressOffset>0x0</addressOffset>
+          <addressOffset>0x40006461</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
           <resetMask>0</resetMask>
         </register>
         <register>
-          <name>FAN_STATUS_REG_MASK_REG</name>
+          <name>TMP05_TMP05_STS_MASK_REG</name>
           <description>No description available</description>
-          <addressOffset>0x20</addressOffset>
+          <addressOffset>0x40006481</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
           <resetMask>0</resetMask>
         </register>
         <register>
-          <name>FAN_STATUS_REG_STATUS_AUX_CTL_REG</name>
+          <name>TMP05_TMP05_STS_STATUS_AUX_CTL_REG</name>
           <description>No description available</description>
-          <addressOffset>0x30</addressOffset>
+          <addressOffset>0x40006491</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -4827,9 +4827,9 @@
       </registers>
     </peripheral>
     <peripheral>
-      <name>TMP05_TMP05_STS</name>
+      <name>FAN_STATUS_REG</name>
       <description>No description available</description>
-      <baseAddress>0x40006461</baseAddress>
+      <baseAddress>0x0</baseAddress>
       <addressBlock>
         <offset>0</offset>
         <size>0x0</size>
@@ -4837,27 +4837,27 @@
       </addressBlock>
       <registers>
         <register>
-          <name>TMP05_TMP05_STS_STATUS_REG</name>
+          <name>FAN_STATUS_REG_STATUS_REG</name>
           <description>No description available</description>
-          <addressOffset>0x0</addressOffset>
+          <addressOffset>0x4000646C</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
           <resetMask>0</resetMask>
         </register>
         <register>
-          <name>TMP05_TMP05_STS_MASK_REG</name>
+          <name>FAN_STATUS_REG_MASK_REG</name>
           <description>No description available</description>
-          <addressOffset>0x20</addressOffset>
+          <addressOffset>0x4000648C</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
           <resetMask>0</resetMask>
         </register>
         <register>
-          <name>TMP05_TMP05_STS_STATUS_AUX_CTL_REG</name>
+          <name>FAN_STATUS_REG_STATUS_AUX_CTL_REG</name>
           <description>No description available</description>
-          <addressOffset>0x30</addressOffset>
+          <addressOffset>0x4000649C</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -5330,8 +5330,8 @@
           </fields>
         </register>
         <register>
-          <name>SPIS_MCU_RX_DATA</name>
-          <description>SPIS RX Data</description>
+          <name>SPIS_MCU_TX_DATA</name>
+          <description>SPIS TX Data</description>
           <addressOffset>0x40006507</addressOffset>
           <size>8</size>
           <access>read-write</access>
@@ -5339,8 +5339,8 @@
           <resetMask>0</resetMask>
         </register>
         <register>
-          <name>SPIS_MCU_TX_DATA</name>
-          <description>SPIS TX Data</description>
+          <name>SPIS_MCU_RX_DATA</name>
+          <description>SPIS RX Data</description>
           <addressOffset>0x40006507</addressOffset>
           <size>8</size>
           <access>read-write</access>
@@ -5808,7 +5808,7 @@
     <peripheral>
       <name>SENSOR_SELECT</name>
       <description>No description available</description>
-      <baseAddress>0x4000657B</baseAddress>
+      <baseAddress>0x0</baseAddress>
       <addressBlock>
         <offset>0</offset>
         <size>0x0</size>
@@ -5818,7 +5818,7 @@
         <register>
           <name>SENSOR_SELECT_CONTROL_REG</name>
           <description>No description available</description>
-          <addressOffset>0x0</addressOffset>
+          <addressOffset>0x4000657B</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>

@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <blockRegMap version="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://cypress.com/xsd/cyblockregmap cyblockregmap.xsd" xmlns="http://cypress.com/xsd/cyblockregmap">
-  <block name="CTS_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="RTS_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="CTS_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="cy_boot" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Tx_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Bootloader_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Em_EEPROM_Dynamic" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="UART_1" BASE="0x0" SIZE="0x0" desc="UART" visible="true" hidden="false">
     <block name="VirtualMux_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="RXInternalInterrupt" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
@@ -31,5 +30,7 @@
       <field name="UART_1_TX_STS_FIFO_NOT_FULL" from="3" to="3" access="R" resetVal="" desc="" hidden="false" />
     </register>
   </block>
+  <block name="Bootloader_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Tx_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Rx_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
 </blockRegMap>

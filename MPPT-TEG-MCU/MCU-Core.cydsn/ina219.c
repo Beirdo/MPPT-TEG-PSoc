@@ -51,9 +51,9 @@ void INA219_connect(int index) {
     I2C_RESET_Write(1);
     
     // First use the TCA9548 to switch the I2C bus over to the channel
-    I2C_1_I2CMasterSendStart(TCA9548_ADDR, I2C_1_I2C_WRITE_XFER_MODE, 0);  
-    I2C_1_I2CMasterWriteByte(value, 0);  // Write the data value
-    I2C_1_I2CMasterSendStop(0);
+    I2C_I2CMasterSendStart(TCA9548_ADDR, I2C_I2C_WRITE_XFER_MODE, 0);  
+    I2C_I2CMasterWriteByte(value, 0);  // Write the data value
+    I2C_I2CMasterSendStop(0);
     
     connected = value;
 }
@@ -63,24 +63,24 @@ uint16 INA219_read_register(uint8 addr, uint8 reg) {
     uint8 temp;
     
     // Write out the register number
-    I2C_1_I2CMasterSendStart(addr, I2C_1_I2C_WRITE_XFER_MODE, 0);  
-    I2C_1_I2CMasterWriteByte(reg, 0);  // Write the register address
+    I2C_I2CMasterSendStart(addr, I2C_I2C_WRITE_XFER_MODE, 0);  
+    I2C_I2CMasterWriteByte(reg, 0);  // Write the register address
     // Restart reading
-    I2C_1_I2CMasterSendRestart(addr, I2C_1_I2C_READ_XFER_MODE, 0);  
-    I2C_1_I2CMasterReadByte(I2C_1_I2C_ACK_DATA, &temp, 0);  // Read the MSB of value
+    I2C_I2CMasterSendRestart(addr, I2C_I2C_READ_XFER_MODE, 0);  
+    I2C_I2CMasterReadByte(I2C_I2C_ACK_DATA, &temp, 0);  // Read the MSB of value
     value = temp << 8;
-    I2C_1_I2CMasterReadByte(I2C_1_I2C_NAK_DATA, &temp, 0);  // Read the LSB of value
+    I2C_I2CMasterReadByte(I2C_I2C_NAK_DATA, &temp, 0);  // Read the LSB of value
     value |= temp;
-    I2C_1_I2CMasterSendStop(0);
+    I2C_I2CMasterSendStop(0);
     return value;
 }
 
 void INA219_write_register(uint8 addr, uint8 reg, uint16 value) {
-    I2C_1_I2CMasterSendStart(addr, I2C_1_I2C_WRITE_XFER_MODE, 0);  
-    I2C_1_I2CMasterWriteByte(reg, 0);  // Write the register address
-    I2C_1_I2CMasterWriteByte((value >> 8) & 0xFF, 0);  // Write the MSB of value
-    I2C_1_I2CMasterWriteByte(value & 0xFF, 0);  // Write the LSB of value
-    I2C_1_I2CMasterSendStop(0);
+    I2C_I2CMasterSendStart(addr, I2C_I2C_WRITE_XFER_MODE, 0);  
+    I2C_I2CMasterWriteByte(reg, 0);  // Write the register address
+    I2C_I2CMasterWriteByte((value >> 8) & 0xFF, 0);  // Write the MSB of value
+    I2C_I2CMasterWriteByte(value & 0xFF, 0);  // Write the LSB of value
+    I2C_I2CMasterSendStop(0);
 }
 
 void INA219_read(uint8 addr, int index, uint16 *current, uint16 *voltage, uint16 *power) {

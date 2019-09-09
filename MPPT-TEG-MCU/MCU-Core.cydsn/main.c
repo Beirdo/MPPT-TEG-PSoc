@@ -49,8 +49,8 @@ int main(void)
     
     initializeChannels();
     
-    DMA_1_Init();
-    DMA_1_SetInterruptCallback(dma_complete);
+    DMA_SPI_Init();
+    DMA_SPI_SetInterruptCallback(dma_complete);
     dma_complete_flag = 0;
     CyDmaEnable();
     
@@ -76,21 +76,21 @@ int main(void)
 
         // Now we want to send the entire teg_channel block to the CPU for display and upstream to IOT
         memcpy(transfer_buffer, teg_channels, sizeof(transfer_buffer));
-        SPI_1_SpiSetActiveSlaveSelect(SPI_1_SPI_SLAVE_SELECT0);
-        SPI_1_Start();
+        SPI_SpiSetActiveSlaveSelect(SPI_SPI_SLAVE_SELECT0);
+        SPI_Start();
         
         dma_complete_flag = 0;
-        DMA_1_SetDstAddress(0, (void *)SPI_1_TX_FIFO_WR_PTR);
-        DMA_1_SetSrcAddress(0, transfer_buffer);
-        DMA_1_SetNumDataElements(0, sizeof(transfer_buffer));
-        DMA_1_ValidateDescriptor(0);
-        DMA_1_ChEnable();
+        DMA_SPI_SetDstAddress(0, (void *)SPI_TX_FIFO_WR_PTR);
+        DMA_SPI_SetSrcAddress(0, transfer_buffer);
+        DMA_SPI_SetNumDataElements(0, sizeof(transfer_buffer));
+        DMA_SPI_ValidateDescriptor(0);
+        DMA_SPI_ChEnable();
         
         while(!dma_complete_flag) {
             CySysPmSleep();
         }
         
-        SPI_1_Stop();
+        SPI_Stop();
         
         // And finally, wait for the 100ms timer to tick, and do it all again
         while(lastTimer == CySysWdtGetCount(1)) {

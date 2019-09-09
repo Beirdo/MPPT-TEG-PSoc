@@ -13,9 +13,12 @@
 #include <FreeRTOS.h>
 #include <task.h>
 #include "project.h"
+#include "systemTasks.h"
 
 void prvSetupHardware()
 {
+    setupBacklightAdjust();
+    
     CyGlobalIntEnable;
 }
 
@@ -25,6 +28,7 @@ int main( void )
     prvSetupHardware();
 
     /* --- APPLICATION TASKS CAN BE CREATED HERE --- */
+    xTaskCreate(doTaskBacklightAdjust, "backlight-adjust", 100, NULL, 8, NULL);
 
     /* Start the created tasks running. */
     vTaskStartScheduler();

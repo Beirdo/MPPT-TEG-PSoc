@@ -28,7 +28,7 @@
       </registers>
     </peripheral>
     <peripheral>
-      <name>ResistiveTouch_1_ADC</name>
+      <name>ResistiveTouch_ADC</name>
       <description>No description available</description>
       <baseAddress>0x0</baseAddress>
       <addressBlock>
@@ -38,7 +38,7 @@
       </addressBlock>
       <registers>
         <register>
-          <name>ResistiveTouch_1_ADC_DSM_DEC_PM_ACT_CFG</name>
+          <name>ResistiveTouch_ADC_DSM_DEC_PM_ACT_CFG</name>
           <description>Decimator Active mode Power Register</description>
           <addressOffset>0x400043AA</addressOffset>
           <size>8</size>
@@ -87,7 +87,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DSM_DEC_PM_STBY_CFG</name>
+          <name>ResistiveTouch_ADC_DSM_DEC_PM_STBY_CFG</name>
           <description>Decimator Alternate Active mode Power Register</description>
           <addressOffset>0x400043BA</addressOffset>
           <size>8</size>
@@ -136,7 +136,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DEC_CR</name>
+          <name>ResistiveTouch_ADC_DEC_CR</name>
           <description>Decimator Control Register</description>
           <addressOffset>0x40004E00</addressOffset>
           <size>8</size>
@@ -290,7 +290,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DEC_SR</name>
+          <name>ResistiveTouch_ADC_DEC_SR</name>
           <description>Decimator Status Register</description>
           <addressOffset>0x40004E01</addressOffset>
           <size>8</size>
@@ -415,7 +415,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DEC_SHIFT1</name>
+          <name>ResistiveTouch_ADC_DEC_SHIFT1</name>
           <description>Decimator Shift Register</description>
           <addressOffset>0x40004E02</addressOffset>
           <size>8</size>
@@ -433,7 +433,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DEC_SHIFT2</name>
+          <name>ResistiveTouch_ADC_DEC_SHIFT2</name>
           <description>Decimator Shift Register</description>
           <addressOffset>0x40004E03</addressOffset>
           <size>8</size>
@@ -451,7 +451,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DEC_DR2</name>
+          <name>ResistiveTouch_ADC_DEC_DR2</name>
           <description>Decimator Decimation Rate (2) Register</description>
           <addressOffset>0x40004E04</addressOffset>
           <size>8</size>
@@ -469,7 +469,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DEC_DR2H</name>
+          <name>ResistiveTouch_ADC_DEC_DR2H</name>
           <description>Decimator Decimation Rate and Overflow Correction Register</description>
           <addressOffset>0x40004E05</addressOffset>
           <size>8</size>
@@ -494,7 +494,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DEC_DR1</name>
+          <name>ResistiveTouch_ADC_DEC_DR1</name>
           <description>Decimator Decimation Rate (1) Register</description>
           <addressOffset>0x40004E06</addressOffset>
           <size>8</size>
@@ -512,7 +512,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DEC_OCOR</name>
+          <name>ResistiveTouch_ADC_DEC_OCOR</name>
           <description>Decimator Offset Correction Coefficient (Low Byte) Register</description>
           <addressOffset>0x40004E08</addressOffset>
           <size>8</size>
@@ -530,7 +530,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DEC_OCORM</name>
+          <name>ResistiveTouch_ADC_DEC_OCORM</name>
           <description>Decimator Offset Correction Coefficient (Middle Byte) Register</description>
           <addressOffset>0x40004E09</addressOffset>
           <size>8</size>
@@ -548,7 +548,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DEC_OCORH</name>
+          <name>ResistiveTouch_ADC_DEC_OCORH</name>
           <description>Decimator Offset Correction Coefficient (High Byte) Register</description>
           <addressOffset>0x40004E0A</addressOffset>
           <size>8</size>
@@ -566,7 +566,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DEC_GCOR</name>
+          <name>ResistiveTouch_ADC_DEC_GCOR</name>
           <description>Decimator Gain Correction Coefficient (Low Byte) Register</description>
           <addressOffset>0x40004E0C</addressOffset>
           <size>8</size>
@@ -584,7 +584,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DEC_GCORH</name>
+          <name>ResistiveTouch_ADC_DEC_GCORH</name>
           <description>Decimator Gain Correction Coefficient (High Byte) Register</description>
           <addressOffset>0x40004E0D</addressOffset>
           <size>8</size>
@@ -602,7 +602,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DEC_GVAL</name>
+          <name>ResistiveTouch_ADC_DEC_GVAL</name>
           <description>Decimator Gain Correction Size Register</description>
           <addressOffset>0x40004E0E</addressOffset>
           <size>8</size>
@@ -620,7 +620,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DEC_OUTSAMP</name>
+          <name>ResistiveTouch_ADC_DEC_OUTSAMP</name>
           <description>Decimator Output Data Sample (Low Byte) Register</description>
           <addressOffset>0x40004E10</addressOffset>
           <size>8</size>
@@ -638,7 +638,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DEC_OUTSAMPM</name>
+          <name>ResistiveTouch_ADC_DEC_OUTSAMPM</name>
           <description>Decimator Output Data Sample (Middle Byte) Register</description>
           <addressOffset>0x40004E11</addressOffset>
           <size>8</size>
@@ -656,7 +656,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DEC_OUTSAMPH</name>
+          <name>ResistiveTouch_ADC_DEC_OUTSAMPH</name>
           <description>Decimator Output Data Sample (High Byte) Register</description>
           <addressOffset>0x40004E12</addressOffset>
           <size>8</size>
@@ -674,7 +674,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DEC_COHER</name>
+          <name>ResistiveTouch_ADC_DEC_COHER</name>
           <description>Decimator Coherency Register</description>
           <addressOffset>0x40004E14</addressOffset>
           <size>8</size>
@@ -772,7 +772,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DSM_CR0</name>
+          <name>ResistiveTouch_ADC_DSM_CR0</name>
           <description>Delta Sigma Modulator Control Register 0</description>
           <addressOffset>0x40005880</addressOffset>
           <size>8</size>
@@ -841,7 +841,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DSM_CR1</name>
+          <name>ResistiveTouch_ADC_DSM_CR1</name>
           <description>Delta Sigma Modulator Control Register 1</description>
           <addressOffset>0x40005881</addressOffset>
           <size>8</size>
@@ -885,7 +885,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DSM_CR2</name>
+          <name>ResistiveTouch_ADC_DSM_CR2</name>
           <description>Delta Sigma Modulator Control Register 2</description>
           <addressOffset>0x40005882</addressOffset>
           <size>8</size>
@@ -1040,7 +1040,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DSM_CR3</name>
+          <name>ResistiveTouch_ADC_DSM_CR3</name>
           <description>Delta Sigma Modulator Control Register 3</description>
           <addressOffset>0x40005883</addressOffset>
           <size>8</size>
@@ -1197,7 +1197,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DSM_CR4</name>
+          <name>ResistiveTouch_ADC_DSM_CR4</name>
           <description>Delta Sigma Modulator Control Register 4</description>
           <addressOffset>0x40005884</addressOffset>
           <size>8</size>
@@ -1281,7 +1281,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DSM_CR5</name>
+          <name>ResistiveTouch_ADC_DSM_CR5</name>
           <description>Delta Sigma Modulator Control Register 5</description>
           <addressOffset>0x40005885</addressOffset>
           <size>8</size>
@@ -1365,7 +1365,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DSM_CR6</name>
+          <name>ResistiveTouch_ADC_DSM_CR6</name>
           <description>Delta Sigma Modulator Control Register 6</description>
           <addressOffset>0x40005886</addressOffset>
           <size>8</size>
@@ -1434,7 +1434,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DSM_CR7</name>
+          <name>ResistiveTouch_ADC_DSM_CR7</name>
           <description>Delta Sigma Modulator Control Register 7</description>
           <addressOffset>0x40005887</addressOffset>
           <size>8</size>
@@ -1535,7 +1535,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DSM_CR8</name>
+          <name>ResistiveTouch_ADC_DSM_CR8</name>
           <description>Delta Sigma Modulator Control Register 8</description>
           <addressOffset>0x40005888</addressOffset>
           <size>8</size>
@@ -1703,7 +1703,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DSM_CR9</name>
+          <name>ResistiveTouch_ADC_DSM_CR9</name>
           <description>Delta Sigma Modulator Control Register 9</description>
           <addressOffset>0x40005889</addressOffset>
           <size>8</size>
@@ -1871,7 +1871,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DSM_CR10</name>
+          <name>ResistiveTouch_ADC_DSM_CR10</name>
           <description>Delta Sigma Modulator Control Register 10</description>
           <addressOffset>0x4000588A</addressOffset>
           <size>8</size>
@@ -2018,7 +2018,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DSM_CR11</name>
+          <name>ResistiveTouch_ADC_DSM_CR11</name>
           <description>Delta Sigma Modulator Control Register 11</description>
           <addressOffset>0x4000588B</addressOffset>
           <size>8</size>
@@ -2186,7 +2186,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DSM_CR12</name>
+          <name>ResistiveTouch_ADC_DSM_CR12</name>
           <description>Delta Sigma Modulator Control Register 12</description>
           <addressOffset>0x4000588C</addressOffset>
           <size>8</size>
@@ -2404,7 +2404,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DSM_CR13</name>
+          <name>ResistiveTouch_ADC_DSM_CR13</name>
           <description>Delta Sigma Modulator Control Register 13</description>
           <addressOffset>0x4000588D</addressOffset>
           <size>8</size>
@@ -2413,7 +2413,7 @@
           <resetMask>0</resetMask>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DSM_CR14</name>
+          <name>ResistiveTouch_ADC_DSM_CR14</name>
           <description>Delta Sigma Modulator Control Register 14</description>
           <addressOffset>0x4000588E</addressOffset>
           <size>8</size>
@@ -2562,7 +2562,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DSM_CR15</name>
+          <name>ResistiveTouch_ADC_DSM_CR15</name>
           <description>Delta Sigma Modulator Control Register 15</description>
           <addressOffset>0x4000588F</addressOffset>
           <size>8</size>
@@ -2651,7 +2651,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DSM_CR16</name>
+          <name>ResistiveTouch_ADC_DSM_CR16</name>
           <description>Delta Sigma Modulator Control Register 16</description>
           <addressOffset>0x40005890</addressOffset>
           <size>8</size>
@@ -2779,7 +2779,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DSM_CR17</name>
+          <name>ResistiveTouch_ADC_DSM_CR17</name>
           <description>Delta Sigma Modulator Control Register 17</description>
           <addressOffset>0x40005891</addressOffset>
           <size>8</size>
@@ -2915,7 +2915,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DSM_REF0</name>
+          <name>ResistiveTouch_ADC_DSM_REF0</name>
           <description>Delta Sigma Modulator Reference Register 0</description>
           <addressOffset>0x40005892</addressOffset>
           <size>8</size>
@@ -3049,7 +3049,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DSM_REF1</name>
+          <name>ResistiveTouch_ADC_DSM_REF1</name>
           <description>Delta Sigma Modulator Reference Register 1</description>
           <addressOffset>0x40005893</addressOffset>
           <size>8</size>
@@ -3079,7 +3079,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DSM_REF2</name>
+          <name>ResistiveTouch_ADC_DSM_REF2</name>
           <description>Delta Sigma Modulator Reference Register 2</description>
           <addressOffset>0x40005894</addressOffset>
           <size>8</size>
@@ -3146,7 +3146,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DSM_REF3</name>
+          <name>ResistiveTouch_ADC_DSM_REF3</name>
           <description>Delta Sigma Modulator Reference Register 3</description>
           <addressOffset>0x40005895</addressOffset>
           <size>8</size>
@@ -3199,7 +3199,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DSM_DEM0</name>
+          <name>ResistiveTouch_ADC_DSM_DEM0</name>
           <description>Delta Sigma Modulator Dynamic Element Matching Register 0</description>
           <addressOffset>0x40005896</addressOffset>
           <size>8</size>
@@ -3305,7 +3305,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DSM_DEM1</name>
+          <name>ResistiveTouch_ADC_DSM_DEM1</name>
           <description>Delta Sigma Modulator Dynamic Element Matching Register 1</description>
           <addressOffset>0x40005897</addressOffset>
           <size>8</size>
@@ -3323,7 +3323,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DSM_TST0</name>
+          <name>ResistiveTouch_ADC_DSM_TST0</name>
           <description>Delta Sigma Modulator Test Register 0</description>
           <addressOffset>0x40005898</addressOffset>
           <size>8</size>
@@ -3472,7 +3472,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DSM_TST1</name>
+          <name>ResistiveTouch_ADC_DSM_TST1</name>
           <description>Delta Sigma Modulator Test Register 1</description>
           <addressOffset>0x40005899</addressOffset>
           <size>8</size>
@@ -3481,7 +3481,7 @@
           <resetMask>0</resetMask>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DSM_BUF0</name>
+          <name>ResistiveTouch_ADC_DSM_BUF0</name>
           <description>Delta Sigma Modulator Buffer Register 0</description>
           <addressOffset>0x4000589A</addressOffset>
           <size>8</size>
@@ -3549,7 +3549,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DSM_BUF1</name>
+          <name>ResistiveTouch_ADC_DSM_BUF1</name>
           <description>Delta Sigma Modulator Buffer Register 1</description>
           <addressOffset>0x4000589B</addressOffset>
           <size>8</size>
@@ -3627,7 +3627,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DSM_BUF2</name>
+          <name>ResistiveTouch_ADC_DSM_BUF2</name>
           <description>Delta Sigma Modulator Buffer Register 2</description>
           <addressOffset>0x4000589C</addressOffset>
           <size>8</size>
@@ -3664,7 +3664,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DSM_BUF3</name>
+          <name>ResistiveTouch_ADC_DSM_BUF3</name>
           <description>Delta Sigma Modulator Buffer Register 3</description>
           <addressOffset>0x4000589D</addressOffset>
           <size>8</size>
@@ -3743,7 +3743,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DSM_MISC</name>
+          <name>ResistiveTouch_ADC_DSM_MISC</name>
           <description>Delta Sigma Modulator Miscallaneous Register</description>
           <addressOffset>0x4000589E</addressOffset>
           <size>8</size>
@@ -3811,7 +3811,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DSM_CLK</name>
+          <name>ResistiveTouch_ADC_DSM_CLK</name>
           <description>Delta Sigma Modulator Clock Selection Register</description>
           <addressOffset>0x40005B07</addressOffset>
           <size>8</size>
@@ -3909,7 +3909,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DSM_OUT0</name>
+          <name>ResistiveTouch_ADC_DSM_OUT0</name>
           <description>Delta Sigma Modulator Output Register 0</description>
           <addressOffset>0x40005B88</addressOffset>
           <size>8</size>
@@ -3927,7 +3927,7 @@
           </fields>
         </register>
         <register>
-          <name>ResistiveTouch_1_ADC_DSM_OUT1</name>
+          <name>ResistiveTouch_ADC_DSM_OUT1</name>
           <description>Delta Sigma Modulator Output Register 1</description>
           <addressOffset>0x40005B89</addressOffset>
           <size>8</size>
@@ -4055,7 +4055,7 @@
       </registers>
     </peripheral>
     <peripheral>
-      <name>UART_1</name>
+      <name>UART</name>
       <description>UART</description>
       <baseAddress>0x0</baseAddress>
       <addressBlock>
@@ -4065,7 +4065,7 @@
       </addressBlock>
       <registers>
         <register>
-          <name>RX_UART_1_RX_ADDRESS1</name>
+          <name>RX_UART_RX_ADDRESS1</name>
           <description>RX Address1 Register</description>
           <addressOffset>0x40006425</addressOffset>
           <size>8</size>
@@ -4074,7 +4074,7 @@
           <resetMask>0</resetMask>
         </register>
         <register>
-          <name>RX_UART_1_RX_ADDRESS2</name>
+          <name>RX_UART_RX_ADDRESS2</name>
           <description>RX Address2 Register</description>
           <addressOffset>0x40006435</addressOffset>
           <size>8</size>
@@ -4083,7 +4083,7 @@
           <resetMask>0</resetMask>
         </register>
         <register>
-          <name>RX_UART_1_RX_DATA</name>
+          <name>RX_UART_RX_DATA</name>
           <description>RX Data Register</description>
           <addressOffset>0x40006445</addressOffset>
           <size>8</size>
@@ -4092,7 +4092,7 @@
           <resetMask>0</resetMask>
         </register>
         <register>
-          <name>TX_UART_1_TX_DATA</name>
+          <name>TX_UART_TX_DATA</name>
           <description>TX Data Register</description>
           <addressOffset>0x4000644E</addressOffset>
           <size>8</size>
@@ -4101,7 +4101,7 @@
           <resetMask>0</resetMask>
         </register>
         <register>
-          <name>RX_UART_1_RX_STATUS</name>
+          <name>RX_UART_RX_STATUS</name>
           <description>RX status register</description>
           <addressOffset>0x40006464</addressOffset>
           <size>8</size>
@@ -4110,49 +4110,49 @@
           <resetMask>0</resetMask>
           <fields>
             <field>
-              <name>UART_1_RX_STS_MRKSPC</name>
+              <name>UART_RX_STS_MRKSPC</name>
               <description>No description available</description>
               <lsb>0</lsb>
               <msb>0</msb>
               <access>read-only</access>
             </field>
             <field>
-              <name>UART_1_RX_STS_BREAK</name>
+              <name>UART_RX_STS_BREAK</name>
               <description>No description available</description>
               <lsb>1</lsb>
               <msb>1</msb>
               <access>read-only</access>
             </field>
             <field>
-              <name>UART_1_RX_STS_PAR_ERROR</name>
+              <name>UART_RX_STS_PAR_ERROR</name>
               <description>No description available</description>
               <lsb>2</lsb>
               <msb>2</msb>
               <access>read-only</access>
             </field>
             <field>
-              <name>UART_1_RX_STS_STOP_ERROR</name>
+              <name>UART_RX_STS_STOP_ERROR</name>
               <description>No description available</description>
               <lsb>3</lsb>
               <msb>3</msb>
               <access>read-only</access>
             </field>
             <field>
-              <name>UART_1_RX_STS_OVERRUN</name>
+              <name>UART_RX_STS_OVERRUN</name>
               <description>No description available</description>
               <lsb>4</lsb>
               <msb>4</msb>
               <access>read-only</access>
             </field>
             <field>
-              <name>UART_1_RX_STS_FIFO_NOTEMPTY</name>
+              <name>UART_RX_STS_FIFO_NOTEMPTY</name>
               <description>No description available</description>
               <lsb>5</lsb>
               <msb>5</msb>
               <access>read-only</access>
             </field>
             <field>
-              <name>UART_1_RX_STS_ADDR_MATCH</name>
+              <name>UART_RX_STS_ADDR_MATCH</name>
               <description>No description available</description>
               <lsb>6</lsb>
               <msb>6</msb>
@@ -4161,7 +4161,7 @@
           </fields>
         </register>
         <register>
-          <name>TX_UART_1_TX_STATUS</name>
+          <name>TX_UART_TX_STATUS</name>
           <description>TX status register</description>
           <addressOffset>0x4000646E</addressOffset>
           <size>8</size>
@@ -4170,28 +4170,28 @@
           <resetMask>0</resetMask>
           <fields>
             <field>
-              <name>UART_1_TX_STS_COMPLETE</name>
+              <name>UART_TX_STS_COMPLETE</name>
               <description>No description available</description>
               <lsb>0</lsb>
               <msb>0</msb>
               <access>read-only</access>
             </field>
             <field>
-              <name>UART_1_TX_STS_FIFO_EMPTY</name>
+              <name>UART_TX_STS_FIFO_EMPTY</name>
               <description>No description available</description>
               <lsb>1</lsb>
               <msb>1</msb>
               <access>read-only</access>
             </field>
             <field>
-              <name>UART_1_TX_STS_FIFO_FULL</name>
+              <name>UART_TX_STS_FIFO_FULL</name>
               <description>No description available</description>
               <lsb>2</lsb>
               <msb>2</msb>
               <access>read-only</access>
             </field>
             <field>
-              <name>UART_1_TX_STS_FIFO_NOT_FULL</name>
+              <name>UART_TX_STS_FIFO_NOT_FULL</name>
               <description>No description available</description>
               <lsb>3</lsb>
               <msb>3</msb>
@@ -4827,7 +4827,7 @@
       </registers>
     </peripheral>
     <peripheral>
-      <name>TMP05_1_TMP05_STS</name>
+      <name>TMP05_TMP05_STS</name>
       <description>No description available</description>
       <baseAddress>0x40006461</baseAddress>
       <addressBlock>
@@ -4837,7 +4837,7 @@
       </addressBlock>
       <registers>
         <register>
-          <name>TMP05_1_TMP05_STS_STATUS_REG</name>
+          <name>TMP05_TMP05_STS_STATUS_REG</name>
           <description>No description available</description>
           <addressOffset>0x0</addressOffset>
           <size>8</size>
@@ -4846,7 +4846,7 @@
           <resetMask>0</resetMask>
         </register>
         <register>
-          <name>TMP05_1_TMP05_STS_MASK_REG</name>
+          <name>TMP05_TMP05_STS_MASK_REG</name>
           <description>No description available</description>
           <addressOffset>0x20</addressOffset>
           <size>8</size>
@@ -4855,7 +4855,7 @@
           <resetMask>0</resetMask>
         </register>
         <register>
-          <name>TMP05_1_TMP05_STS_STATUS_AUX_CTL_REG</name>
+          <name>TMP05_TMP05_STS_STATUS_AUX_CTL_REG</name>
           <description>No description available</description>
           <addressOffset>0x30</addressOffset>
           <size>8</size>
@@ -5274,7 +5274,7 @@
       </registers>
     </peripheral>
     <peripheral>
-      <name>SPIS_1</name>
+      <name>SPIS_MCU</name>
       <description>No description available</description>
       <baseAddress>0x0</baseAddress>
       <addressBlock>
@@ -5284,7 +5284,7 @@
       </addressBlock>
       <registers>
         <register>
-          <name>SPIS_1_TXSTATUS</name>
+          <name>SPIS_MCU_TXSTATUS</name>
           <description>SPIS TX Status Register</description>
           <addressOffset>0x40006463</addressOffset>
           <size>8</size>
@@ -5330,7 +5330,7 @@
           </fields>
         </register>
         <register>
-          <name>SPIS_1_RX_DATA</name>
+          <name>SPIS_MCU_RX_DATA</name>
           <description>SPIS RX Data</description>
           <addressOffset>0x40006507</addressOffset>
           <size>8</size>
@@ -5339,7 +5339,7 @@
           <resetMask>0</resetMask>
         </register>
         <register>
-          <name>SPIS_1_TX_DATA</name>
+          <name>SPIS_MCU_TX_DATA</name>
           <description>SPIS TX Data</description>
           <addressOffset>0x40006507</addressOffset>
           <size>8</size>
@@ -5348,7 +5348,7 @@
           <resetMask>0</resetMask>
         </register>
         <register>
-          <name>SPIS_1_RXSTATUS</name>
+          <name>SPIS_MCU_RXSTATUS</name>
           <description>SPIS RX Status Register</description>
           <addressOffset>0x40006568</addressOffset>
           <size>8</size>
@@ -5396,7 +5396,7 @@
       </registers>
     </peripheral>
     <peripheral>
-      <name>I2C_1</name>
+      <name>I2C</name>
       <description>No description available</description>
       <baseAddress>0x0</baseAddress>
       <addressBlock>
@@ -5406,7 +5406,7 @@
       </addressBlock>
       <registers>
         <register>
-          <name>I2C_1_FF_XCFG</name>
+          <name>I2C_FF_XCFG</name>
           <description>I2C Extended Configuration Register</description>
           <addressOffset>0x400049C8</addressOffset>
           <size>8</size>
@@ -5452,7 +5452,7 @@
           </fields>
         </register>
         <register>
-          <name>I2C_1_FF_ADDR</name>
+          <name>I2C_FF_ADDR</name>
           <description>I2C Slave Adddress Register</description>
           <addressOffset>0x400049CA</addressOffset>
           <size>8</size>
@@ -5470,7 +5470,7 @@
           </fields>
         </register>
         <register>
-          <name>I2C_1_FF_CFG</name>
+          <name>I2C_FF_CFG</name>
           <description>I2C Configuration Register</description>
           <addressOffset>0x400049D6</addressOffset>
           <size>8</size>
@@ -5530,7 +5530,7 @@
           </fields>
         </register>
         <register>
-          <name>I2C_1_FF_CSR</name>
+          <name>I2C_FF_CSR</name>
           <description>I2C Control and Status Register</description>
           <addressOffset>0x400049D7</addressOffset>
           <size>8</size>
@@ -5597,7 +5597,7 @@
           </fields>
         </register>
         <register>
-          <name>I2C_1_FF_DATA</name>
+          <name>I2C_FF_DATA</name>
           <description>I2C Data Register</description>
           <addressOffset>0x400049D8</addressOffset>
           <size>8</size>
@@ -5615,7 +5615,7 @@
           </fields>
         </register>
         <register>
-          <name>I2C_1_FF_MCSR</name>
+          <name>I2C_FF_MCSR</name>
           <description>Master Control and Status Register: I2C_MCSR</description>
           <addressOffset>0x400049D9</addressOffset>
           <size>8</size>
@@ -5661,7 +5661,7 @@
           </fields>
         </register>
         <register>
-          <name>I2C_1_FF_CLK_DIV1</name>
+          <name>I2C_FF_CLK_DIV1</name>
           <description>I2C Clock Divide Factor Register-1</description>
           <addressOffset>0x400049DB</addressOffset>
           <size>8</size>
@@ -5679,7 +5679,7 @@
           </fields>
         </register>
         <register>
-          <name>I2C_1_FF_CLK_DIV2</name>
+          <name>I2C_FF_CLK_DIV2</name>
           <description>I2C Clock Divide Factor Register-2</description>
           <addressOffset>0x400049DC</addressOffset>
           <size>8</size>
@@ -5697,7 +5697,7 @@
           </fields>
         </register>
         <register>
-          <name>I2C_1_FF__TMOUT_CSR</name>
+          <name>I2C_FF__TMOUT_CSR</name>
           <description>I2C Timerout Control and Status Register</description>
           <addressOffset>0x400049DD</addressOffset>
           <size>8</size>
@@ -5743,7 +5743,7 @@
           </fields>
         </register>
         <register>
-          <name>I2C_1_FF__TMOUT_SR</name>
+          <name>I2C_FF__TMOUT_SR</name>
           <description>I2C Timerout Status Register</description>
           <addressOffset>0x400049DE</addressOffset>
           <size>8</size>
@@ -5768,7 +5768,7 @@
           </fields>
         </register>
         <register>
-          <name>I2C_1_FF__TMOUT_CFG0</name>
+          <name>I2C_FF__TMOUT_CFG0</name>
           <description>I2C Timerout Period Configuration Register-0</description>
           <addressOffset>0x400049DF</addressOffset>
           <size>8</size>
@@ -5786,7 +5786,7 @@
           </fields>
         </register>
         <register>
-          <name>I2C_1_FF__TMOUT_CFG1</name>
+          <name>I2C_FF__TMOUT_CFG1</name>
           <description>Extended Configuration Register: TMOUT_CFG1</description>
           <addressOffset>0x400049E0</addressOffset>
           <size>8</size>
@@ -5827,7 +5827,7 @@
       </registers>
     </peripheral>
     <peripheral>
-      <name>RTC_1</name>
+      <name>RTC</name>
       <description>RTC</description>
       <baseAddress>0x0</baseAddress>
       <addressBlock>

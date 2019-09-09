@@ -12,6 +12,8 @@
 #ifndef CYAPICALLBACKS_H
 #define CYAPICALLBACKS_H
     
+#define LIGHT_SENSOR_IRQ_INTERRUPT_INTERRUPT_CALLBACK
+void LIGHT_SENSOR_IRQ_Interrupt_InterruptCallback(void);
 
     /*Define your macro callbacks here */
     /*For more information, refer to the Writing Code topic in the PSoC Creator Help.*/

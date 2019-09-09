@@ -9,7 +9,7 @@
     <peripheral>
       <name>PWM_ENABLE_REG</name>
       <description>No description available</description>
-      <baseAddress>0x4000647C</baseAddress>
+      <baseAddress>0x40006578</baseAddress>
       <addressBlock>
         <offset>0</offset>
         <size>0x0</size>
@@ -4067,7 +4067,7 @@
         <register>
           <name>RX_UART_1_RX_ADDRESS1</name>
           <description>RX Address1 Register</description>
-          <addressOffset>0x40006422</addressOffset>
+          <addressOffset>0x40006425</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -4076,7 +4076,7 @@
         <register>
           <name>RX_UART_1_RX_ADDRESS2</name>
           <description>RX Address2 Register</description>
-          <addressOffset>0x40006432</addressOffset>
+          <addressOffset>0x40006435</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -4085,7 +4085,7 @@
         <register>
           <name>RX_UART_1_RX_DATA</name>
           <description>RX Data Register</description>
-          <addressOffset>0x40006442</addressOffset>
+          <addressOffset>0x40006445</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -4094,7 +4094,7 @@
         <register>
           <name>TX_UART_1_TX_DATA</name>
           <description>TX Data Register</description>
-          <addressOffset>0x4000644B</addressOffset>
+          <addressOffset>0x4000644E</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -4103,7 +4103,7 @@
         <register>
           <name>RX_UART_1_RX_STATUS</name>
           <description>RX status register</description>
-          <addressOffset>0x40006462</addressOffset>
+          <addressOffset>0x40006464</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -4163,7 +4163,7 @@
         <register>
           <name>TX_UART_1_TX_STATUS</name>
           <description>TX status register</description>
-          <addressOffset>0x4000646B</addressOffset>
+          <addressOffset>0x4000646E</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -4214,7 +4214,7 @@
         <register>
           <name>DESULFATE_PWMGEN_Control_Reg</name>
           <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x40006475</addressOffset>
+          <addressOffset>0x40006476</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -4246,7 +4246,7 @@
         <register>
           <name>DESULFATE_PWMGEN_COMPARE_Reg_</name>
           <description>UDB.D0 - Assigned Compare Value</description>
-          <addressOffset>0x4000652B</addressOffset>
+          <addressOffset>0x40006526</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -4255,7 +4255,7 @@
         <register>
           <name>DESULFATE_PWMGEN_STATUS_AUX_CTRL</name>
           <description>UDB Auxilliary Control Register</description>
-          <addressOffset>0x4000659B</addressOffset>
+          <addressOffset>0x40006596</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -4674,7 +4674,7 @@
     <peripheral>
       <name>FAN_STATUS_REG</name>
       <description>No description available</description>
-      <baseAddress>0x4000646E</baseAddress>
+      <baseAddress>0x4000646C</baseAddress>
       <addressBlock>
         <offset>0</offset>
         <size>0x0</size>
@@ -5286,7 +5286,7 @@
         <register>
           <name>SPIS_1_TXSTATUS</name>
           <description>SPIS TX Status Register</description>
-          <addressOffset>0x40006466</addressOffset>
+          <addressOffset>0x40006463</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -5332,7 +5332,7 @@
         <register>
           <name>SPIS_1_RX_DATA</name>
           <description>SPIS RX Data</description>
-          <addressOffset>0x40006505</addressOffset>
+          <addressOffset>0x40006507</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -5341,7 +5341,7 @@
         <register>
           <name>SPIS_1_TX_DATA</name>
           <description>SPIS TX Data</description>
-          <addressOffset>0x40006505</addressOffset>
+          <addressOffset>0x40006507</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -5808,7 +5808,7 @@
     <peripheral>
       <name>SENSOR_SELECT</name>
       <description>No description available</description>
-      <baseAddress>0x40006579</baseAddress>
+      <baseAddress>0x4000657B</baseAddress>
       <addressBlock>
         <offset>0</offset>
         <size>0x0</size>

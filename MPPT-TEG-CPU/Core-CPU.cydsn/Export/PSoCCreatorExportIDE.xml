@@ -44,6 +44,8 @@
           <File BuildType="BUILD" Toolchain="">..\..\..\..\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Source\stream_buffer.c</File>
           <File BuildType="BUILD" Toolchain="">..\..\..\..\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Source\tasks.c</File>
           <File BuildType="BUILD" Toolchain="">..\..\..\..\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Source\timers.c</File>
+          <File BuildType="BUILD" Toolchain="">..\..\..\..\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Source\portable\GCC\ARM_CM3\port.c</File>
+          <File BuildType="BUILD" Toolchain="">heap_1.c</File>
           <File BuildType="BUILD" Toolchain="">cyapicallbacks.h</File>
           <File BuildType="BUILD" Toolchain="">device.h</File>
           <File BuildType="BUILD" Toolchain="">FreeRTOSConfig.h</File>
@@ -64,7 +66,6 @@
           <File BuildType="BUILD" Toolchain="">..\..\..\..\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Source\include\stream_buffer.h</File>
           <File BuildType="BUILD" Toolchain="">..\..\..\..\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Source\include\task.h</File>
           <File BuildType="BUILD" Toolchain="">..\..\..\..\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Source\include\timers.h</File>
-          <File BuildType="BUILD" Toolchain="">..\..\..\..\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Source\portable\GCC\ARM_CM3\port.c</File>
           <File BuildType="BUILD" Toolchain="">..\..\..\..\FreeRTOS\FreeRTOSv10.2.1\FreeRTOS\Source\portable\GCC\ARM_CM3\portmacro.h</File>
         </Files>
       </Folder>
@@ -152,15 +153,9 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\BACKLIGHT_PWM.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Bootloadable_1.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Bootloadable_1.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MOSI_3_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MOSI_3.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MOSI_3.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_1_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_1.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_1.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_2_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_2.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_2.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LIGHT_SENSOR_IRQ.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LIGHT_SENSOR_IRQ.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LIGHT_SENSOR_INT_aliases.h</File>
@@ -177,23 +172,11 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ESPBUSY_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ESPBUSY.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ESPBUSY.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MISO_3_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MISO_3.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MISO_3.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\RTC_1.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\RTC_1.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\RTC_1_INT.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\DieTemp_1.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\DieTemp_1.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SCLK_3_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SCLK_3.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SCLK_3.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_3b_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_3b.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_3b.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_3a_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_3a.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_3a.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SENSOR_SELECT.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SENSOR_SELECT.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SENSOR_SELECT_PM.c</File>
@@ -224,17 +207,8 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ResistiveTouch_1.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPI_4M_CLK.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPI_4M_CLK.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_3c_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_3c.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_3c.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPI_8M_CLK.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPI_8M_CLK.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_3d_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_3d.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_3d.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_3e_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_3e.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_3e.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\tmp05_in_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\tmp05_in.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\tmp05_in.h</File>
@@ -358,6 +332,33 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Timer_20KHz_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\isrTimer_20KHz_TC.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\isrTimer_20KHz_TC.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SCLK_0_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SCLK_0.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SCLK_0.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MOSI_0_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MOSI_0.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MOSI_0.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MISO_0_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MISO_0.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MISO_0.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_0_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_0.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_0.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_2b_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_2b.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_2b.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_2a_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_2a.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_2a.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_2c_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_2c.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_2c.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_2d_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_2d.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_2d.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_2e_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_2e.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_2e.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="D:\Workspace\MPPT-TEG-PSoc\MPPT-TEG-CPU\Core-CPU.cydsn\Export\ARM_GCC_Generic">

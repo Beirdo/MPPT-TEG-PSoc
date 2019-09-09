@@ -9,18 +9,47 @@
  *
  * ========================================
 */
+
+#include <FreeRTOS.h>
+#include <task.h>
 #include "project.h"
 
-int main(void)
+void prvSetupHardware()
 {
-    CyGlobalIntEnable; /* Enable global interrupts. */
+    CyGlobalIntEnable;
+}
 
-    /* Place your initialization/startup code here (e.g. MyInst_Start()) */
+int main( void )
+{
+    /* Perform any hardware setup necessary. */
+    prvSetupHardware();
 
-    for(;;)
-    {
-        /* Place your application code here. */
-    }
+    /* --- APPLICATION TASKS CAN BE CREATED HERE --- */
+
+    /* Start the created tasks running. */
+    vTaskStartScheduler();
+
+    /* Execution will only reach here if there was insufficient heap to
+    start the scheduler. */
+    for( ;; );
+    return 0;
+}
+
+void vApplicationStackOverflowHook( TaskHandle_t pxTask, char *pcTaskName )
+{
+    (void)pxTask;
+    (void)pcTaskName;
+    
+	/* The stack space has been execeeded for a task, considering allocating more. */
+	taskDISABLE_INTERRUPTS();
+	for( ;; );
+}
+
+void vApplicationMallocFailedHook( void )
+{
+	/* The heap space has been execeeded. */
+	taskDISABLE_INTERRUPTS();
+	for( ;; );
 }
 
 /* [] END OF FILE */

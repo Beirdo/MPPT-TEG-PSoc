@@ -7,8 +7,8 @@
 <wrkspc_folders />
 <files />
 <projects>
-<v>.\Bootloader.cydsn\Bootloader.cyprj</v>
 <v>.\MCU-Core.cydsn\MCU-Core.cyprj</v>
+<v>.\Bootloader-MCU.cydsn\Bootloader-MCU.cyprj</v>
 </projects>
 <workspace_id v="9c1e2a23-7f6c-445e-963c-24eb5a78bc5b" />
 <WriteAppVersionLastSavedWith v="4.1.0.3210" />

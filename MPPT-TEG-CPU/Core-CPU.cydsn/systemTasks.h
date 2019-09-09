@@ -19,6 +19,9 @@
     
 void setupBacklightAdjust(void);
 void doTaskBacklightAdjust(void *args);
+
+void setupThermalMonitor(void);
+void doTaskThermalMonitor(void *args);
     
 #endif // __systemTasks_h__
 

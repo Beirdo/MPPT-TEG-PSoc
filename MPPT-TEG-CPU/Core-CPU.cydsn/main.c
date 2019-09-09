@@ -18,7 +18,7 @@
 void prvSetupHardware()
 {
     setupBacklightAdjust();
-    
+    setupThermalMonitor();
     CyGlobalIntEnable;
 }
 
@@ -29,6 +29,7 @@ int main( void )
 
     /* --- APPLICATION TASKS CAN BE CREATED HERE --- */
     xTaskCreate(doTaskBacklightAdjust, "backlight-adjust", 100, NULL, 8, NULL);
+    xTaskCreate(doTaskThermalMonitor, "thermal-monitor", 100, NULL, 8, NULL);
 
     /* Start the created tasks running. */
     vTaskStartScheduler();

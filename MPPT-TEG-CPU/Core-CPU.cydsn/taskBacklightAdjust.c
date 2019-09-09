@@ -63,7 +63,7 @@ void doTaskBacklightAdjust(void *args)
            in ticks.  The pdMS_TO_TICKS macro is used to convert milliseconds
            into ticks.  xLastWakeTime is automatically updated within vTaskDelayUntil()
            so is not explicitly updated by the task. */
-        vTaskDelayUntil( &xLastWakeTime, xPeriod ); 
+        vTaskDelayUntil(&xLastWakeTime, xPeriod); 
         
         needCalc = 0;
         old_m = backlight_m;

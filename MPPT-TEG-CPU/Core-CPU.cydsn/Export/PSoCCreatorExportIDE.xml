@@ -49,6 +49,7 @@
           <File BuildType="BUILD" Toolchain="">taskBacklightAdjust.c</File>
           <File BuildType="BUILD" Toolchain="">ltr303.c</File>
           <File BuildType="BUILD" Toolchain="">i2cRegister.c</File>
+          <File BuildType="BUILD" Toolchain="">taskThermalMonitoring.c</File>
           <File BuildType="BUILD" Toolchain="">cyapicallbacks.h</File>
           <File BuildType="BUILD" Toolchain="">device.h</File>
           <File BuildType="BUILD" Toolchain="">FreeRTOSConfig.h</File>

@@ -52,6 +52,10 @@ void TMP05_EOC_ISR_Interrupt_InterruptCallback(void)
     portYIELD_FROM_ISR(preempted); 
 }
 
+// TODO: Add the handler for the fan controller interrupts
+
+// TODO: Add a holy-shit handle to shut off the pump if the hot-side gets too hot or on fan failure
+
 void setupThermalMonitor(void)
 {
     needToReadTMP05 = xSemaphoreCreateBinary();

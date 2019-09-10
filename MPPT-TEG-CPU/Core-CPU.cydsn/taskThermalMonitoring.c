@@ -30,6 +30,7 @@
 #define FAN_CONTROLLER_START (DIE_START + DIE_COUNT)
 #define FAN_CONTROLLER_COUNT 2
 
+#define INDEX_HOT_SIDE (THERMOCOUPLE_START + 1)
 #define INDEX_COLD_SIDE (THERMOCOUPLE_START + 2)
 #define INDEX_AMBIENT_AIR (THERMISTOR_START)
 #define FAN_PWM_DELTA 0x05
@@ -37,10 +38,14 @@
 #define SPI_SENSOR_COUNT (THERMISTOR_START + THERMISTOR_COUNT)
 #define TEMPERATURE_COUNT (FAN_CONTROLLER_START + FAN_CONTROLLER_COUNT)
 
+#define HOT_SIDE_THRESHOLD (85 << 3)    // We don't want the hot-side over 85C
+
 int16 temperatures[TEMPERATURE_COUNT];
 uint16 fan_speed[2];
 
 SemaphoreHandle_t needToReadTMP05;
+SemaphoreHandle_t fanOverrideFull;
+SemaphoreHandle_t shutdownPump;
 
 static int16 convert_temperature(uint16 raw_value);
 
@@ -52,14 +57,37 @@ void TMP05_EOC_ISR_Interrupt_InterruptCallback(void)
     portYIELD_FROM_ISR(preempted); 
 }
 
-// TODO: Add the handler for the fan controller interrupts
+#define FAN_ALERT 0x01
+#define FAN_FAIL 0x02
+#define FAN_SHUTDOWN 0x04
 
-// TODO: Add a holy-shit handle to shut off the pump if the hot-side gets too hot or on fan failure
+void FAN_IRQ_Interrupt_InterruptCallback(void)
+{
+    static BaseType_t preempted = pdFALSE;
+    static BaseType_t localPreempted = pdFALSE;
+    uint8 status = FAN_STATUS_REG_Read();   // will clear the bits on read
+    
+    if(status & FAN_ALERT) {
+        // Cold-side is over the threshold.
+        xSemaphoreGiveFromISR(fanOverrideFull, &localPreempted);
+        preempted = (localPreempted || preempted ? pdTRUE : pdFALSE);
+    }
+    
+    if(status & FAN_FAIL || status & FAN_SHUTDOWN) {
+        // Fan has failed or shutdown has occurred
+        xSemaphoreGiveFromISR(shutdownPump, &localPreempted);
+        preempted = (localPreempted || preempted ? pdTRUE : pdFALSE);
+    }
+    portYIELD_FROM_ISR(preempted);
+}
 
 void setupThermalMonitor(void)
 {
     needToReadTMP05 = xSemaphoreCreateBinary();
+    fanOverrideFull = xSemaphoreCreateBinary();
+    shutdownPump = xSemaphoreCreateBinary();
     MAX31760_initialize();
+    PUMP_ENABLE_Write(1);  // Turn on the circulation pump
 }
 
 void doTaskThermalMonitor(void *args)
@@ -76,6 +104,7 @@ void doTaskThermalMonitor(void *args)
     int16 deltaTempDiff;
     int8 deltaPwm;
     uint8 fan_pwm_value = 0;
+    int emergency_shutdown = 0;
     
     (void)args;
     
@@ -96,7 +125,7 @@ void doTaskThermalMonitor(void *args)
         }
         
         // Now pull the temperatures from the TMP05 chain if they are ready (already in 1/100C format!)
-        if (xSemaphoreTake(needToReadTMP05, 0) == pdPASS) {
+        if(xSemaphoreTake(needToReadTMP05, 0) == pdPASS) {
             for(i = 0; i < TMP05_COUNT; i++) {
                 tmp05_value[i] = TMP05_GetTemperature(i);
             }
@@ -142,23 +171,42 @@ void doTaskThermalMonitor(void *args)
             temperatures[FAN_CONTROLLER_START + i] = convert_temperature(fan_temp[i]);
         }
         
-        // Using cold-side temperature (heat sink) and ambient air temperature, create a control loop controlling the
-        // fan RPM via PWM.
-        prevTempDiff = tempDiff;
-        tempDiff = temperatures[INDEX_COLD_SIDE] - temperatures[INDEX_AMBIENT_AIR];
-        deltaTempDiff = tempDiff - prevTempDiff;
-        
-        if(abs(deltaTempDiff) < 4) { // within 0.5C, slow the fan
-            deltaPwm = - FAN_PWM_DELTA;
-        } else if(deltaTempDiff > 5 << 3) { // differential rose 5C or more, speed up quickly
-            deltaPwm = 4 * FAN_PWM_DELTA;
-        } else if(deltaTempDiff > 0) { // differential rose some, speed up medium
-            deltaPwm = 2 * FAN_PWM_DELTA;
-        } else { // differential decreased.  We are starting to catch up to the set-point
-            deltaPwm = FAN_PWM_DELTA;
+        if(xSemaphoreTake(fanOverrideFull, 0) == pdPASS) {
+            // Our cold-side temperature has hit the threshold.  Blast the fan full speed.
+            fan_pwm_value = 0xFF;
+        } else {
+            // Using cold-side temperature (heat sink) and ambient air temperature, create a control loop controlling the
+            // fan RPM via PWM.
+            prevTempDiff = tempDiff;
+            tempDiff = temperatures[INDEX_COLD_SIDE] - temperatures[INDEX_AMBIENT_AIR];
+            deltaTempDiff = tempDiff - prevTempDiff;
+            
+            if(abs(deltaTempDiff) < 4) { // within 0.5C, slow the fan
+                deltaPwm = - FAN_PWM_DELTA;
+            } else if(deltaTempDiff > 5 << 3) { // differential rose 5C or more, speed up quickly
+                deltaPwm = 4 * FAN_PWM_DELTA;
+            } else if(deltaTempDiff > 0) { // differential rose some, speed up medium
+                deltaPwm = 2 * FAN_PWM_DELTA;
+            } else { // differential decreased.  We are starting to catch up to the set-point
+                deltaPwm = FAN_PWM_DELTA;
+            }
+            fan_pwm_value = clamp(fan_pwm_value + deltaPwm, 0, 255);
         }
-        fan_pwm_value = clamp(fan_pwm_value + deltaPwm, 0, 255);
         MAX31760_set_fan_pwm(fan_pwm_value);
+        
+        if(xSemaphoreTake(shutdownPump, 0) == pdPASS) {
+            // Fan failure.  Shutdown the pump so the system can cool down
+            emergency_shutdown = 1;
+            PUMP_ENABLE_Write(0);
+        }
+
+        if(!emergency_shutdown) {
+            if(temperatures[INDEX_HOT_SIDE] >= HOT_SIDE_THRESHOLD) {
+                PUMP_ENABLE_Write(0);   // Hot side is getting too hot, stop circulation
+            } else {
+                PUMP_ENABLE_Write(1);   // Ensure we turn the circulating pump on
+            }
+        }
     }
 }
 

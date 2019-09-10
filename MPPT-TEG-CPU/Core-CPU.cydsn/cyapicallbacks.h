@@ -17,6 +17,9 @@ void LIGHT_SENSOR_IRQ_Interrupt_InterruptCallback(void);
 
 #define TMP05_EOC_ISR_INTERRUPT_INTERRUPT_CALLBACK
 void TMP05_EOC_ISR_Interrupt_InterruptCallback(void);
+
+#define FAN_IRQ_INTERRUPT_INTERRUPT_CALLBACK
+void FAN_IRQ_Interrupt_InterruptCallback(void);
     
 #endif /* CYAPICALLBACKS_H */   
 /* [] */

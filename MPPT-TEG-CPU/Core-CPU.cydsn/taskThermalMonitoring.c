@@ -45,7 +45,7 @@
 
 int16 temperatures[TEMPERATURE_COUNT];  // 0.125C LSB
 uint16 fan_speed[2];  // RPM
-uint16 flow_rate;     // mL/min
+uint32 flow_rate;     // mL/min
 
 SemaphoreHandle_t needToReadTMP05;
 SemaphoreHandle_t fanOverrideFull;
@@ -53,7 +53,7 @@ SemaphoreHandle_t shutdownPump;
 
 static int16 convert_temperature(uint16 raw_value);
 void water_flow_clear(void);
-uint32 water_flow_read(void);
+uint16 water_flow_read(void);
 
 void TMP05_EOC_ISR_Interrupt_InterruptCallback(void)
 {
@@ -92,11 +92,11 @@ void water_flow_clear(void)
     WATER_FLOW_Write(0x03);
 }
 
-uint32 water_flow_read(void)
+uint16 water_flow_read(void)
 {
-    uint32 reading = WATER_FLOW_COUNT_ReadCounter();
+    uint16 reading = WATER_FLOW_COUNT_ReadCounter();
     WATER_FLOW_Write(0x03);
-    return reading * 2;
+    return reading;
 }
 
 void setupThermalMonitor(void)
@@ -114,7 +114,7 @@ void doTaskThermalMonitor(void *args)
 {
     TickType_t xLastWakeTime;
     uint16 period;
-    uint32 flow_reading = 0;
+    uint16 flow_reading = 0;
     const TickType_t xPeriod = pdMS_TO_TICKS(100);
     int i;
     uint16 spi_sensor_value[SPI_SENSOR_COUNT];
@@ -238,8 +238,9 @@ void doTaskThermalMonitor(void *args)
         
         period = TICKS_TO_MS(xTaskGetTickCount() - xLastWakeTime);
         if(period) {  // should be about 100ms
-            flow_reading = water_flow_read();  // in mL, each tick is ~2mL flow
-            flow_rate = (uint16)((flow_reading * 1000 * 60) / period);   // output is mL/min
+            flow_reading = water_flow_read();  // pulse count (max per 100ms should be around 25)
+            // (x pulses / y ms)(1000 ms/1 s)(60 s/1 min)(1L / 485 pulses)(1000mL / 1L) = (x * 60,000,000) / (y * 485)
+            flow_rate = ((uint32)(flow_reading) * 60000000) / (uint32)(period * 485);   // output is mL/min
         }
     }
 }

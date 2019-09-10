@@ -18,6 +18,7 @@
 typedef struct _eeprom_contents {
     int16 backlight_m;
     int16 backlight_b;
+    uint8 fan_poles[2];
 } eeprom_contents_t;
 
 static eeprom_contents_t *eeprom_contents = (eeprom_contents_t *)(CYDEV_EE_BASE);

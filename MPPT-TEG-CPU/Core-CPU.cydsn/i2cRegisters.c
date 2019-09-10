@@ -12,6 +12,7 @@
 
 #include "project.h"
 #include "i2cRegisters.h"
+#include "utils.h"
 
 uint8 i2c_register_read(uint8 addr, uint8 regnum)
 {
@@ -32,5 +33,18 @@ void i2c_register_write(uint8 addr, uint8 regnum, uint8 value)
     I2C_MasterSendStop();
 }
 
+uint16 i2c_register_read_msb16(uint8 addr, uint8 basereg)
+{
+    uint16 value = TO_BYTE_C(i2c_register_read(addr, basereg));
+    value |= TO_BYTE_D(i2c_register_read(addr, basereg + 1));
+    return value;
+}
+
+uint16 i2c_register_read_lsb16(uint8 addr, uint8 basereg)
+{
+    uint16 value = TO_BYTE_D(i2c_register_read(addr, basereg));
+    value |= TO_BYTE_C(i2c_register_read(addr, basereg + 1));
+    return value;
+}
 
 /* [] END OF FILE */

@@ -29,6 +29,8 @@
 #define TO_BYTE_C(x) (((x) & 0xFF) << 8)
 #define TO_BYTE_D(x) ((x) & 0xFF)
     
+#define TICKS_TO_MS(x)  ((x) * 1000 / configTICK_RATE_HZ)
+    
 #endif // __utils_h__
 
 /* [] END OF FILE */

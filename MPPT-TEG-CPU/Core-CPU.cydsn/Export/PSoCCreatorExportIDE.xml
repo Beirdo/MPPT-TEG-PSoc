@@ -376,6 +376,20 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cycodeshareimport.ld</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cycodeshareexport.ld</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cycodeshareimport.scat</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\DUMP_VALVE_ENABLE_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\DUMP_VALVE_ENABLE.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\DUMP_VALVE_ENABLE.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WATER_FLOW_COUNT.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WATER_FLOW_COUNT.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WATER_FLOW_COUNT_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WATER_FLOW_PULSE_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WATER_FLOW_PULSE.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WATER_FLOW_PULSE.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WATER_FLOW.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WATER_FLOW.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WATER_FLOW_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WATER_FLOW_CLK.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WATER_FLOW_CLK.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Workspace\MPPT-TEG-PSoc\MPPT-TEG-CPU\Core-CPU.cydsn\Export\ARM_GCC_Generic">

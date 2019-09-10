@@ -38,16 +38,22 @@
 #define SPI_SENSOR_COUNT (THERMISTOR_START + THERMISTOR_COUNT)
 #define TEMPERATURE_COUNT (FAN_CONTROLLER_START + FAN_CONTROLLER_COUNT)
 
-#define HOT_SIDE_THRESHOLD (85 << 3)    // We don't want the hot-side over 85C
+#define HOT_SIDE_HOT_THRESHOLD (85 << 3)    // We don't want the hot-side over 85C
+#define HOT_SIDE_WARM_THRESHOLD (80 << 3)   // Turn on dump valve at 80C
+#define HOT_SIDE_COOL_THRESHOLD (75 << 3)   // Turn off dump valve at 75C
 
-int16 temperatures[TEMPERATURE_COUNT];
-uint16 fan_speed[2];
+
+int16 temperatures[TEMPERATURE_COUNT];  // 0.125C LSB
+uint16 fan_speed[2];  // RPM
+uint16 flow_rate;     // mL/min
 
 SemaphoreHandle_t needToReadTMP05;
 SemaphoreHandle_t fanOverrideFull;
 SemaphoreHandle_t shutdownPump;
 
 static int16 convert_temperature(uint16 raw_value);
+void water_flow_clear(void);
+uint32 water_flow_read(void);
 
 void TMP05_EOC_ISR_Interrupt_InterruptCallback(void)
 {
@@ -81,6 +87,18 @@ void FAN_IRQ_Interrupt_InterruptCallback(void)
     portYIELD_FROM_ISR(preempted);
 }
 
+void water_flow_clear(void)
+{
+    WATER_FLOW_Write(0x03);
+}
+
+uint32 water_flow_read(void)
+{
+    uint32 reading = WATER_FLOW_COUNT_ReadCounter();
+    WATER_FLOW_Write(0x03);
+    return reading * 2;
+}
+
 void setupThermalMonitor(void)
 {
     needToReadTMP05 = xSemaphoreCreateBinary();
@@ -88,11 +106,15 @@ void setupThermalMonitor(void)
     shutdownPump = xSemaphoreCreateBinary();
     MAX31760_initialize();
     PUMP_ENABLE_Write(1);  // Turn on the circulation pump
+    DUMP_VALVE_ENABLE_Write(0);  // Turn off dump valve
+    water_flow_clear(); // Reset and enable the water flow counter
 }
 
 void doTaskThermalMonitor(void *args)
 {
     TickType_t xLastWakeTime;
+    uint16 period;
+    uint32 flow_reading = 0;
     const TickType_t xPeriod = pdMS_TO_TICKS(100);
     int i;
     uint16 spi_sensor_value[SPI_SENSOR_COUNT];
@@ -116,7 +138,7 @@ void doTaskThermalMonitor(void *args)
            into ticks.  xLastWakeTime is automatically updated within vTaskDelayUntil()
            so is not explicitly updated by the task. */
         vTaskDelayUntil(&xLastWakeTime, xPeriod); 
-    
+        
         // Let's do the SPI sensors first
         for(i = 0; i < SPI_SENSOR_COUNT; i++) {
             SENSOR_SELECT_Write(i);
@@ -195,17 +217,29 @@ void doTaskThermalMonitor(void *args)
         MAX31760_set_fan_pwm(fan_pwm_value);
         
         if(xSemaphoreTake(shutdownPump, 0) == pdPASS) {
-            // Fan failure.  Shutdown the pump so the system can cool down
+            // Fan failure.  Shutdown the pump so the system can cool down, turn on dump valve
             emergency_shutdown = 1;
             PUMP_ENABLE_Write(0);
+            DUMP_VALVE_ENABLE_Write(1);
         }
 
         if(!emergency_shutdown) {
-            if(temperatures[INDEX_HOT_SIDE] >= HOT_SIDE_THRESHOLD) {
+            if(temperatures[INDEX_HOT_SIDE] >= HOT_SIDE_HOT_THRESHOLD) {
                 PUMP_ENABLE_Write(0);   // Hot side is getting too hot, stop circulation
+            } else if(temperatures[INDEX_HOT_SIDE] >= HOT_SIDE_WARM_THRESHOLD) {
+                DUMP_VALVE_ENABLE_Write(1);
             } else {
                 PUMP_ENABLE_Write(1);   // Ensure we turn the circulating pump on
+                if(temperatures[INDEX_HOT_SIDE] <= HOT_SIDE_COOL_THRESHOLD) {
+                    DUMP_VALVE_ENABLE_Write(0);
+                }
             }
+        }
+        
+        period = TICKS_TO_MS(xTaskGetTickCount() - xLastWakeTime);
+        if(period) {  // should be about 100ms
+            flow_reading = water_flow_read();  // in mL, each tick is ~2mL flow
+            flow_rate = (uint16)((flow_reading * 1000 * 60) / period);   // output is mL/min
         }
     }
 }

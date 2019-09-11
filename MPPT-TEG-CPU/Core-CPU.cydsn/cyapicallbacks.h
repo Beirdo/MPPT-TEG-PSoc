@@ -20,6 +20,17 @@ void TMP05_EOC_ISR_Interrupt_InterruptCallback(void);
 
 #define FAN_IRQ_INTERRUPT_INTERRUPT_CALLBACK
 void FAN_IRQ_Interrupt_InterruptCallback(void);
+
+#define ESP_BUSY_IRQ_INTERRUPT_INTERRUPT_CALLBACK
+void ESP_BUSY_IRQ_Interrupt_InterruptCallback(void);
+
+#define SPIM_WIFI_TX_ISR_ENTRY_CALLBACK
+void SPIM_WIFI_TX_ISR_EntryCallback(void);
+        
+#define SPIM_WIFI_TX_ISR_EXIT_CALLBACK
+void SPIM_WIFI_TX_ISR_ExitCallback(void);
+        
+        
     
 #endif /* CYAPICALLBACKS_H */   
 /* [] */

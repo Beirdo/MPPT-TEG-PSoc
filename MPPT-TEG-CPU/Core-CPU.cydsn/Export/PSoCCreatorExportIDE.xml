@@ -390,6 +390,11 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WATER_FLOW_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WATER_FLOW_CLK.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WATER_FLOW_CLK.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WIFI_CS_OVERRIDE.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WIFI_CS_OVERRIDE.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WIFI_CS_OVERRIDE_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPI_16M_CLK.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPI_16M_CLK.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Workspace\MPPT-TEG-PSoc\MPPT-TEG-CPU\Core-CPU.cydsn\Export\ARM_GCC_Generic">

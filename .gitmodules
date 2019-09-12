@@ -1,3 +1,6 @@
 [submodule "WiFiNINA-PSoC"]
 	path = WiFiNINA-PSoC
 	url = https://github.com/Beirdo/WiFiNINA-PSoC.git
+[submodule "emWinGraphics-PSoC"]
+	path = emWinGraphics-PSoC
+	url = https://gitlab.home.beirdo.ca/Beirdo/emWinGraphics-PSoC.git

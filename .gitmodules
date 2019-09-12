@@ -1,0 +1,3 @@
+[submodule "WiFiNINA-PSoC"]
+	path = WiFiNINA-PSoC
+	url = https://github.com/Beirdo/WiFiNINA-PSoC.git

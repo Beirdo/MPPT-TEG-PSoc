@@ -4,3 +4,6 @@
 [submodule "emWinGraphics-PSoC"]
 	path = emWinGraphics-PSoC
 	url = https://gitlab.home.beirdo.ca/Beirdo/emWinGraphics-PSoC.git
+[submodule "emFile-PSoC"]
+	path = emFile-PSoC
+	url = https://gitlab.home.beirdo.ca/Beirdo/emFile-PSoC.git

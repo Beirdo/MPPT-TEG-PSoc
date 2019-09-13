@@ -22,6 +22,12 @@ void doTaskBacklightAdjust(void *args);
 
 void setupThermalMonitor(void);
 void doTaskThermalMonitor(void *args);
+
+void setupGUITask(void);
+void doGUITask(void *args);
+
+void setupMcuSpiHandler(void);
+void doMcuSpiHandler(void *args);
     
 #endif // __systemTasks_h__
 

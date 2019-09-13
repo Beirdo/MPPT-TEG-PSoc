@@ -539,7 +539,7 @@ function getElementsByClass(rootNode, elemName, className)
 <tr> <td class="prop"> Project :</td>
 <td class="proptext"> MCU-Core</td></tr>
 <tr> <td class="prop"> Build Time :</td>
-<td class="proptext"> 09/09/19 12:12:25</td></tr>
+<td class="proptext"> 09/13/19 00:21:43</td></tr>
 <tr> <td class="prop"> Device :</td>
 <td class="proptext"> CY8C4246AZI-L423</td></tr>
 <tr> <td class="prop"> Temperature :</td>
@@ -603,11 +603,19 @@ Clock Summary Section</span>
 </thead> 
 <tbody>
 <tr> 
+ <td class = "text_info">ADC_SAR_SEQ_intClock(FFB)</td>
+ <td class = "text_info">ADC_SAR_SEQ_intClock(FFB)</td>
+ <td class = "number">1.600&nbsp;MHz</td>
+ <td class = "number">1.600&nbsp;MHz</td>
+ <td class = "number"> N/A </td>
+ <td class = "text_info"> </td>
+</tr>
+<tr> 
  <td class = "text_info">CyHFClk</td>
  <td class = "text_info">CyHFClk</td>
  <td class = "number">48.000&nbsp;MHz</td>
  <td class = "number">48.000&nbsp;MHz</td>
- <td class = "number">112.296&nbsp;MHz</td>
+ <td class = "number">112.600&nbsp;MHz</td>
  <td class = "text_info"></td>
 </tr>
 <tr> 
@@ -639,8 +647,16 @@ Clock Summary Section</span>
  <td class = "text_info">CyHFClk</td>
  <td class = "number">8.000&nbsp;MHz</td>
  <td class = "number">8.000&nbsp;MHz</td>
- <td class = "number">112.296&nbsp;MHz</td>
+ <td class = "number">112.600&nbsp;MHz</td>
  <td class = "text_info"></td>
+</tr>
+<tr> 
+ <td class = "text_info">ADC_SAR_SEQ_intClock</td>
+ <td class = "text_info">CyHFClk</td>
+ <td class = "number">1.600&nbsp;MHz</td>
+ <td class = "number">1.600&nbsp;MHz</td>
+ <td class = "number"> N/A </td>
+ <td class = "text_info"> </td>
 </tr>
 <tr> 
  <td class = "text_info">CyILO</td>
@@ -751,9 +767,9 @@ Destination Clock : PHASE_CLOCK : Positive edge(Required Frequency 8&nbsp;MHz)</
 <tr> 
  <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_1</td>
  <td class = "text_info">Net_1376/main_1</td>
- <td class = "number">112.296&nbsp;MHz</td>
- <td class = "number">8.905</td>
- <td class = "number">11.928</td>
+ <td class = "number">112.600&nbsp;MHz</td>
+ <td class = "number">8.881</td>
+ <td class = "number">11.952</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -787,11 +803,11 @@ Destination Clock : PHASE_CLOCK : Positive edge(Required Frequency 8&nbsp;MHz)</
  <td class = "text_info">Net_1395</td>
  <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_1</td>
  <td class = "text_info">Net_1376/main_1</td>
- <td class = "number">2.815</td>
+ <td class = "number">2.791</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell9</td>
- <td class = "text_info">U(1,2)</td>
+ <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">Net_1376</td>
  <td class = "text_info"></td>
@@ -814,321 +830,6 @@ Destination Clock : PHASE_CLOCK : Positive edge(Required Frequency 8&nbsp;MHz)</
 <tr> 
  <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_1</td>
  <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\/main_0</td>
- <td class = "number">112.296&nbsp;MHz</td>
- <td class = "number">8.905</td>
- <td class = "number">11.928</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="6">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/busclk</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_1</td>
- <td class = "number">2.580</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">Net_1395</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_1</td>
- <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\/main_0</td>
- <td class = "number">2.815</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell13</td>
- <td class = "text_info">U(1,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\</td>
- <td class = "text_info"></td>
- <td class = "text_info">SETUP</td>
- <td class = "number">3.510</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_1</td>
- <td class = "text_info">\PHASE_CLK_DIV:count_0\/main_0</td>
- <td class = "number">112.296&nbsp;MHz</td>
- <td class = "number">8.905</td>
- <td class = "number">11.928</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="6">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/busclk</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_1</td>
- <td class = "number">2.580</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">Net_1395</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_1</td>
- <td class = "text_info">\PHASE_CLK_DIV:count_0\/main_0</td>
- <td class = "number">2.815</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell14</td>
- <td class = "text_info">U(1,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">\PHASE_CLK_DIV:count_0\</td>
- <td class = "text_info"></td>
- <td class = "text_info">SETUP</td>
- <td class = "number">3.510</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
- <td class = "text_info">Net_1376/main_2</td>
- <td class = "number">112.486&nbsp;MHz</td>
- <td class = "number">8.890</td>
- <td class = "number">11.943</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="6">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/busclk</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
- <td class = "number">2.580</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">Net_2014</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
- <td class = "text_info">Net_1376/main_2</td>
- <td class = "number">2.800</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell9</td>
- <td class = "text_info">U(1,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">Net_1376</td>
- <td class = "text_info"></td>
- <td class = "text_info">SETUP</td>
- <td class = "number">3.510</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
- <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\/main_1</td>
- <td class = "number">112.486&nbsp;MHz</td>
- <td class = "number">8.890</td>
- <td class = "number">11.943</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="6">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/busclk</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
- <td class = "number">2.580</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">Net_2014</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
- <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\/main_1</td>
- <td class = "number">2.800</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell13</td>
- <td class = "text_info">U(1,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\</td>
- <td class = "text_info"></td>
- <td class = "text_info">SETUP</td>
- <td class = "number">3.510</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
- <td class = "text_info">\PHASE_CLK_DIV:count_0\/main_1</td>
- <td class = "number">112.486&nbsp;MHz</td>
- <td class = "number">8.890</td>
- <td class = "number">11.943</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="6">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/busclk</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
- <td class = "number">2.580</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">Net_2014</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
- <td class = "text_info">\PHASE_CLK_DIV:count_0\/main_1</td>
- <td class = "number">2.800</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell14</td>
- <td class = "text_info">U(1,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">\PHASE_CLK_DIV:count_0\</td>
- <td class = "text_info"></td>
- <td class = "text_info">SETUP</td>
- <td class = "number">3.510</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_1</td>
- <td class = "text_info">Net_2002_2/main_1</td>
  <td class = "number">112.600&nbsp;MHz</td>
  <td class = "number">8.881</td>
  <td class = "number">11.952</td>
@@ -1164,8 +865,197 @@ Destination Clock : PHASE_CLOCK : Positive edge(Required Frequency 8&nbsp;MHz)</
  <td class = "number">1</td>
  <td class = "text_info">Net_1395</td>
  <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_1</td>
- <td class = "text_info">Net_2002_2/main_1</td>
+ <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\/main_0</td>
  <td class = "number">2.791</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell13</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">3.510</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_1</td>
+ <td class = "text_info">\PHASE_CLK_DIV:count_0\/main_0</td>
+ <td class = "number">112.600&nbsp;MHz</td>
+ <td class = "number">8.881</td>
+ <td class = "number">11.952</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">controlcell1</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/busclk</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_1</td>
+ <td class = "number">2.580</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_1395</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_1</td>
+ <td class = "text_info">\PHASE_CLK_DIV:count_0\/main_0</td>
+ <td class = "number">2.791</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell14</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\PHASE_CLK_DIV:count_0\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">3.510</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
+ <td class = "text_info">Net_2002_2/main_2</td>
+ <td class = "number">112.613&nbsp;MHz</td>
+ <td class = "number">8.880</td>
+ <td class = "number">11.953</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">controlcell1</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/busclk</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
+ <td class = "number">2.580</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_2014</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
+ <td class = "text_info">Net_2002_2/main_2</td>
+ <td class = "number">2.790</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell10</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_2002_2</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">3.510</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_1</td>
+ <td class = "text_info">Net_2002_2/main_1</td>
+ <td class = "number">112.613&nbsp;MHz</td>
+ <td class = "number">8.880</td>
+ <td class = "number">11.953</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">controlcell1</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/busclk</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_1</td>
+ <td class = "number">2.580</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_1395</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_1</td>
+ <td class = "text_info">Net_2002_2/main_1</td>
+ <td class = "number">2.790</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell10</td>
@@ -1192,9 +1082,9 @@ Destination Clock : PHASE_CLOCK : Positive edge(Required Frequency 8&nbsp;MHz)</
 <tr> 
  <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_1</td>
  <td class = "text_info">Net_2002_1/main_0</td>
- <td class = "number">112.600&nbsp;MHz</td>
- <td class = "number">8.881</td>
- <td class = "number">11.952</td>
+ <td class = "number">112.613&nbsp;MHz</td>
+ <td class = "number">8.880</td>
+ <td class = "number">11.953</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1228,7 +1118,70 @@ Destination Clock : PHASE_CLOCK : Positive edge(Required Frequency 8&nbsp;MHz)</
  <td class = "text_info">Net_1395</td>
  <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_1</td>
  <td class = "text_info">Net_2002_1/main_0</td>
- <td class = "number">2.791</td>
+ <td class = "number">2.790</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell11</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_2002_1</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">3.510</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
+ <td class = "text_info">Net_2002_1/main_1</td>
+ <td class = "number">112.613&nbsp;MHz</td>
+ <td class = "number">8.880</td>
+ <td class = "number">11.953</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">controlcell1</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/busclk</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
+ <td class = "number">2.580</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_2014</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
+ <td class = "text_info">Net_2002_1/main_1</td>
+ <td class = "number">2.790</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell11</td>
@@ -1255,9 +1208,9 @@ Destination Clock : PHASE_CLOCK : Positive edge(Required Frequency 8&nbsp;MHz)</
 <tr> 
  <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_1</td>
  <td class = "text_info">Net_2002_0/main_0</td>
- <td class = "number">112.600&nbsp;MHz</td>
- <td class = "number">8.881</td>
- <td class = "number">11.952</td>
+ <td class = "number">112.613&nbsp;MHz</td>
+ <td class = "number">8.880</td>
+ <td class = "number">11.953</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1291,7 +1244,7 @@ Destination Clock : PHASE_CLOCK : Positive edge(Required Frequency 8&nbsp;MHz)</
  <td class = "text_info">Net_1395</td>
  <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_1</td>
  <td class = "text_info">Net_2002_0/main_0</td>
- <td class = "number">2.791</td>
+ <td class = "number">2.790</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell12</td>
@@ -1317,7 +1270,70 @@ Destination Clock : PHASE_CLOCK : Positive edge(Required Frequency 8&nbsp;MHz)</
 </tr>
 <tr> 
  <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
- <td class = "text_info">Net_2002_2/main_2</td>
+ <td class = "text_info">Net_2002_0/main_1</td>
+ <td class = "number">112.613&nbsp;MHz</td>
+ <td class = "number">8.880</td>
+ <td class = "number">11.953</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">controlcell1</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/busclk</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
+ <td class = "number">2.580</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_2014</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
+ <td class = "text_info">Net_2002_0/main_1</td>
+ <td class = "number">2.790</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell12</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_2002_0</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">3.510</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
+ <td class = "text_info">Net_1376/main_2</td>
  <td class = "number">112.663&nbsp;MHz</td>
  <td class = "number">8.876</td>
  <td class = "number">11.957</td>
@@ -1353,14 +1369,14 @@ Destination Clock : PHASE_CLOCK : Positive edge(Required Frequency 8&nbsp;MHz)</
  <td class = "number">1</td>
  <td class = "text_info">Net_2014</td>
  <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
- <td class = "text_info">Net_2002_2/main_2</td>
+ <td class = "text_info">Net_1376/main_2</td>
  <td class = "number">2.786</td>
 </tr>
 <tr> 
- <td class = "text_info">macrocell10</td>
+ <td class = "text_info">macrocell9</td>
  <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
- <td class = "text_info">Net_2002_2</td>
+ <td class = "text_info">Net_1376</td>
  <td class = "text_info"></td>
  <td class = "text_info">SETUP</td>
  <td class = "number">3.510</td>
@@ -1410,11 +1426,389 @@ Destination Clock : PHASE_CLOCK : Positive edge(Required Frequency 8&nbsp;MHz)</
 </thead> 
 <tbody>
 <tr> 
+ <td class = "text_info">Net_1376/q</td>
+ <td class = "text_info">Net_1376/main_0</td>
+ <td class = "number">118.413&nbsp;MHz</td>
+ <td class = "number">8.445</td>
+ <td class = "number">116.555</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell9</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_1376</td>
+ <td class = "text_info">Net_1376/clock_0</td>
+ <td class = "text_info">Net_1376/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell9</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_1376</td>
+ <td class = "text_info">Net_1376/q</td>
+ <td class = "text_info">Net_1376/main_0</td>
+ <td class = "number">3.685</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell9</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_1376</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">3.510</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">Net_2002_0/q</td>
+ <td class = "text_info">Net_2002_2/main_4</td>
+ <td class = "number">120.207&nbsp;MHz</td>
+ <td class = "number">8.319</td>
+ <td class = "number">116.681</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell12</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_2002_0</td>
+ <td class = "text_info">Net_2002_0/clock_0</td>
+ <td class = "text_info">Net_2002_0/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_2002_0</td>
+ <td class = "text_info">Net_2002_0/q</td>
+ <td class = "text_info">Net_2002_2/main_4</td>
+ <td class = "number">3.559</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell10</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_2002_2</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">3.510</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">Net_2002_0/q</td>
+ <td class = "text_info">Net_2002_1/main_3</td>
+ <td class = "number">120.207&nbsp;MHz</td>
+ <td class = "number">8.319</td>
+ <td class = "number">116.681</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell12</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_2002_0</td>
+ <td class = "text_info">Net_2002_0/clock_0</td>
+ <td class = "text_info">Net_2002_0/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_2002_0</td>
+ <td class = "text_info">Net_2002_0/q</td>
+ <td class = "text_info">Net_2002_1/main_3</td>
+ <td class = "number">3.559</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell11</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_2002_1</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">3.510</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">Net_2002_0/q</td>
+ <td class = "text_info">Net_2002_0/main_2</td>
+ <td class = "number">120.207&nbsp;MHz</td>
+ <td class = "number">8.319</td>
+ <td class = "number">116.681</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell12</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_2002_0</td>
+ <td class = "text_info">Net_2002_0/clock_0</td>
+ <td class = "text_info">Net_2002_0/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell12</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_2002_0</td>
+ <td class = "text_info">Net_2002_0/q</td>
+ <td class = "text_info">Net_2002_0/main_2</td>
+ <td class = "number">3.559</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell12</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_2002_0</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">3.510</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">Net_2002_1/q</td>
+ <td class = "text_info">Net_2002_2/main_3</td>
+ <td class = "number">122.911&nbsp;MHz</td>
+ <td class = "number">8.136</td>
+ <td class = "number">116.864</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell11</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_2002_1</td>
+ <td class = "text_info">Net_2002_1/clock_0</td>
+ <td class = "text_info">Net_2002_1/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_2002_1</td>
+ <td class = "text_info">Net_2002_1/q</td>
+ <td class = "text_info">Net_2002_2/main_3</td>
+ <td class = "number">3.376</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell10</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_2002_2</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">3.510</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">Net_2002_1/q</td>
+ <td class = "text_info">Net_2002_1/main_2</td>
+ <td class = "number">122.911&nbsp;MHz</td>
+ <td class = "number">8.136</td>
+ <td class = "number">116.864</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell11</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_2002_1</td>
+ <td class = "text_info">Net_2002_1/clock_0</td>
+ <td class = "text_info">Net_2002_1/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell11</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_2002_1</td>
+ <td class = "text_info">Net_2002_1/q</td>
+ <td class = "text_info">Net_2002_1/main_2</td>
+ <td class = "number">3.376</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell11</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_2002_1</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">3.510</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
  <td class = "text_info">Net_2002_2/q</td>
  <td class = "text_info">Net_2002_2/main_0</td>
- <td class = "number">120.120&nbsp;MHz</td>
- <td class = "number">8.325</td>
- <td class = "number">116.675</td>
+ <td class = "number">122.986&nbsp;MHz</td>
+ <td class = "number">8.131</td>
+ <td class = "number">116.869</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1448,391 +1842,13 @@ Destination Clock : PHASE_CLOCK : Positive edge(Required Frequency 8&nbsp;MHz)</
  <td class = "text_info">Net_2002_2</td>
  <td class = "text_info">Net_2002_2/q</td>
  <td class = "text_info">Net_2002_2/main_0</td>
- <td class = "number">3.565</td>
+ <td class = "number">3.371</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell10</td>
  <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">Net_2002_2</td>
- <td class = "text_info"></td>
- <td class = "text_info">SETUP</td>
- <td class = "number">3.510</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">Net_2002_1/q</td>
- <td class = "text_info">Net_2002_2/main_3</td>
- <td class = "number">122.669&nbsp;MHz</td>
- <td class = "number">8.152</td>
- <td class = "number">116.848</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="6">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell11</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">Net_2002_1</td>
- <td class = "text_info">Net_2002_1/clock_0</td>
- <td class = "text_info">Net_2002_1/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">Net_2002_1</td>
- <td class = "text_info">Net_2002_1/q</td>
- <td class = "text_info">Net_2002_2/main_3</td>
- <td class = "number">3.392</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell10</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">Net_2002_2</td>
- <td class = "text_info"></td>
- <td class = "text_info">SETUP</td>
- <td class = "number">3.510</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">Net_2002_1/q</td>
- <td class = "text_info">Net_2002_1/main_2</td>
- <td class = "number">122.669&nbsp;MHz</td>
- <td class = "number">8.152</td>
- <td class = "number">116.848</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="6">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell11</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">Net_2002_1</td>
- <td class = "text_info">Net_2002_1/clock_0</td>
- <td class = "text_info">Net_2002_1/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell11</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">Net_2002_1</td>
- <td class = "text_info">Net_2002_1/q</td>
- <td class = "text_info">Net_2002_1/main_2</td>
- <td class = "number">3.392</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell11</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">Net_2002_1</td>
- <td class = "text_info"></td>
- <td class = "text_info">SETUP</td>
- <td class = "number">3.510</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">Net_1376/q</td>
- <td class = "text_info">Net_1376/main_0</td>
- <td class = "number">123.062&nbsp;MHz</td>
- <td class = "number">8.126</td>
- <td class = "number">116.874</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="6">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell9</td>
- <td class = "text_info">U(1,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">Net_1376</td>
- <td class = "text_info">Net_1376/clock_0</td>
- <td class = "text_info">Net_1376/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell9</td>
- <td class = "text_info">U(1,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">Net_1376</td>
- <td class = "text_info">Net_1376/q</td>
- <td class = "text_info">Net_1376/main_0</td>
- <td class = "number">3.366</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell9</td>
- <td class = "text_info">U(1,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">Net_1376</td>
- <td class = "text_info"></td>
- <td class = "text_info">SETUP</td>
- <td class = "number">3.510</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">Net_2002_0/q</td>
- <td class = "text_info">Net_2002_2/main_4</td>
- <td class = "number">126.024&nbsp;MHz</td>
- <td class = "number">7.935</td>
- <td class = "number">117.065</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="6">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell12</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">Net_2002_0</td>
- <td class = "text_info">Net_2002_0/clock_0</td>
- <td class = "text_info">Net_2002_0/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">Net_2002_0</td>
- <td class = "text_info">Net_2002_0/q</td>
- <td class = "text_info">Net_2002_2/main_4</td>
- <td class = "number">3.175</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell10</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">Net_2002_2</td>
- <td class = "text_info"></td>
- <td class = "text_info">SETUP</td>
- <td class = "number">3.510</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">Net_2002_0/q</td>
- <td class = "text_info">Net_2002_1/main_3</td>
- <td class = "number">126.024&nbsp;MHz</td>
- <td class = "number">7.935</td>
- <td class = "number">117.065</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="6">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell12</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">Net_2002_0</td>
- <td class = "text_info">Net_2002_0/clock_0</td>
- <td class = "text_info">Net_2002_0/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">Net_2002_0</td>
- <td class = "text_info">Net_2002_0/q</td>
- <td class = "text_info">Net_2002_1/main_3</td>
- <td class = "number">3.175</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell11</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">Net_2002_1</td>
- <td class = "text_info"></td>
- <td class = "text_info">SETUP</td>
- <td class = "number">3.510</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">Net_2002_0/q</td>
- <td class = "text_info">Net_2002_0/main_2</td>
- <td class = "number">126.024&nbsp;MHz</td>
- <td class = "number">7.935</td>
- <td class = "number">117.065</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="6">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell12</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">Net_2002_0</td>
- <td class = "text_info">Net_2002_0/clock_0</td>
- <td class = "text_info">Net_2002_0/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell12</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">Net_2002_0</td>
- <td class = "text_info">Net_2002_0/q</td>
- <td class = "text_info">Net_2002_0/main_2</td>
- <td class = "number">3.175</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell12</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">Net_2002_0</td>
  <td class = "text_info"></td>
  <td class = "text_info">SETUP</td>
  <td class = "number">3.510</td>
@@ -1853,9 +1869,9 @@ Destination Clock : PHASE_CLOCK : Positive edge(Required Frequency 8&nbsp;MHz)</
 <tr> 
  <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\/q</td>
  <td class = "text_info">Net_1376/main_3</td>
- <td class = "number">141.523&nbsp;MHz</td>
- <td class = "number">7.066</td>
- <td class = "number">117.934</td>
+ <td class = "number">141.283&nbsp;MHz</td>
+ <td class = "number">7.078</td>
+ <td class = "number">117.922</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1875,7 +1891,7 @@ Destination Clock : PHASE_CLOCK : Positive edge(Required Frequency 8&nbsp;MHz)</
 <tbody>
 <tr> 
  <td class = "text_info">macrocell13</td>
- <td class = "text_info">U(1,2)</td>
+ <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\</td>
  <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\/clock_0</td>
@@ -1889,11 +1905,11 @@ Destination Clock : PHASE_CLOCK : Positive edge(Required Frequency 8&nbsp;MHz)</
  <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\</td>
  <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\/q</td>
  <td class = "text_info">Net_1376/main_3</td>
- <td class = "number">2.306</td>
+ <td class = "number">2.318</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell9</td>
- <td class = "text_info">U(1,2)</td>
+ <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">Net_1376</td>
  <td class = "text_info"></td>
@@ -1916,9 +1932,9 @@ Destination Clock : PHASE_CLOCK : Positive edge(Required Frequency 8&nbsp;MHz)</
 <tr> 
  <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\/q</td>
  <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\/main_2</td>
- <td class = "number">141.523&nbsp;MHz</td>
- <td class = "number">7.066</td>
- <td class = "number">117.934</td>
+ <td class = "number">141.283&nbsp;MHz</td>
+ <td class = "number">7.078</td>
+ <td class = "number">117.922</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1938,7 +1954,7 @@ Destination Clock : PHASE_CLOCK : Positive edge(Required Frequency 8&nbsp;MHz)</
 <tbody>
 <tr> 
  <td class = "text_info">macrocell13</td>
- <td class = "text_info">U(1,2)</td>
+ <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\</td>
  <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\/clock_0</td>
@@ -1947,16 +1963,16 @@ Destination Clock : PHASE_CLOCK : Positive edge(Required Frequency 8&nbsp;MHz)</
 </tr>
 <tr> 
  <td class = "text_info">macrocell13</td>
- <td class = "text_info">U(1,2)</td>
+ <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\</td>
  <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\/q</td>
  <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\/main_2</td>
- <td class = "number">2.306</td>
+ <td class = "number">2.318</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell13</td>
- <td class = "text_info">U(1,2)</td>
+ <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\</td>
  <td class = "text_info"></td>
@@ -1979,9 +1995,9 @@ Destination Clock : PHASE_CLOCK : Positive edge(Required Frequency 8&nbsp;MHz)</
 <tr> 
  <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\/q</td>
  <td class = "text_info">\PHASE_CLK_DIV:count_0\/main_2</td>
- <td class = "number">141.523&nbsp;MHz</td>
- <td class = "number">7.066</td>
- <td class = "number">117.934</td>
+ <td class = "number">141.283&nbsp;MHz</td>
+ <td class = "number">7.078</td>
+ <td class = "number">117.922</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -2001,7 +2017,7 @@ Destination Clock : PHASE_CLOCK : Positive edge(Required Frequency 8&nbsp;MHz)</
 <tbody>
 <tr> 
  <td class = "text_info">macrocell13</td>
- <td class = "text_info">U(1,2)</td>
+ <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\</td>
  <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\/clock_0</td>
@@ -2015,11 +2031,11 @@ Destination Clock : PHASE_CLOCK : Positive edge(Required Frequency 8&nbsp;MHz)</
  <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\</td>
  <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\/q</td>
  <td class = "text_info">\PHASE_CLK_DIV:count_0\/main_2</td>
- <td class = "number">2.306</td>
+ <td class = "number">2.318</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell14</td>
- <td class = "text_info">U(1,2)</td>
+ <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">\PHASE_CLK_DIV:count_0\</td>
  <td class = "text_info"></td>
@@ -2077,374 +2093,8 @@ Destination Clock : PHASE_CLOCK : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
- <td class = "text_info">Net_2002_2/main_2</td>
- <td class = "number">4.826</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/busclk</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
- <td class = "number">2.040</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">Net_2014</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
- <td class = "text_info">Net_2002_2/main_2</td>
- <td class = "number">2.786</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell10</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">Net_2002_2</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
- <td class = "text_info">Net_2002_1/main_1</td>
- <td class = "number">4.826</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/busclk</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
- <td class = "number">2.040</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">Net_2014</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
- <td class = "text_info">Net_2002_1/main_1</td>
- <td class = "number">2.786</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell11</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">Net_2002_1</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
- <td class = "text_info">Net_2002_0/main_1</td>
- <td class = "number">4.826</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/busclk</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
- <td class = "number">2.040</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">Net_2014</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
- <td class = "text_info">Net_2002_0/main_1</td>
- <td class = "number">2.786</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell12</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">Net_2002_0</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_1</td>
- <td class = "text_info">Net_2002_2/main_1</td>
- <td class = "number">4.831</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/busclk</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_1</td>
- <td class = "number">2.040</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">Net_1395</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_1</td>
- <td class = "text_info">Net_2002_2/main_1</td>
- <td class = "number">2.791</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell10</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">Net_2002_2</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_1</td>
- <td class = "text_info">Net_2002_1/main_0</td>
- <td class = "number">4.831</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/busclk</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_1</td>
- <td class = "number">2.040</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">Net_1395</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_1</td>
- <td class = "text_info">Net_2002_1/main_0</td>
- <td class = "number">2.791</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell11</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">Net_2002_1</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_1</td>
- <td class = "text_info">Net_2002_0/main_0</td>
- <td class = "number">4.831</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/busclk</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_1</td>
- <td class = "number">2.040</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">Net_1395</td>
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_1</td>
- <td class = "text_info">Net_2002_0/main_0</td>
- <td class = "number">2.791</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell12</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">Net_2002_0</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
  <td class = "text_info">Net_1376/main_2</td>
- <td class = "number">4.840</td>
+ <td class = "number">4.826</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -2478,11 +2128,11 @@ Destination Clock : PHASE_CLOCK : Positive edge</span>
  <td class = "text_info">Net_2014</td>
  <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
  <td class = "text_info">Net_1376/main_2</td>
- <td class = "number">2.800</td>
+ <td class = "number">2.786</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell9</td>
- <td class = "text_info">U(1,2)</td>
+ <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">Net_1376</td>
  <td class = "text_info"> </td>
@@ -2505,7 +2155,7 @@ Destination Clock : PHASE_CLOCK : Positive edge</span>
 <tr> 
  <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
  <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\/main_1</td>
- <td class = "number">4.840</td>
+ <td class = "number">4.826</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -2539,11 +2189,11 @@ Destination Clock : PHASE_CLOCK : Positive edge</span>
  <td class = "text_info">Net_2014</td>
  <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
  <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\/main_1</td>
- <td class = "number">2.800</td>
+ <td class = "number">2.786</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell13</td>
- <td class = "text_info">U(1,2)</td>
+ <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\</td>
  <td class = "text_info"> </td>
@@ -2566,7 +2216,7 @@ Destination Clock : PHASE_CLOCK : Positive edge</span>
 <tr> 
  <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
  <td class = "text_info">\PHASE_CLK_DIV:count_0\/main_1</td>
- <td class = "number">4.840</td>
+ <td class = "number">4.826</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -2600,11 +2250,11 @@ Destination Clock : PHASE_CLOCK : Positive edge</span>
  <td class = "text_info">Net_2014</td>
  <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
  <td class = "text_info">\PHASE_CLK_DIV:count_0\/main_1</td>
- <td class = "number">2.800</td>
+ <td class = "number">2.786</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell14</td>
- <td class = "text_info">U(1,2)</td>
+ <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">\PHASE_CLK_DIV:count_0\</td>
  <td class = "text_info"> </td>
@@ -2626,8 +2276,374 @@ Destination Clock : PHASE_CLOCK : Positive edge</span>
 </tr>
 <tr> 
  <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_1</td>
+ <td class = "text_info">Net_2002_2/main_1</td>
+ <td class = "number">4.830</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">controlcell1</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/busclk</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_1</td>
+ <td class = "number">2.040</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_1395</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_1</td>
+ <td class = "text_info">Net_2002_2/main_1</td>
+ <td class = "number">2.790</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell10</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_2002_2</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
+ <td class = "text_info">Net_2002_2/main_2</td>
+ <td class = "number">4.830</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">controlcell1</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/busclk</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
+ <td class = "number">2.040</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_2014</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
+ <td class = "text_info">Net_2002_2/main_2</td>
+ <td class = "number">2.790</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell10</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_2002_2</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_1</td>
+ <td class = "text_info">Net_2002_1/main_0</td>
+ <td class = "number">4.830</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">controlcell1</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/busclk</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_1</td>
+ <td class = "number">2.040</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_1395</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_1</td>
+ <td class = "text_info">Net_2002_1/main_0</td>
+ <td class = "number">2.790</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell11</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_2002_1</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
+ <td class = "text_info">Net_2002_1/main_1</td>
+ <td class = "number">4.830</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">controlcell1</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/busclk</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
+ <td class = "number">2.040</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_2014</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
+ <td class = "text_info">Net_2002_1/main_1</td>
+ <td class = "number">2.790</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell11</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_2002_1</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_1</td>
+ <td class = "text_info">Net_2002_0/main_0</td>
+ <td class = "number">4.830</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">controlcell1</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/busclk</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_1</td>
+ <td class = "number">2.040</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_1395</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_1</td>
+ <td class = "text_info">Net_2002_0/main_0</td>
+ <td class = "number">2.790</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell12</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_2002_0</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
+ <td class = "text_info">Net_2002_0/main_1</td>
+ <td class = "number">4.830</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">controlcell1</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/busclk</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
+ <td class = "number">2.040</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_2014</td>
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_0</td>
+ <td class = "text_info">Net_2002_0/main_1</td>
+ <td class = "number">2.790</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell12</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_2002_0</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_1</td>
  <td class = "text_info">Net_1376/main_1</td>
- <td class = "number">4.855</td>
+ <td class = "number">4.831</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -2661,11 +2677,11 @@ Destination Clock : PHASE_CLOCK : Positive edge</span>
  <td class = "text_info">Net_1395</td>
  <td class = "text_info">\PHASE_CLOCK_REG:Sync:ctrl_reg\/control_1</td>
  <td class = "text_info">Net_1376/main_1</td>
- <td class = "number">2.815</td>
+ <td class = "number">2.791</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell9</td>
- <td class = "text_info">U(1,2)</td>
+ <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">Net_1376</td>
  <td class = "text_info"> </td>
@@ -2716,7 +2732,7 @@ Destination Clock : PHASE_CLOCK : Positive edge</span>
 <tr> 
  <td class = "text_info">\PHASE_CLK_DIV:count_0\/q</td>
  <td class = "text_info">Net_1376/main_4</td>
- <td class = "number">3.543</td>
+ <td class = "number">3.564</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -2736,7 +2752,7 @@ Destination Clock : PHASE_CLOCK : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">macrocell14</td>
- <td class = "text_info">U(1,2)</td>
+ <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">\PHASE_CLK_DIV:count_0\</td>
  <td class = "text_info">\PHASE_CLK_DIV:count_0\/clock_0</td>
@@ -2750,11 +2766,11 @@ Destination Clock : PHASE_CLOCK : Positive edge</span>
  <td class = "text_info">\PHASE_CLK_DIV:count_0\</td>
  <td class = "text_info">\PHASE_CLK_DIV:count_0\/q</td>
  <td class = "text_info">Net_1376/main_4</td>
- <td class = "number">2.293</td>
+ <td class = "number">2.314</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell9</td>
- <td class = "text_info">U(1,2)</td>
+ <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">Net_1376</td>
  <td class = "text_info"> </td>
@@ -2777,7 +2793,7 @@ Destination Clock : PHASE_CLOCK : Positive edge</span>
 <tr> 
  <td class = "text_info">\PHASE_CLK_DIV:count_0\/q</td>
  <td class = "text_info">\PHASE_CLK_DIV:count_0\/main_3</td>
- <td class = "number">3.543</td>
+ <td class = "number">3.564</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -2797,7 +2813,7 @@ Destination Clock : PHASE_CLOCK : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">macrocell14</td>
- <td class = "text_info">U(1,2)</td>
+ <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">\PHASE_CLK_DIV:count_0\</td>
  <td class = "text_info">\PHASE_CLK_DIV:count_0\/clock_0</td>
@@ -2806,16 +2822,16 @@ Destination Clock : PHASE_CLOCK : Positive edge</span>
 </tr>
 <tr> 
  <td class = "text_info">macrocell14</td>
- <td class = "text_info">U(1,2)</td>
+ <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">\PHASE_CLK_DIV:count_0\</td>
  <td class = "text_info">\PHASE_CLK_DIV:count_0\/q</td>
  <td class = "text_info">\PHASE_CLK_DIV:count_0\/main_3</td>
- <td class = "number">2.293</td>
+ <td class = "number">2.314</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell14</td>
- <td class = "text_info">U(1,2)</td>
+ <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">\PHASE_CLK_DIV:count_0\</td>
  <td class = "text_info"> </td>
@@ -2838,7 +2854,7 @@ Destination Clock : PHASE_CLOCK : Positive edge</span>
 <tr> 
  <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\/q</td>
  <td class = "text_info">Net_1376/main_3</td>
- <td class = "number">3.556</td>
+ <td class = "number">3.568</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -2858,7 +2874,7 @@ Destination Clock : PHASE_CLOCK : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">macrocell13</td>
- <td class = "text_info">U(1,2)</td>
+ <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\</td>
  <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\/clock_0</td>
@@ -2872,11 +2888,11 @@ Destination Clock : PHASE_CLOCK : Positive edge</span>
  <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\</td>
  <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\/q</td>
  <td class = "text_info">Net_1376/main_3</td>
- <td class = "number">2.306</td>
+ <td class = "number">2.318</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell9</td>
- <td class = "text_info">U(1,2)</td>
+ <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">Net_1376</td>
  <td class = "text_info"> </td>
@@ -2899,7 +2915,7 @@ Destination Clock : PHASE_CLOCK : Positive edge</span>
 <tr> 
  <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\/q</td>
  <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\/main_2</td>
- <td class = "number">3.556</td>
+ <td class = "number">3.568</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -2919,7 +2935,7 @@ Destination Clock : PHASE_CLOCK : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">macrocell13</td>
- <td class = "text_info">U(1,2)</td>
+ <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\</td>
  <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\/clock_0</td>
@@ -2928,16 +2944,16 @@ Destination Clock : PHASE_CLOCK : Positive edge</span>
 </tr>
 <tr> 
  <td class = "text_info">macrocell13</td>
- <td class = "text_info">U(1,2)</td>
+ <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\</td>
  <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\/q</td>
  <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\/main_2</td>
- <td class = "number">2.306</td>
+ <td class = "number">2.318</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell13</td>
- <td class = "text_info">U(1,2)</td>
+ <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\</td>
  <td class = "text_info"> </td>
@@ -2960,7 +2976,7 @@ Destination Clock : PHASE_CLOCK : Positive edge</span>
 <tr> 
  <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\/q</td>
  <td class = "text_info">\PHASE_CLK_DIV:count_0\/main_2</td>
- <td class = "number">3.556</td>
+ <td class = "number">3.568</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -2980,7 +2996,7 @@ Destination Clock : PHASE_CLOCK : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">macrocell13</td>
- <td class = "text_info">U(1,2)</td>
+ <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\</td>
  <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\/clock_0</td>
@@ -2994,11 +3010,11 @@ Destination Clock : PHASE_CLOCK : Positive edge</span>
  <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\</td>
  <td class = "text_info">\PHASE_CLK_DIV:not_last_reset\/q</td>
  <td class = "text_info">\PHASE_CLK_DIV:count_0\/main_2</td>
- <td class = "number">2.306</td>
+ <td class = "number">2.318</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell14</td>
- <td class = "text_info">U(1,2)</td>
+ <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">\PHASE_CLK_DIV:count_0\</td>
  <td class = "text_info"> </td>
@@ -3019,9 +3035,9 @@ Destination Clock : PHASE_CLOCK : Positive edge</span>
 </td>
 </tr>
 <tr> 
- <td class = "text_info">Net_2002_0/q</td>
- <td class = "text_info">Net_2002_2/main_4</td>
- <td class = "number">4.425</td>
+ <td class = "text_info">Net_1376/q</td>
+ <td class = "text_info">Net_2002_2/clk_en</td>
+ <td class = "number">4.568</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -3040,22 +3056,22 @@ Destination Clock : PHASE_CLOCK : Positive edge</span>
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">macrocell12</td>
+ <td class = "text_info">macrocell9</td>
  <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
- <td class = "text_info">Net_2002_0</td>
- <td class = "text_info">Net_2002_0/clock_0</td>
- <td class = "text_info">Net_2002_0/q</td>
+ <td class = "text_info">Net_1376</td>
+ <td class = "text_info">Net_1376/clock_0</td>
+ <td class = "text_info">Net_1376/q</td>
  <td class = "number">1.250</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"></td>
  <td class = "number">1</td>
- <td class = "text_info">Net_2002_0</td>
- <td class = "text_info">Net_2002_0/q</td>
- <td class = "text_info">Net_2002_2/main_4</td>
- <td class = "number">3.175</td>
+ <td class = "text_info">Net_1376</td>
+ <td class = "text_info">Net_1376/q</td>
+ <td class = "text_info">Net_2002_2/clk_en</td>
+ <td class = "number">3.318</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell10</td>
@@ -3080,9 +3096,9 @@ Destination Clock : PHASE_CLOCK : Positive edge</span>
 </td>
 </tr>
 <tr> 
- <td class = "text_info">Net_2002_0/q</td>
- <td class = "text_info">Net_2002_1/main_3</td>
- <td class = "number">4.425</td>
+ <td class = "text_info">Net_1376/q</td>
+ <td class = "text_info">Net_2002_1/clk_en</td>
+ <td class = "number">4.568</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -3101,22 +3117,22 @@ Destination Clock : PHASE_CLOCK : Positive edge</span>
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">macrocell12</td>
+ <td class = "text_info">macrocell9</td>
  <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
- <td class = "text_info">Net_2002_0</td>
- <td class = "text_info">Net_2002_0/clock_0</td>
- <td class = "text_info">Net_2002_0/q</td>
+ <td class = "text_info">Net_1376</td>
+ <td class = "text_info">Net_1376/clock_0</td>
+ <td class = "text_info">Net_1376/q</td>
  <td class = "number">1.250</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"></td>
  <td class = "number">1</td>
- <td class = "text_info">Net_2002_0</td>
- <td class = "text_info">Net_2002_0/q</td>
- <td class = "text_info">Net_2002_1/main_3</td>
- <td class = "number">3.175</td>
+ <td class = "text_info">Net_1376</td>
+ <td class = "text_info">Net_1376/q</td>
+ <td class = "text_info">Net_2002_1/clk_en</td>
+ <td class = "number">3.318</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell11</td>
@@ -3141,9 +3157,9 @@ Destination Clock : PHASE_CLOCK : Positive edge</span>
 </td>
 </tr>
 <tr> 
- <td class = "text_info">Net_2002_0/q</td>
- <td class = "text_info">Net_2002_0/main_2</td>
- <td class = "number">4.425</td>
+ <td class = "text_info">Net_1376/q</td>
+ <td class = "text_info">Net_2002_0/clk_en</td>
+ <td class = "number">4.568</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -3162,22 +3178,22 @@ Destination Clock : PHASE_CLOCK : Positive edge</span>
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">macrocell12</td>
+ <td class = "text_info">macrocell9</td>
  <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
- <td class = "text_info">Net_2002_0</td>
- <td class = "text_info">Net_2002_0/clock_0</td>
- <td class = "text_info">Net_2002_0/q</td>
+ <td class = "text_info">Net_1376</td>
+ <td class = "text_info">Net_1376/clock_0</td>
+ <td class = "text_info">Net_1376/q</td>
  <td class = "number">1.250</td>
 </tr>
 <tr> 
- <td class = "text_info">macrocell12</td>
- <td class = "text_info">U(0,2)</td>
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
  <td class = "number">1</td>
- <td class = "text_info">Net_2002_0</td>
- <td class = "text_info">Net_2002_0/q</td>
- <td class = "text_info">Net_2002_0/main_2</td>
- <td class = "number">3.175</td>
+ <td class = "text_info">Net_1376</td>
+ <td class = "text_info">Net_1376/q</td>
+ <td class = "text_info">Net_2002_0/clk_en</td>
+ <td class = "number">3.318</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell12</td>
@@ -3202,9 +3218,9 @@ Destination Clock : PHASE_CLOCK : Positive edge</span>
 </td>
 </tr>
 <tr> 
- <td class = "text_info">Net_1376/q</td>
- <td class = "text_info">Net_1376/main_0</td>
- <td class = "number">4.616</td>
+ <td class = "text_info">Net_2002_2/q</td>
+ <td class = "text_info">Net_2002_2/main_0</td>
+ <td class = "number">4.621</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -3223,28 +3239,28 @@ Destination Clock : PHASE_CLOCK : Positive edge</span>
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">macrocell9</td>
- <td class = "text_info">U(1,2)</td>
+ <td class = "text_info">macrocell10</td>
+ <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
- <td class = "text_info">Net_1376</td>
- <td class = "text_info">Net_1376/clock_0</td>
- <td class = "text_info">Net_1376/q</td>
+ <td class = "text_info">Net_2002_2</td>
+ <td class = "text_info">Net_2002_2/clock_0</td>
+ <td class = "text_info">Net_2002_2/q</td>
  <td class = "number">1.250</td>
 </tr>
 <tr> 
- <td class = "text_info">macrocell9</td>
- <td class = "text_info">U(1,2)</td>
+ <td class = "text_info">macrocell10</td>
+ <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
- <td class = "text_info">Net_1376</td>
- <td class = "text_info">Net_1376/q</td>
- <td class = "text_info">Net_1376/main_0</td>
- <td class = "number">3.366</td>
+ <td class = "text_info">Net_2002_2</td>
+ <td class = "text_info">Net_2002_2/q</td>
+ <td class = "text_info">Net_2002_2/main_0</td>
+ <td class = "number">3.371</td>
 </tr>
 <tr> 
- <td class = "text_info">macrocell9</td>
- <td class = "text_info">U(1,2)</td>
+ <td class = "text_info">macrocell10</td>
+ <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
- <td class = "text_info">Net_1376</td>
+ <td class = "text_info">Net_2002_2</td>
  <td class = "text_info"> </td>
  <td class = "text_info">HOLD</td>
  <td class = "number">0.000</td>
@@ -3265,7 +3281,7 @@ Destination Clock : PHASE_CLOCK : Positive edge</span>
 <tr> 
  <td class = "text_info">Net_2002_1/q</td>
  <td class = "text_info">Net_2002_2/main_3</td>
- <td class = "number">4.642</td>
+ <td class = "number">4.626</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -3299,7 +3315,7 @@ Destination Clock : PHASE_CLOCK : Positive edge</span>
  <td class = "text_info">Net_2002_1</td>
  <td class = "text_info">Net_2002_1/q</td>
  <td class = "text_info">Net_2002_2/main_3</td>
- <td class = "number">3.392</td>
+ <td class = "number">3.376</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell10</td>
@@ -3355,96 +3371,9 @@ PHASE_CLOCK</span>
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">Net_2002_2/q</td>
- <td class = "text_info">PHASE_6(0)_PAD</td>
- <td class = "number">29.574</td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="3">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell10</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">Net_2002_2</td>
- <td class = "text_info">Net_2002_2/clock_0</td>
- <td class = "text_info">Net_2002_2/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">Net_2002_2</td>
- <td class = "text_info">Net_2002_2/q</td>
- <td class = "text_info">Net_1966/main_1</td>
- <td class = "number">3.570</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell6</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">Net_1966</td>
- <td class = "text_info">Net_1966/main_1</td>
- <td class = "text_info">Net_1966/q</td>
- <td class = "number">3.350</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">Net_1966</td>
- <td class = "text_info">Net_1966/q</td>
- <td class = "text_info">PHASE_6(0)/pin_input</td>
- <td class = "number">5.924</td>
-</tr>
-<tr> 
- <td class = "text_info">iocell20</td>
- <td class = "text_info">P0[1]</td>
- <td class = "number">1</td>
- <td class = "text_info">PHASE_6(0)</td>
- <td class = "text_info">PHASE_6(0)/pin_input</td>
- <td class = "text_info">PHASE_6(0)/pad_out</td>
- <td class = "number">15.480</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">PHASE_6(0)_PAD</td>
- <td class = "text_info">PHASE_6(0)/pad_out</td>
- <td class = "text_info">PHASE_6(0)_PAD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Clock path delay</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">Net_2002_2/q</td>
+ <td class = "text_info">Net_1376/q</td>
  <td class = "text_info">PHASE_4(0)_PAD</td>
- <td class = "number">29.503</td>
+ <td class = "number">30.163</td>
 </tr>
 <tr class="sta_path">
 <td class="sta_path"  colspan="3">
@@ -3462,29 +3391,29 @@ PHASE_CLOCK</span>
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">macrocell10</td>
+ <td class = "text_info">macrocell9</td>
  <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
- <td class = "text_info">Net_2002_2</td>
- <td class = "text_info">Net_2002_2/clock_0</td>
- <td class = "text_info">Net_2002_2/q</td>
+ <td class = "text_info">Net_1376</td>
+ <td class = "text_info">Net_1376/clock_0</td>
+ <td class = "text_info">Net_1376/q</td>
  <td class = "number">1.250</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"></td>
  <td class = "number">1</td>
- <td class = "text_info">Net_2002_2</td>
- <td class = "text_info">Net_2002_2/q</td>
- <td class = "text_info">Net_1981/main_1</td>
- <td class = "number">3.570</td>
+ <td class = "text_info">Net_1376</td>
+ <td class = "text_info">Net_1376/q</td>
+ <td class = "text_info">Net_1981/main_0</td>
+ <td class = "number">3.685</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell4</td>
- <td class = "text_info">U(0,2)</td>
+ <td class = "text_info">U(1,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">Net_1981</td>
- <td class = "text_info">Net_1981/main_1</td>
+ <td class = "text_info">Net_1981/main_0</td>
  <td class = "text_info">Net_1981/q</td>
  <td class = "number">3.350</td>
 </tr>
@@ -3495,7 +3424,7 @@ PHASE_CLOCK</span>
  <td class = "text_info">Net_1981</td>
  <td class = "text_info">Net_1981/q</td>
  <td class = "text_info">PHASE_4(0)/pin_input</td>
- <td class = "number">5.683</td>
+ <td class = "number">6.228</td>
 </tr>
 <tr> 
  <td class = "text_info">iocell23</td>
@@ -3529,9 +3458,9 @@ PHASE_CLOCK</span>
 </td>
 </tr>
 <tr> 
- <td class = "text_info">Net_2002_2/q</td>
- <td class = "text_info">PHASE_8(0)_PAD</td>
- <td class = "number">28.336</td>
+ <td class = "text_info">Net_1376/q</td>
+ <td class = "text_info">PHASE_6(0)_PAD</td>
+ <td class = "number">29.833</td>
 </tr>
 <tr class="sta_path">
 <td class="sta_path"  colspan="3">
@@ -3549,29 +3478,116 @@ PHASE_CLOCK</span>
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">macrocell10</td>
+ <td class = "text_info">macrocell9</td>
  <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
- <td class = "text_info">Net_2002_2</td>
- <td class = "text_info">Net_2002_2/clock_0</td>
- <td class = "text_info">Net_2002_2/q</td>
+ <td class = "text_info">Net_1376</td>
+ <td class = "text_info">Net_1376/clock_0</td>
+ <td class = "text_info">Net_1376/q</td>
  <td class = "number">1.250</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"></td>
  <td class = "number">1</td>
- <td class = "text_info">Net_2002_2</td>
- <td class = "text_info">Net_2002_2/q</td>
- <td class = "text_info">Net_1968/main_1</td>
- <td class = "number">3.570</td>
+ <td class = "text_info">Net_1376</td>
+ <td class = "text_info">Net_1376/q</td>
+ <td class = "text_info">Net_1966/main_0</td>
+ <td class = "number">3.681</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell6</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_1966</td>
+ <td class = "text_info">Net_1966/main_0</td>
+ <td class = "text_info">Net_1966/q</td>
+ <td class = "number">3.350</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_1966</td>
+ <td class = "text_info">Net_1966/q</td>
+ <td class = "text_info">PHASE_6(0)/pin_input</td>
+ <td class = "number">6.072</td>
+</tr>
+<tr> 
+ <td class = "text_info">iocell20</td>
+ <td class = "text_info">P0[1]</td>
+ <td class = "number">1</td>
+ <td class = "text_info">PHASE_6(0)</td>
+ <td class = "text_info">PHASE_6(0)/pin_input</td>
+ <td class = "text_info">PHASE_6(0)/pad_out</td>
+ <td class = "number">15.480</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">PHASE_6(0)_PAD</td>
+ <td class = "text_info">PHASE_6(0)/pad_out</td>
+ <td class = "text_info">PHASE_6(0)_PAD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Clock path delay</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">Net_1376/q</td>
+ <td class = "text_info">PHASE_8(0)_PAD</td>
+ <td class = "number">28.422</td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="3">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell9</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_1376</td>
+ <td class = "text_info">Net_1376/clock_0</td>
+ <td class = "text_info">Net_1376/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_1376</td>
+ <td class = "text_info">Net_1376/q</td>
+ <td class = "text_info">Net_1968/main_0</td>
+ <td class = "number">3.685</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell8</td>
- <td class = "text_info">U(0,2)</td>
+ <td class = "text_info">U(1,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">Net_1968</td>
- <td class = "text_info">Net_1968/main_1</td>
+ <td class = "text_info">Net_1968/main_0</td>
  <td class = "text_info">Net_1968/q</td>
  <td class = "number">3.350</td>
 </tr>
@@ -3582,7 +3598,7 @@ PHASE_CLOCK</span>
  <td class = "text_info">Net_1968</td>
  <td class = "text_info">Net_1968/q</td>
  <td class = "text_info">PHASE_8(0)/pin_input</td>
- <td class = "number">5.906</td>
+ <td class = "number">5.877</td>
 </tr>
 <tr> 
  <td class = "text_info">iocell22</td>
@@ -3616,9 +3632,9 @@ PHASE_CLOCK</span>
 </td>
 </tr>
 <tr> 
- <td class = "text_info">Net_2002_2/q</td>
+ <td class = "text_info">Net_1376/q</td>
  <td class = "text_info">PHASE_1(0)_PAD</td>
- <td class = "number">28.194</td>
+ <td class = "number">28.418</td>
 </tr>
 <tr class="sta_path">
 <td class="sta_path"  colspan="3">
@@ -3636,29 +3652,29 @@ PHASE_CLOCK</span>
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">macrocell10</td>
+ <td class = "text_info">macrocell9</td>
  <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
- <td class = "text_info">Net_2002_2</td>
- <td class = "text_info">Net_2002_2/clock_0</td>
- <td class = "text_info">Net_2002_2/q</td>
+ <td class = "text_info">Net_1376</td>
+ <td class = "text_info">Net_1376/clock_0</td>
+ <td class = "text_info">Net_1376/q</td>
  <td class = "number">1.250</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"></td>
  <td class = "number">1</td>
- <td class = "text_info">Net_2002_2</td>
- <td class = "text_info">Net_2002_2/q</td>
- <td class = "text_info">Net_1984/main_1</td>
- <td class = "number">3.430</td>
+ <td class = "text_info">Net_1376</td>
+ <td class = "text_info">Net_1376/q</td>
+ <td class = "text_info">Net_1984/main_0</td>
+ <td class = "number">3.685</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell1</td>
  <td class = "text_info">U(1,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">Net_1984</td>
- <td class = "text_info">Net_1984/main_1</td>
+ <td class = "text_info">Net_1984/main_0</td>
  <td class = "text_info">Net_1984/q</td>
  <td class = "number">3.350</td>
 </tr>
@@ -3669,7 +3685,7 @@ PHASE_CLOCK</span>
  <td class = "text_info">Net_1984</td>
  <td class = "text_info">Net_1984/q</td>
  <td class = "text_info">PHASE_1(0)/pin_input</td>
- <td class = "number">5.894</td>
+ <td class = "number">5.863</td>
 </tr>
 <tr> 
  <td class = "text_info">iocell26</td>
@@ -3703,9 +3719,9 @@ PHASE_CLOCK</span>
 </td>
 </tr>
 <tr> 
- <td class = "text_info">Net_2002_2/q</td>
+ <td class = "text_info">Net_1376/q</td>
  <td class = "text_info">PHASE_3(0)_PAD</td>
- <td class = "number">28.036</td>
+ <td class = "number">28.332</td>
 </tr>
 <tr class="sta_path">
 <td class="sta_path"  colspan="3">
@@ -3723,29 +3739,29 @@ PHASE_CLOCK</span>
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">macrocell10</td>
+ <td class = "text_info">macrocell9</td>
  <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
- <td class = "text_info">Net_2002_2</td>
- <td class = "text_info">Net_2002_2/clock_0</td>
- <td class = "text_info">Net_2002_2/q</td>
+ <td class = "text_info">Net_1376</td>
+ <td class = "text_info">Net_1376/clock_0</td>
+ <td class = "text_info">Net_1376/q</td>
  <td class = "number">1.250</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"></td>
  <td class = "number">1</td>
- <td class = "text_info">Net_2002_2</td>
- <td class = "text_info">Net_2002_2/q</td>
- <td class = "text_info">Net_1982/main_1</td>
- <td class = "number">3.401</td>
+ <td class = "text_info">Net_1376</td>
+ <td class = "text_info">Net_1376/q</td>
+ <td class = "text_info">Net_1982/main_0</td>
+ <td class = "number">3.682</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell3</td>
  <td class = "text_info">U(1,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">Net_1982</td>
- <td class = "text_info">Net_1982/main_1</td>
+ <td class = "text_info">Net_1982/main_0</td>
  <td class = "text_info">Net_1982/q</td>
  <td class = "number">3.350</td>
 </tr>
@@ -3756,7 +3772,7 @@ PHASE_CLOCK</span>
  <td class = "text_info">Net_1982</td>
  <td class = "text_info">Net_1982/q</td>
  <td class = "text_info">PHASE_3(0)/pin_input</td>
- <td class = "number">5.855</td>
+ <td class = "number">5.870</td>
 </tr>
 <tr> 
  <td class = "text_info">iocell24</td>
@@ -3790,9 +3806,9 @@ PHASE_CLOCK</span>
 </td>
 </tr>
 <tr> 
- <td class = "text_info">Net_2002_2/q</td>
- <td class = "text_info">PHASE_2(0)_PAD</td>
- <td class = "number">27.606</td>
+ <td class = "text_info">Net_1376/q</td>
+ <td class = "text_info">PHASE_5(0)_PAD</td>
+ <td class = "number">28.189</td>
 </tr>
 <tr class="sta_path">
 <td class="sta_path"  colspan="3">
@@ -3810,29 +3826,116 @@ PHASE_CLOCK</span>
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">macrocell10</td>
+ <td class = "text_info">macrocell9</td>
  <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
- <td class = "text_info">Net_2002_2</td>
- <td class = "text_info">Net_2002_2/clock_0</td>
- <td class = "text_info">Net_2002_2/q</td>
+ <td class = "text_info">Net_1376</td>
+ <td class = "text_info">Net_1376/clock_0</td>
+ <td class = "text_info">Net_1376/q</td>
  <td class = "number">1.250</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"></td>
  <td class = "number">1</td>
- <td class = "text_info">Net_2002_2</td>
- <td class = "text_info">Net_2002_2/q</td>
- <td class = "text_info">Net_1983/main_1</td>
- <td class = "number">3.430</td>
+ <td class = "text_info">Net_1376</td>
+ <td class = "text_info">Net_1376/q</td>
+ <td class = "text_info">Net_1965/main_0</td>
+ <td class = "number">3.685</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell5</td>
+ <td class = "text_info">U(1,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_1965</td>
+ <td class = "text_info">Net_1965/main_0</td>
+ <td class = "text_info">Net_1965/q</td>
+ <td class = "number">3.350</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_1965</td>
+ <td class = "text_info">Net_1965/q</td>
+ <td class = "text_info">PHASE_5(0)/pin_input</td>
+ <td class = "number">5.924</td>
+</tr>
+<tr> 
+ <td class = "text_info">iocell19</td>
+ <td class = "text_info">P1[4]</td>
+ <td class = "number">1</td>
+ <td class = "text_info">PHASE_5(0)</td>
+ <td class = "text_info">PHASE_5(0)/pin_input</td>
+ <td class = "text_info">PHASE_5(0)/pad_out</td>
+ <td class = "number">13.980</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">PHASE_5(0)_PAD</td>
+ <td class = "text_info">PHASE_5(0)/pad_out</td>
+ <td class = "text_info">PHASE_5(0)_PAD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Clock path delay</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">Net_1376/q</td>
+ <td class = "text_info">PHASE_2(0)_PAD</td>
+ <td class = "number">27.858</td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="3">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell9</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_1376</td>
+ <td class = "text_info">Net_1376/clock_0</td>
+ <td class = "text_info">Net_1376/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_1376</td>
+ <td class = "text_info">Net_1376/q</td>
+ <td class = "text_info">Net_1983/main_0</td>
+ <td class = "number">3.682</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell2</td>
  <td class = "text_info">U(1,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">Net_1983</td>
- <td class = "text_info">Net_1983/main_1</td>
+ <td class = "text_info">Net_1983/main_0</td>
  <td class = "text_info">Net_1983/q</td>
  <td class = "number">3.350</td>
 </tr>
@@ -3877,96 +3980,9 @@ PHASE_CLOCK</span>
 </td>
 </tr>
 <tr> 
- <td class = "text_info">Net_2002_2/q</td>
- <td class = "text_info">PHASE_5(0)_PAD</td>
- <td class = "number">27.527</td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="3">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell10</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">Net_2002_2</td>
- <td class = "text_info">Net_2002_2/clock_0</td>
- <td class = "text_info">Net_2002_2/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">Net_2002_2</td>
- <td class = "text_info">Net_2002_2/q</td>
- <td class = "text_info">Net_1965/main_1</td>
- <td class = "number">3.430</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell5</td>
- <td class = "text_info">U(1,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">Net_1965</td>
- <td class = "text_info">Net_1965/main_1</td>
- <td class = "text_info">Net_1965/q</td>
- <td class = "number">3.350</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">Net_1965</td>
- <td class = "text_info">Net_1965/q</td>
- <td class = "text_info">PHASE_5(0)/pin_input</td>
- <td class = "number">5.517</td>
-</tr>
-<tr> 
- <td class = "text_info">iocell19</td>
- <td class = "text_info">P1[4]</td>
- <td class = "number">1</td>
- <td class = "text_info">PHASE_5(0)</td>
- <td class = "text_info">PHASE_5(0)/pin_input</td>
- <td class = "text_info">PHASE_5(0)/pad_out</td>
- <td class = "number">13.980</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">PHASE_5(0)_PAD</td>
- <td class = "text_info">PHASE_5(0)/pad_out</td>
- <td class = "text_info">PHASE_5(0)_PAD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Clock path delay</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">Net_2002_2/q</td>
+ <td class = "text_info">Net_1376/q</td>
  <td class = "text_info">PHASE_7(0)_PAD</td>
- <td class = "number">26.707</td>
+ <td class = "number">27.150</td>
 </tr>
 <tr class="sta_path">
 <td class="sta_path"  colspan="3">
@@ -3984,29 +4000,29 @@ PHASE_CLOCK</span>
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">macrocell10</td>
+ <td class = "text_info">macrocell9</td>
  <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
- <td class = "text_info">Net_2002_2</td>
- <td class = "text_info">Net_2002_2/clock_0</td>
- <td class = "text_info">Net_2002_2/q</td>
+ <td class = "text_info">Net_1376</td>
+ <td class = "text_info">Net_1376/clock_0</td>
+ <td class = "text_info">Net_1376/q</td>
  <td class = "number">1.250</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"></td>
  <td class = "number">1</td>
- <td class = "text_info">Net_2002_2</td>
- <td class = "text_info">Net_2002_2/q</td>
- <td class = "text_info">Net_1967/main_1</td>
- <td class = "number">3.570</td>
+ <td class = "text_info">Net_1376</td>
+ <td class = "text_info">Net_1376/q</td>
+ <td class = "text_info">Net_1967/main_0</td>
+ <td class = "number">3.685</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell7</td>
  <td class = "text_info">U(0,2)</td>
  <td class = "number">1</td>
  <td class = "text_info">Net_1967</td>
- <td class = "text_info">Net_1967/main_1</td>
+ <td class = "text_info">Net_1967/main_0</td>
  <td class = "text_info">Net_1967/q</td>
  <td class = "number">3.350</td>
 </tr>
@@ -4017,7 +4033,7 @@ PHASE_CLOCK</span>
  <td class = "text_info">Net_1967</td>
  <td class = "text_info">Net_1967/q</td>
  <td class = "text_info">PHASE_7(0)/pin_input</td>
- <td class = "number">5.587</td>
+ <td class = "number">5.915</td>
 </tr>
 <tr> 
  <td class = "text_info">iocell21</td>

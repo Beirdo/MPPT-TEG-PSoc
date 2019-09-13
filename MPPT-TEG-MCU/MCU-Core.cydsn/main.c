@@ -13,13 +13,37 @@
 #include "tegchannel.h"
 #include "tca9534.h"
 
-teg_channel_t transfer_buffer[TEG_CHANNEL_COUNT];
+teg_channel_t spi_buffer;
+system_data_t system_data;
 static volatile _Bool dma_complete_flag;
 
-void dma_complete(void) {
-    uint32 mask = CyDmaGetInterruptSource();
+void send_spi_with_dma(uint8 index);
+
+void SPI_DMA_COMPLETE_Interrupt_InterruptCallback(void) {
     dma_complete_flag = 1;
-    CyDmaClearInterruptSource(mask);
+}
+
+void send_spi_with_dma(uint8 index) {
+    if (index < TEG_CHANNEL_COUNT) {
+        teg_channel_t *ch = &teg_channels[index];
+        memcpy(&spi_buffer, ch, sizeof(teg_channel_t));
+    } else if (index == 0xFF) {
+        memset(&spi_buffer, 0, sizeof(teg_channel_t));
+        memcpy(&spi_buffer, &system_data, sizeof(system_data));
+    } else {
+        return;
+    }
+
+    dma_complete_flag = 0;
+    DMA_SPI_SetDstAddress(0, (void *)SPI_TX_FIFO_WR_PTR);
+    DMA_SPI_SetSrcAddress(0, &spi_buffer);
+    DMA_SPI_SetNumDataElements(0, sizeof(spi_buffer));
+    DMA_SPI_ValidateDescriptor(0);
+    DMA_SPI_ChEnable();
+    
+    while(!dma_complete_flag) {
+        CySysPmSleep();
+    }
 }
 
 int main(void)
@@ -50,7 +74,7 @@ int main(void)
     initializeChannels();
     
     DMA_SPI_Init();
-    DMA_SPI_SetInterruptCallback(dma_complete);
+    ADC_SAR_SEQ_Start();
     dma_complete_flag = 0;
     CyDmaEnable();
     
@@ -73,22 +97,21 @@ int main(void)
     
             // Channel is still enabled, any cleanup?
         }
+        
+        // update the die temperature in the system data
+        system_data.die_temperature = (int16)(DIE_TEMP_CountsTo_Celsius(ADC_SAR_SEQ_GetResult16(0)) << 3);
 
-        // Now we want to send the entire teg_channel block to the CPU for display and upstream to IOT
-        memcpy(transfer_buffer, teg_channels, sizeof(transfer_buffer));
+        // Now we want to send the entire teg_channel block to the CPU for display and upstream to IOT (one channel per message)
         SPI_SpiSetActiveSlaveSelect(SPI_SPI_SLAVE_SELECT0);
         SPI_Start();
-        
-        dma_complete_flag = 0;
-        DMA_SPI_SetDstAddress(0, (void *)SPI_TX_FIFO_WR_PTR);
-        DMA_SPI_SetSrcAddress(0, transfer_buffer);
-        DMA_SPI_SetNumDataElements(0, sizeof(transfer_buffer));
-        DMA_SPI_ValidateDescriptor(0);
-        DMA_SPI_ChEnable();
-        
-        while(!dma_complete_flag) {
-            CySysPmSleep();
+
+        // Iterate through each channel, then wait for 100ms timer to hit before starting groundhog's day.
+        for(i = 0; i < TEG_CHANNEL_COUNT; i++) {
+            send_spi_with_dma(i);
         }
+        
+        // And now system data
+        send_spi_with_dma(0xFF);
         
         SPI_Stop();
         

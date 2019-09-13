@@ -6,8 +6,8 @@
     <Toolchain Name="ARM GCC Generic" Selected="True">
       <Tool Name="prebuild" Command="" Options="" />
       <Tool Name="assembler" Command="arm-none-eabi-as.exe" Options="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -alh=${OutputDir}/${CompileFile}.lst -g -W" />
-      <Tool Name="compiler" Command="arm-none-eabi-gcc.exe" Options="-mcpu=cortex-m3 -mthumb -I..\..\FreeRTOS\port-gcc-CortexM3\include -I..\..\FreeRTOS\include -I..\..\WiFiNINA-PSoC\include -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
-      <Tool Name="linker" Command="arm-none-eabi-gcc.exe" Options="-mcpu=cortex-m3 -mthumb -L Generated_Source\PSoC5 -Wl,-Map,${OutputDir}/${ProjectShortName}.map -T Generated_Source\PSoC5\cm3gcc_1.ld -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects" />
+      <Tool Name="compiler" Command="arm-none-eabi-gcc.exe" Options="-mcpu=cortex-m3 -mthumb -I..\..\FreeRTOS\port-gcc-CortexM3\include -I..\..\FreeRTOS\include -I..\..\WiFiNINA-PSoC\include -I..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\osts -I..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5 -I..\..\common\include -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+      <Tool Name="linker" Command="arm-none-eabi-gcc.exe" Options="-mcpu=cortex-m3 -mthumb -l m -L Generated_Source\PSoC5 -L ..\..\emWinGraphics-PSoC\LinkLibrary\PSoC5\GCC ..\..\emWinGraphics-PSoC\LinkLibrary\PSoC5\GCC\libemWin_osts_cm3_gcc.a -Wl,-Map,${OutputDir}/${ProjectShortName}.map -T Generated_Source\PSoC5\cm3gcc_1.ld -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects" />
       <Tool Name="postbuild" Command="" Options="" />
     </Toolchain>
     <Toolchain Name="ARM MDK Generic" Selected="False">
@@ -42,7 +42,7 @@
           <File BuildType="BUILD" Toolchain="">i2cRegisters.c</File>
           <File BuildType="BUILD" Toolchain="">taskThermalMonitoring.c</File>
           <File BuildType="BUILD" Toolchain="">..\..\FreeRTOS\port-gcc-CortexM3\port.c</File>
-          <File BuildType="BUILD" Toolchain="">..\..\FreeRTOS\MemMang\heap_1.c</File>
+          <File BuildType="BUILD" Toolchain="">..\..\FreeRTOS\MemMang\heap_4.c</File>
           <File BuildType="BUILD" Toolchain="">max31760.c</File>
           <File BuildType="BUILD" Toolchain="">..\..\WiFiNINA-PSoC\src\server_drv.c</File>
           <File BuildType="BUILD" Toolchain="">..\..\WiFiNINA-PSoC\src\spi_drv.c</File>
@@ -50,6 +50,13 @@
           <File BuildType="BUILD" Toolchain="">..\..\WiFiNINA-PSoC\src\wifi_drv.c</File>
           <File BuildType="BUILD" Toolchain="">..\..\WiFiNINA-PSoC\src\WiFiClient.c</File>
           <File BuildType="BUILD" Toolchain="">..\..\WiFiNINA-PSoC\src\WiFiSocketBuffer.c</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Source\PSoC4_5\FlexColor\GUI_X_FreeRTOS.c</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Source\PSoC4_5\FlexColor\GUIConf.c</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Source\PSoC4_5\FlexColor\GUIDRV_FlexColor.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Source\PSoC4_5\FlexColor\LCDConf.c</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Source\PSoC4_5\FlexColor\LCDConf.h</File>
+          <File BuildType="BUILD" Toolchain="">guiTask.c</File>
+          <File BuildType="BUILD" Toolchain="">mcuSpiHandler.c</File>
           <File BuildType="BUILD" Toolchain="">cyapicallbacks.h</File>
           <File BuildType="BUILD" Toolchain="">device.h</File>
           <File BuildType="BUILD" Toolchain="">FreeRTOSConfig.h</File>
@@ -86,6 +93,96 @@
           <File BuildType="BUILD" Toolchain="">..\..\WiFiNINA-PSoC\include\WiFiSocketBuffer.h</File>
           <File BuildType="BUILD" Toolchain="">..\..\WiFiNINA-PSoC\include\wl_definitions.h</File>
           <File BuildType="BUILD" Toolchain="">..\..\WiFiNINA-PSoC\include\wl_types.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\BUTTON.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\BUTTON_Private.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\CALENDAR.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\CHECKBOX.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\CHECKBOX_Private.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\CHOOSECOLOR.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\CHOOSEFILE.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\DIALOG.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\DIALOG_Intern.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\DROPDOWN.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\DROPDOWN_Private.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\EDIT.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\EDIT_Private.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\FRAMEWIN.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\FRAMEWIN_Private.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\Global.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\GRAPH.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\GRAPH_Private.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\GUI.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\GUI__BiDi2_Brackets_800.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\GUI__BiDi2_Types_800.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\GUI_ARRAY.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\GUI_ARRAY_Private.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\GUI_BMP_Private.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\GUI_ConfDefaults.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\GUI_Debug.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\GUI_FontIntern.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\GUI_GCache_Private.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\GUI_GIF_Private.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\GUI_HOOK.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\GUI_JPEG_Private.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\GUI_Private.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\GUI_SetOrientation.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\GUI_SetOrientationCX.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\GUI_SPRITE_Private.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\GUI_Type.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\GUI_Version.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\GUI_VNC.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\GUIDRV_Generic.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\HEADER.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\HEADER_Private.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\ICONVIEW.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\ICONVIEW_Private.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\IMAGE.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\IMAGE_Private.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\IP_FS.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\KNOB.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\KNOB_Private.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\LCD.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\LCD_ConfDefaults.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\LCD_Private.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\LCD_Protected.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\LCD_SIM.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\LISTBOX.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\LISTBOX_Private.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\LISTVIEW.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\LISTVIEW_Private.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\LISTWHEEL.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\LISTWHEEL_Private.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\MENU.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\MENU_Private.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\MESSAGEBOX.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\MULTIEDIT.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\MULTIPAGE.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\MULTIPAGE_Private.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\PROGBAR.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\PROGBAR_Private.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\RADIO.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\RADIO_Private.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\SCROLLBAR.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\SCROLLBAR_Private.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\SEGGER.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\SLIDER.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\SLIDER_Private.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\SPINBOX.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\SPINBOX_Private.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\SWIPELIST.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\SWIPELIST_Private.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\TEXT.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\TEXT_Private.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\TREEVIEW.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\TREEVIEW_Private.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\WIDGET.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\WINDOW_Private.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\WM.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\WM_GUI.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\WM_Intern.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\osts\GUIConf.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\common\include\interprocessor.h</File>
+          <File BuildType="BUILD" Toolchain="">mcuData.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Workspace\MPPT-TEG-PSoc\MPPT-TEG-CPU\Core-CPU.cydsn">
@@ -241,8 +338,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPIM_SENSORS_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPIM_SENSORS_INT.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPIM_SENSORS_PVT.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\I2C_LCD.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\I2C_LCD.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\UART.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\UART.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\UART_PM.c</File>
@@ -322,11 +417,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PGOOD_12V_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PGOOD_12V.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PGOOD_12V.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Timer_20KHz.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Timer_20KHz.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Timer_20KHz_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\isrTimer_20KHz_TC.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\isrTimer_20KHz_TC.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ResistiveTouch_AMux.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ResistiveTouch_AMux.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ResistiveTouch_xm_aliases.h</File>
@@ -410,6 +500,10 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WIFI_CS_OVERRIDE_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPI_16M_CLK.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPI_16M_CLK.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPIS_DMA_dma.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPIS_DMA_dma.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MCU_SPI_DONE.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MCU_SPI_DONE.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Workspace\MPPT-TEG-PSoc\MPPT-TEG-CPU\Core-CPU.cydsn\Export\ARM_GCC_Generic">

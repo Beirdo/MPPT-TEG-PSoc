@@ -29,8 +29,9 @@ void SPIM_WIFI_TX_ISR_EntryCallback(void);
         
 #define SPIM_WIFI_TX_ISR_EXIT_CALLBACK
 void SPIM_WIFI_TX_ISR_ExitCallback(void);
-        
-        
-    
+
+#define MCU_SPI_DONE_INTERRUPT_INTERRUPT_CALLBACK
+void MCU_SPI_DONE_Interrupt_InterruptCallback(void);
+            
 #endif /* CYAPICALLBACKS_H */   
 /* [] */

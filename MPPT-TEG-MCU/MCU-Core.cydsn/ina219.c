@@ -12,6 +12,7 @@
 
 #include "project.h"
 #include "ina219.h"
+#include "tegchannel.h"
 
 #define INA219_COUNT 3
 
@@ -83,18 +84,18 @@ void INA219_write_register(uint8 addr, uint8 reg, uint16 value) {
     I2C_I2CMasterSendStop(0);
 }
 
-void INA219_read(uint8 addr, int index, uint16 *current, uint16 *voltage, uint16 *power) {
-    if (!current || !voltage || !power) {
-        return;
-    }
-
+ina219_reading_t INA219_read(uint8 addr, int index) {
+    ina219_reading_t reading;
+    
     INA219_connect(index);
 
     // Now we have the bus connected to the correct INA219 chips.  Read 3 registers
     // (0x02 = bus voltage, 0x03 = power, 0x04 = current)
-    *voltage = INA219_read_register(addr, 0x02);
-    *power = INA219_read_register(addr, 0x03);
-    *current = INA219_read_register(addr, 0x04);
+    reading.voltage = INA219_read_register(addr, 0x02);
+    reading.power   = INA219_read_register(addr, 0x03);
+    reading.current = INA219_read_register(addr, 0x04);
+    
+    return reading;
 }
 
 void INA219_disconnect(void) {

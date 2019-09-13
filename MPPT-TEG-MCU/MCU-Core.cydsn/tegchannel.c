@@ -85,19 +85,19 @@ int processChannel(teg_channel_t *ch, uint8 newEnables) {
     }
     
     // Store previous values
-    ch->prevVin = ch->Vin;
-    ch->prevIin = ch->Iin;
-    ch->prevPin = ch->Pin;
+    ch->prevVin = ch->input.voltage;
+    ch->prevIin = ch->input.current;
+    ch->prevPin = ch->input.power;
     
     // We need to read all our current, voltage and power readings from the INA219 chips for the channel
-    INA219_read(INA219_INPUT_ADDR, i, &ch->Vin, &ch->Pin, &ch->Iin);
-    INA219_read(INA219_MID_ADDR, i, &ch->Vmid, &ch->Pmid, &ch->Imid);
-    INA219_read(INA219_OUTPUT_ADDR, i, &ch->Vout, &ch->Pout, &ch->Iout);
+    ch->input = INA219_read(INA219_INPUT_ADDR, i);
+    ch->middle = INA219_read(INA219_MID_ADDR, i);
+    ch->output = INA219_read(INA219_OUTPUT_ADDR, i);
     INA219_disconnect();
     
     // Calculate the deltas
-    deltaI = ch->Iin - ch->prevIin;
-    deltaP = ch->Pin - ch->prevPin;
+    deltaI = ch->input.current - ch->prevIin;
+    deltaP = ch->input.power - ch->prevPin;
     
     oldPWM = ch->PWMval;
     
@@ -108,12 +108,12 @@ int processChannel(teg_channel_t *ch, uint8 newEnables) {
             break;
         case STATE_SECOND_POINT:
             // calculate the Open-Circuit voltage and Short-Circuit current
-            if(ch->prevIin == ch->Iin || ch->prevVin == ch->Vin) {
+            if(ch->prevIin == ch->input.current || ch->prevVin == ch->input.voltage) {
                 // OK, admit defeat, this gives a vertical line or horizontal line, try another point!
-                ch->PWMval = currentToPWM(ch->Iin + huntDeltaI);
+                ch->PWMval = currentToPWM(ch->input.current + huntDeltaI);
                 break;
             }
-            slope = (double)(ch->Vin - ch->prevVin) / (double)(ch->Iin - ch->prevIin);
+            slope = (double)(ch->input.voltage - ch->prevVin) / (double)(ch->input.current - ch->prevIin);
             ch->Ishort = ch->prevIin - (uint16)((double)(ch->prevVin) / slope);
             ch->Vopen = ch->prevIin - (uint16)((double)(ch->prevIin) * slope);
             
@@ -124,7 +124,7 @@ int processChannel(teg_channel_t *ch, uint8 newEnables) {
         case STATE_HUNT:
             // Check for large delta, if so, stop hunting
             if (deltaP >= deltaPMax || deltaP <= -deltaPMax) {
-                ch->PWMval = currentToPWM(ch->Iin + deltaI);
+                ch->PWMval = currentToPWM(ch->input.current + deltaI);
                 ch->state = STATE_SECOND_POINT;
                 break;
             }
@@ -142,7 +142,7 @@ int processChannel(teg_channel_t *ch, uint8 newEnables) {
                     deltaI = huntDeltaI;
                 }
             }
-            ch->PWMval = currentToPWM(ch->Iin + deltaI);
+            ch->PWMval = currentToPWM(ch->input.current + deltaI);
             break;
         default:
             // This should never happen!!!

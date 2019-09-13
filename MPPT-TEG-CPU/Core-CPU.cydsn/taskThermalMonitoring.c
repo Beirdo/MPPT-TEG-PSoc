@@ -18,6 +18,7 @@
 #include "systemTasks.h"
 #include "utils.h"
 #include "max31760.h"
+#include "mcuData.h"
 
 #define THERMOCOUPLE_START 0
 #define THERMOCOUPLE_COUNT 3
@@ -26,13 +27,15 @@
 #define TMP05_START (THERMISTOR_START + THERMISTOR_COUNT)
 #define TMP05_COUNT 4
 #define DIE_START (TMP05_START + TMP05_COUNT)
-#define DIE_COUNT 1
+#define DIE_COUNT 2
 #define FAN_CONTROLLER_START (DIE_START + DIE_COUNT)
 #define FAN_CONTROLLER_COUNT 2
 
 #define INDEX_HOT_SIDE (THERMOCOUPLE_START + 1)
 #define INDEX_COLD_SIDE (THERMOCOUPLE_START + 2)
 #define INDEX_AMBIENT_AIR (THERMISTOR_START)
+#define INDEX_MCU_DIE (DIE_START + 1)
+
 #define FAN_PWM_DELTA 0x05
 
 #define SPI_SENSOR_COUNT (THERMISTOR_START + THERMISTOR_COUNT)
@@ -156,6 +159,9 @@ void doTaskThermalMonitor(void *args)
         // Also let's get the die temperature
         DieTemp_GetTemp(&die_temp);
 
+        // MCU already converted to 1/8C for us (after truncating!!)
+        temperatures[INDEX_MCU_DIE] = mcu_system_data.die_temperature;
+        
         // Get fan controller temperatures and fan speeds
         for(i = 0; i < FAN_CONTROLLER_COUNT; i++) {
             fan_temp[i] = MAX31760_read_temperature(i);
@@ -187,7 +193,7 @@ void doTaskThermalMonitor(void *args)
         
         // Die temperature is in degrees C
         temperatures[DIE_START] = die_temp << 3;
-
+        
         for(i = 0; i < FAN_CONTROLLER_COUNT; i++) {
             // Same format as the thermistors
             temperatures[FAN_CONTROLLER_START + i] = convert_temperature(fan_temp[i]);

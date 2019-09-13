@@ -9,11 +9,16 @@
  *
  * ========================================
 */
-#ifndef CYAPICALLBACKS_H
-#define CYAPICALLBACKS_H
+
+#ifndef __mcuData_h__
+#define __mcuData_h__
     
-#define SPI_DMA_COMPLETE_INTERRUPT_INTERRUPT_CALLBACK
-void SPI_DMA_COMPLETE_Interrupt_InterruptCallback(void);
+#include "project.h"
+#include "interprocessor.h"
     
-#endif /* CYAPICALLBACKS_H */   
-/* [] */
+extern teg_channel_t teg_channels[TEG_CHANNEL_COUNT];
+extern system_data_t mcu_system_data;
+    
+#endif // __mcuData_h__
+
+/* [] END OF FILE */

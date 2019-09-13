@@ -15,14 +15,18 @@
 #include "project.h"
 #include "systemTasks.h"
 
-void prvSetupHardware()
+
+void prvSetupHardware(void)
 {
     setupBacklightAdjust();
     setupThermalMonitor();
+    setupMcuSpiHandler();
+    setupGUITask();
+    
     CyGlobalIntEnable;
 }
 
-int main( void )
+int main(void)
 {
     /* Perform any hardware setup necessary. */
     prvSetupHardware();
@@ -30,7 +34,9 @@ int main( void )
     /* --- APPLICATION TASKS CAN BE CREATED HERE --- */
     xTaskCreate(doTaskBacklightAdjust, "backlight-adjust", 100, NULL, 8, NULL);
     xTaskCreate(doTaskThermalMonitor, "thermal-monitor", 100, NULL, 8, NULL);
-
+    xTaskCreate(doMcuSpiHandler, "MCU-SPI", 100, NULL, 8, NULL);
+    xTaskCreate(doGUITask, "gui", 100, NULL, 8, NULL);
+    
     /* Start the created tasks running. */
     vTaskStartScheduler();
 

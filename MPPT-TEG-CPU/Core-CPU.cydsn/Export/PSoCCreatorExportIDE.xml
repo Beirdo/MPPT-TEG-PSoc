@@ -6,8 +6,8 @@
     <Toolchain Name="ARM GCC Generic" Selected="True">
       <Tool Name="prebuild" Command="" Options="" />
       <Tool Name="assembler" Command="arm-none-eabi-as.exe" Options="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -alh=${OutputDir}/${CompileFile}.lst -g -W" />
-      <Tool Name="compiler" Command="arm-none-eabi-gcc.exe" Options="-mcpu=cortex-m3 -mthumb -I..\..\FreeRTOS\port-gcc-CortexM3\include -I..\..\FreeRTOS\include -I..\..\WiFiNINA-PSoC\include -I..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\osts -I..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5 -I..\..\common\include -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
-      <Tool Name="linker" Command="arm-none-eabi-gcc.exe" Options="-mcpu=cortex-m3 -mthumb -l m -L Generated_Source\PSoC5 -L ..\..\emWinGraphics-PSoC\LinkLibrary\PSoC5\GCC ..\..\emWinGraphics-PSoC\LinkLibrary\PSoC5\GCC\libemWin_osts_cm3_gcc.a -Wl,-Map,${OutputDir}/${ProjectShortName}.map -T Generated_Source\PSoC5\cm3gcc_1.ld -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects" />
+      <Tool Name="compiler" Command="arm-none-eabi-gcc.exe" Options="-mcpu=cortex-m3 -mthumb -I..\..\FreeRTOS\port-gcc-CortexM3\include -I..\..\FreeRTOS\include -I..\..\WiFiNINA-PSoC\include -I..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\osts -I..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5 -I..\..\common\include -I..\..\emFile-PSoC\Code\Include\PSoC5 -I..\..\emFile-PSoC\Code\Include\PSoC5\emf32OS -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+      <Tool Name="linker" Command="arm-none-eabi-gcc.exe" Options="-mcpu=cortex-m3 -mthumb -l m -L Generated_Source\PSoC5 -L ..\..\emWinGraphics-PSoC\LinkLibrary\PSoC5\GCC -L ..\..\emFile-PSoC\LinkLibrary\PSoC5\GCC ..\..\emWinGraphics-PSoC\LinkLibrary\PSoC5\GCC\libemWin_osts_cm3_gcc.a ..\..\emFile-PSoC\LinkLibrary\PSoC5\GCC\libemf32oslfn.a -Wl,-Map,${OutputDir}/${ProjectShortName}.map -T Generated_Source\PSoC5\cm3gcc_1.ld -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects" />
       <Tool Name="postbuild" Command="" Options="" />
     </Toolchain>
     <Toolchain Name="ARM MDK Generic" Selected="False">
@@ -50,6 +50,8 @@
           <File BuildType="BUILD" Toolchain="">..\..\WiFiNINA-PSoC\src\wifi_drv.c</File>
           <File BuildType="BUILD" Toolchain="">..\..\WiFiNINA-PSoC\src\WiFiClient.c</File>
           <File BuildType="BUILD" Toolchain="">..\..\WiFiNINA-PSoC\src\WiFiSocketBuffer.c</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emFile-PSoC\Code\Source\PSoC5\FS_ConfigIO.c</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emFile-PSoC\Code\Source\PSoC5\FS_X_OS.c</File>
           <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Source\PSoC4_5\FlexColor\GUI_X_FreeRTOS.c</File>
           <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Source\PSoC4_5\FlexColor\GUIConf.c</File>
           <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Source\PSoC4_5\FlexColor\GUIDRV_FlexColor.h</File>
@@ -93,6 +95,26 @@
           <File BuildType="BUILD" Toolchain="">..\..\WiFiNINA-PSoC\include\WiFiSocketBuffer.h</File>
           <File BuildType="BUILD" Toolchain="">..\..\WiFiNINA-PSoC\include\wl_definitions.h</File>
           <File BuildType="BUILD" Toolchain="">..\..\WiFiNINA-PSoC\include\wl_types.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emFile-PSoC\Code\Include\PSoC5\FAT.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emFile-PSoC\Code\Include\PSoC5\FAT_Intern.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emFile-PSoC\Code\Include\PSoC5\FS.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emFile-PSoC\Code\Include\PSoC5\FS_API.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emFile-PSoC\Code\Include\PSoC5\FS_CLib.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emFile-PSoC\Code\Include\PSoC5\FS_ConfDefaults.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emFile-PSoC\Code\Include\PSoC5\FS_Debug.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emFile-PSoC\Code\Include\PSoC5\FS_Dev.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emFile-PSoC\Code\Include\PSoC5\FS_DF_X_HW.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emFile-PSoC\Code\Include\PSoC5\FS_Int.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emFile-PSoC\Code\Include\PSoC5\FS_Lbl.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emFile-PSoC\Code\Include\PSoC5\FS_OS.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emFile-PSoC\Code\Include\PSoC5\FS_Storage.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emFile-PSoC\Code\Include\PSoC5\FS_Types.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emFile-PSoC\Code\Include\PSoC5\Global.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emFile-PSoC\Code\Include\PSoC5\MMC_MCI_HW.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emFile-PSoC\Code\Include\PSoC5\MMC_SD_CardMode_X_HW.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emFile-PSoC\Code\Include\PSoC5\MMC_X_HW.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emFile-PSoC\Code\Include\PSoC5\SEGGER.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\emFile-PSoC\Code\Include\PSoC5\emf32OS\FS_Conf.h</File>
           <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\BUTTON.h</File>
           <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\BUTTON_Private.h</File>
           <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\CALENDAR.h</File>
@@ -250,20 +272,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MOSI_1_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MOSI_1.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MOSI_1.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPIM_SDCARD.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPIM_SDCARD.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPIM_SDCARD_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPIM_SDCARD_INT.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPIM_SDCARD_PVT.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SCLK_0_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SCLK_0.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SCLK_0.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MOSI_0_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MOSI_0.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MOSI_0.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MISO_0_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MISO_0.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MISO_0.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SCLK_1_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SCLK_1.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SCLK_1.h</File>
@@ -288,9 +296,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MOSI_2_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MOSI_2.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MOSI_2.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_0_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_0.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_0.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_1_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_1.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_1.h</File>
@@ -346,8 +351,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LCDScreen.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LCDScreen.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LCDScreen_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LCD_BUS_CLK.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LCD_BUS_CLK.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\EEPROM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\EEPROM.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ResistiveTouch.c</File>
@@ -493,17 +496,40 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WATER_FLOW.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WATER_FLOW.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WATER_FLOW_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WATER_FLOW_CLK.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WATER_FLOW_CLK.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WIFI_CS_OVERRIDE.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WIFI_CS_OVERRIDE.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WIFI_CS_OVERRIDE_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPI_16M_CLK.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPI_16M_CLK.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPIS_DMA_dma.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPIS_DMA_dma.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MCU_SPI_DONE.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MCU_SPI_DONE.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDCARD.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDCARD_ConfigMMC_SPI.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDCARD_MMC_HW_SPI.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDCARD_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPIM_WIFI_IntClock.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPIM_WIFI_IntClock.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDCARD_SPI0.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDCARD_SPI0.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDCARD_SPI0_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDCARD_SPI0_INT.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDCARD_SPI0_PVT.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDCARD_mosi0_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDCARD_mosi0.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDCARD_mosi0.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDCARD_Clock_1.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDCARD_Clock_1.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDCARD_miso0_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDCARD_miso0.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDCARD_miso0.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDCARD_sclk0_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDCARD_sclk0.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDCARD_sclk0.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDCARD_SPI0_CS_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDCARD_SPI0_CS.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDCARD_SPI0_CS.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\CLK_16M.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\CLK_16M.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Workspace\MPPT-TEG-PSoc\MPPT-TEG-CPU\Core-CPU.cydsn\Export\ARM_GCC_Generic">

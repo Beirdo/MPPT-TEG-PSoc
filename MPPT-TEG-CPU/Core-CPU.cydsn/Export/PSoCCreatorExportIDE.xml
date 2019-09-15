@@ -214,13 +214,14 @@
           <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\WM_Intern.h</File>
           <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\osts\GUIConf.h</File>
           <File BuildType="BUILD" Toolchain="">..\..\common\include\interprocessor.h</File>
-          <File BuildType="BUILD" Toolchain="">iotDefines.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\common\include\iotDefines.h</File>
           <File BuildType="BUILD" Toolchain="">mcuData.h</File>
           <File BuildType="BUILD" Toolchain="">wifiQueue.h</File>
           <File BuildType="BUILD" Toolchain="">tmp100.h</File>
           <File BuildType="BUILD" Toolchain="">..\..\QCBOR\inc\qcbor.h</File>
           <File BuildType="BUILD" Toolchain="">..\..\QCBOR\inc\UsefulBuf.h</File>
           <File BuildType="BUILD" Toolchain="">convertTime.h</File>
+          <File BuildType="BUILD" Toolchain="">thermalMonitoring.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Workspace\MPPT-TEG-PSoc\MPPT-TEG-CPU\Core-CPU.cydsn">

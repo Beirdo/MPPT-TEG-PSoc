@@ -17,6 +17,8 @@
 #include "wl_definitions.h"
     
 typedef struct CY_PACKED_ATTR _eeprom_contents {
+    uint16 struct_version;
+    uint8 board_id[14];
     int16 backlight_m;
     int16 backlight_b;
     uint8 fan_poles[2];

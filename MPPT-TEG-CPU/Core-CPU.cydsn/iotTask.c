@@ -15,7 +15,9 @@
 #include "systemTasks.h"
 #include "convertTime.h"
 #include "mcuData.h"
+#include "thermalMonitoring.h"
 #include "iotDefines.h"
+#include "eepromContents.h"
 
 #include "FreeRTOS.h"
 #include "semphr.h"
@@ -50,6 +52,7 @@ void doIotTask(void *args) {
     wifiQueueItem_t item;
     int i;
     UsefulBufC Encoded;
+    (void)args;
     
 
     xLastWakeTime = xTaskGetTickCount(); 
@@ -172,9 +175,10 @@ static int cbor_encode_channel(uint32 now, int index, UsefulBufC *output) {
     QCBOREncode_Init(&EC, UsefulBuf_FROM_BYTE_ARRAY(cbor_buffer));
 
     QCBOREncode_OpenMap(&EC);
+    QCBOREncode_AddSZStringToMapN(&EC, IOT_BOARD_ID, (const char *)eeprom_contents->board_id);
     QCBOREncode_AddDateEpochToMapN(&EC, IOT_TIMESTAMP, now);
     QCBOREncode_AddUInt64ToMapN(&EC, IOT_INDEX, index);
-    QCBOREncode_AddBoolToMapN(&EC, IOT_TEG_ENABLED, !(!ch->enabled));
+    QCBOREncode_AddBoolToMapN(&EC, IOT_TEG_ENABLED, ch->enabled);
     QCBOREncode_AddUInt64ToMapN(&EC, IOT_TEG_STATE, ch->state);
     QCBOREncode_AddUInt64ToMapN(&EC, IOT_TEG_INPUT_VOLTAGE, ch->input.voltage);
     QCBOREncode_AddUInt64ToMapN(&EC, IOT_TEG_INPUT_CURRENT, ch->input.current);
@@ -195,12 +199,26 @@ static int cbor_encode_channel(uint32 now, int index, UsefulBufC *output) {
 
 static int cbor_encode_system_data(uint32 now, UsefulBufC *output) {
     QCBOREncodeContext EC;
+    int i;
 
     QCBOREncode_Init(&EC, UsefulBuf_FROM_BYTE_ARRAY(cbor_buffer));
 
     QCBOREncode_OpenMap(&EC);
+    QCBOREncode_AddSZStringToMapN(&EC, IOT_BOARD_ID, (const char *)eeprom_contents->board_id);
     QCBOREncode_AddDateEpochToMapN(&EC, IOT_TIMESTAMP, now);
     QCBOREncode_AddUInt64ToMapN(&EC, IOT_INDEX, 0xFF);
+    for (i = 0; i < TEMPERATURE_COUNT; i++) {
+        QCBOREncode_AddInt64ToMapN(&EC, IOT_SYS_TEMPERATURE_BASE + i, temperatures[i]);
+    }
+    QCBOREncode_AddUInt64ToMapN(&EC, IOT_SYS_INPUT_FAN_SPEED, fan_speed[0]);
+    QCBOREncode_AddUInt64ToMapN(&EC, IOT_SYS_OUTPUT_FAN_SPEED, fan_speed[1]);
+    QCBOREncode_AddBoolToMapN(&EC, IOT_SYS_PUMP_ON, pump_on);
+    QCBOREncode_AddBoolToMapN(&EC, IOT_SYS_DUMP_VALVE_OPEN, dump_valve_open);
+    QCBOREncode_AddBoolToMapN(&EC, IOT_SYS_EMERGENCY_SHUTDOWN, emergency_shutdown);
+    QCBOREncode_AddUInt64ToMapN(&EC, IOT_SYS_FLOW_RATE, flow_rate);
+    QCBOREncode_AddBoolToMapN(&EC, IOT_SYS_12V_POWERGOOD, PGOOD_12V_Read());
+    QCBOREncode_AddBoolToMapN(&EC, IOT_SYS_ON_BATT, ON_BATT_Read());
+
     QCBOREncode_CloseMap(&EC);
 
     return (QCBOREncode_Finish(&EC, output) == QCBOR_SUCCESS);

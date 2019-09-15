@@ -20,36 +20,20 @@
 #include "max31760.h"
 #include "tmp100.h"
 #include "mcuData.h"
+#include "thermalMonitoring.h"
 
-#define THERMOCOUPLE_START 0
-#define THERMOCOUPLE_COUNT 3
-#define THERMISTOR_START (THERMOCOUPLE_START + THERMOCOUPLE_COUNT)
-#define THERMISTOR_COUNT 2
-#define TMP100_START (THERMISTOR_START + THERMISTOR_COUNT)
-#define TMP100_COUNT 8
-#define DIE_START (TMP100_START + TMP100_COUNT)
-#define DIE_COUNT 2
-#define FAN_CONTROLLER_START (DIE_START + DIE_COUNT)
-#define FAN_CONTROLLER_COUNT 2
 
-#define INDEX_HOT_SIDE (THERMOCOUPLE_START + 1)
-#define INDEX_COLD_SIDE (THERMOCOUPLE_START + 2)
-#define INDEX_AMBIENT_AIR (THERMISTOR_START)
-#define INDEX_MCU_DIE (DIE_START + 1)
-
-#define FAN_PWM_DELTA 0x05
-
-#define SPI_SENSOR_COUNT (THERMISTOR_START + THERMISTOR_COUNT)
-#define TEMPERATURE_COUNT (FAN_CONTROLLER_START + FAN_CONTROLLER_COUNT)
 
 #define HOT_SIDE_HOT_THRESHOLD (85 << 3)    // We don't want the hot-side over 85C
 #define HOT_SIDE_WARM_THRESHOLD (80 << 3)   // Turn on dump valve at 80C
 #define HOT_SIDE_COOL_THRESHOLD (75 << 3)   // Turn off dump valve at 75C
 
-
 int16 temperatures[TEMPERATURE_COUNT];  // 0.125C LSB
 uint16 fan_speed[2];  // RPM
 uint32 flow_rate;     // mL/min
+int emergency_shutdown = 0;
+int pump_on = 0;
+int dump_valve_open = 0;
 
 SemaphoreHandle_t fanOverrideFull;
 SemaphoreHandle_t shutdownPump;
@@ -129,7 +113,6 @@ void doTaskThermalMonitor(void *args)
     int16 deltaTempDiff;
     int8 deltaPwm;
     uint8 fan_pwm_value = 0;
-    int emergency_shutdown = 0;
     
     (void)args;
     
@@ -212,18 +195,24 @@ void doTaskThermalMonitor(void *args)
             // Fan failure.  Shutdown the pump so the system can cool down, turn on dump valve
             emergency_shutdown = 1;
             PUMP_ENABLE_Write(0);
+            pump_on = 0;
             DUMP_VALVE_ENABLE_Write(1);
+            dump_valve_open = 1;
         }
 
         if(!emergency_shutdown) {
             if(temperatures[INDEX_HOT_SIDE] >= HOT_SIDE_HOT_THRESHOLD) {
                 PUMP_ENABLE_Write(0);   // Hot side is getting too hot, stop circulation
+                pump_on = 1;
             } else if(temperatures[INDEX_HOT_SIDE] >= HOT_SIDE_WARM_THRESHOLD) {
                 DUMP_VALVE_ENABLE_Write(1);
+                dump_valve_open = 1;
             } else {
                 PUMP_ENABLE_Write(1);   // Ensure we turn the circulating pump on
+                pump_on = 1;
                 if(temperatures[INDEX_HOT_SIDE] <= HOT_SIDE_COOL_THRESHOLD) {
                     DUMP_VALVE_ENABLE_Write(0);
+                    dump_valve_open = 0;
                 }
             }
         }

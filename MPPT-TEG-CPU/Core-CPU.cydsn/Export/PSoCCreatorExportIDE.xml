@@ -214,6 +214,7 @@
           <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\WM_Intern.h</File>
           <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\osts\GUIConf.h</File>
           <File BuildType="BUILD" Toolchain="">..\..\common\include\interprocessor.h</File>
+          <File BuildType="BUILD" Toolchain="">iotDefines.h</File>
           <File BuildType="BUILD" Toolchain="">mcuData.h</File>
           <File BuildType="BUILD" Toolchain="">wifiQueue.h</File>
           <File BuildType="BUILD" Toolchain="">tmp100.h</File>

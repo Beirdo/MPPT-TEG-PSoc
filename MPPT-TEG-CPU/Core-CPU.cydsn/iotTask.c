@@ -15,6 +15,7 @@
 #include "systemTasks.h"
 #include "convertTime.h"
 #include "mcuData.h"
+#include "iotDefines.h"
 
 #include "FreeRTOS.h"
 #include "semphr.h"
@@ -171,10 +172,25 @@ static int cbor_encode_channel(uint32 now, int index, UsefulBufC *output) {
     QCBOREncode_Init(&EC, UsefulBuf_FROM_BYTE_ARRAY(cbor_buffer));
 
     QCBOREncode_OpenMap(&EC);
-    QCBOREncode_AddBoolToMapN(&EC, 66, true);
+    QCBOREncode_AddDateEpochToMapN(&EC, IOT_TIMESTAMP, now);
+    QCBOREncode_AddUInt64ToMapN(&EC, IOT_INDEX, index);
+    QCBOREncode_AddBoolToMapN(&EC, IOT_TEG_ENABLED, !(!ch->enabled));
+    QCBOREncode_AddUInt64ToMapN(&EC, IOT_TEG_STATE, ch->state);
+    QCBOREncode_AddUInt64ToMapN(&EC, IOT_TEG_INPUT_VOLTAGE, ch->input.voltage);
+    QCBOREncode_AddUInt64ToMapN(&EC, IOT_TEG_INPUT_CURRENT, ch->input.current);
+    QCBOREncode_AddUInt64ToMapN(&EC, IOT_TEG_INPUT_POWER, ch->input.power);
+    QCBOREncode_AddUInt64ToMapN(&EC, IOT_TEG_MIDDLE_VOLTAGE, ch->middle.voltage);
+    QCBOREncode_AddUInt64ToMapN(&EC, IOT_TEG_MIDDLE_CURRENT, ch->middle.current);
+    QCBOREncode_AddUInt64ToMapN(&EC, IOT_TEG_MIDDLE_POWER, ch->middle.power);
+    QCBOREncode_AddUInt64ToMapN(&EC, IOT_TEG_OUTPUT_VOLTAGE, ch->output.voltage);
+    QCBOREncode_AddUInt64ToMapN(&EC, IOT_TEG_OUTPUT_CURRENT, ch->output.current);
+    QCBOREncode_AddUInt64ToMapN(&EC, IOT_TEG_OUTPUT_POWER, ch->output.power);
+    QCBOREncode_AddUInt64ToMapN(&EC, IOT_TEG_VOPEN, ch->Vopen);
+    QCBOREncode_AddUInt64ToMapN(&EC, IOT_TEG_ISHORT, ch->Ishort);
+    QCBOREncode_AddUInt64ToMapN(&EC, IOT_TEG_PWM_VALUE, ch->PWMval);
     QCBOREncode_CloseMap(&EC);
 
-    return !QCBOREncode_Finish(&EC, output);
+    return (QCBOREncode_Finish(&EC, output) == QCBOR_SUCCESS);
 }
 
 static int cbor_encode_system_data(uint32 now, UsefulBufC *output) {
@@ -183,10 +199,11 @@ static int cbor_encode_system_data(uint32 now, UsefulBufC *output) {
     QCBOREncode_Init(&EC, UsefulBuf_FROM_BYTE_ARRAY(cbor_buffer));
 
     QCBOREncode_OpenMap(&EC);
-    QCBOREncode_AddBoolToMapN(&EC, 66, true);
+    QCBOREncode_AddDateEpochToMapN(&EC, IOT_TIMESTAMP, now);
+    QCBOREncode_AddUInt64ToMapN(&EC, IOT_INDEX, 0xFF);
     QCBOREncode_CloseMap(&EC);
 
-    return !QCBOREncode_Finish(&EC, output);
+    return (QCBOREncode_Finish(&EC, output) == QCBOR_SUCCESS);
 }
 
 /* [] END OF FILE */

@@ -7,3 +7,6 @@
 [submodule "emFile-PSoC"]
 	path = emFile-PSoC
 	url = https://gitlab.home.beirdo.ca/Beirdo/emFile-PSoC.git
+[submodule "QCBOR"]
+	path = QCBOR
+	url = https://github.com/laurencelundblade/QCBOR.git

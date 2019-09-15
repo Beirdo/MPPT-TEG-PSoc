@@ -23,6 +23,7 @@ void prvSetupHardware(void)
     setupThermalMonitor();
     setupMcuSpiHandler();
     setupGUITask();
+    setupIotTask();
     
     CyGlobalIntEnable;
 }
@@ -37,7 +38,9 @@ int main(void)
     xTaskCreate(doTaskThermalMonitor, "thermal-monitor", 100, NULL, 8, NULL);
     xTaskCreate(doMcuSpiHandler, "MCU-SPI", 100, NULL, 8, NULL);
     xTaskCreate(doGUITask, "gui", 100, NULL, 8, NULL);
-    xTaskCreate(doWiFiTask, "wifi", 100, NULL, 8, NULL);
+    xTaskCreate(doWiFiTask, "WiFi", 100, NULL, 8, NULL);
+    xTaskCreate(doIotTask, "IOT", 100, NULL, 8, NULL);
+
     
     /* Start the created tasks running. */
     vTaskStartScheduler();

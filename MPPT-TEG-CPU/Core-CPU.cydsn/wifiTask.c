@@ -38,8 +38,12 @@ static wifiScanItem_t scanTable[WL_NETWORKS_LIST_MAXNUM];
 
 static int checkInitialized(void);
 
-uint16 get_random_id(void) {
-    return PRS_Read();
+int isWifiConnected(void) {
+    return connected;
+}
+
+int isWifiEnabled(void) {
+    return wifi_enabled;
 }
 
 int sendWifiRequest(wifiRequest_t type, SemaphoreHandle_t semaphore, uint8 *data, uint8 data_len, TickType_t timeout) {
@@ -58,8 +62,10 @@ wifiQueueItem_t getWifiResponse(SemaphoreHandle_t semaphore, TickType_t timeout)
     memset(&response, 0, sizeof(response));
     if (xSemaphoreTake(semaphore, timeout) == pdPASS) {
         memcpy(&response, &wifiResponseItem, sizeof(response));
+    } else {
+        response.request_type = WIFI_TIMEOUT;
     }
-            
+           
     xSemaphoreGive(wifiResponseMutex);
     return response;
 }

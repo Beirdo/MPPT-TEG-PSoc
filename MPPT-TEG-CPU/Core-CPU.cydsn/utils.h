@@ -29,6 +29,12 @@
 #define TO_BYTE_C(x) (((x) & 0xFF) << 8)
 #define TO_BYTE_D(x) ((x) & 0xFF)
     
+#define WORD_AB(x) (((x) >> 16) & 0xFFFF)
+#define WORD_CD(x) ((x)         & 0xFFFF)
+    
+#define TO_WORD_AB(x) (((x) & 0xFFFF) << 16)
+#define TO_WORD_CD(x) ((x)  & 0xFFFF)
+    
 #define TICKS_TO_MS(x)  ((x) * 1000 / configTICK_RATE_HZ)
     
 #ifndef ustrlen

@@ -6,7 +6,7 @@
     <Toolchain Name="ARM GCC Generic" Selected="True">
       <Tool Name="prebuild" Command="" Options="" />
       <Tool Name="assembler" Command="arm-none-eabi-as.exe" Options="-mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -alh=${OutputDir}/${CompileFile}.lst -g -W" />
-      <Tool Name="compiler" Command="arm-none-eabi-gcc.exe" Options="-mcpu=cortex-m3 -mthumb -I..\..\FreeRTOS\port-gcc-CortexM3\include -I..\..\FreeRTOS\include -I..\..\WiFiNINA-PSoC\include -I..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\osts -I..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5 -I..\..\common\include -I..\..\emFile-PSoC\Code\Include\PSoC5 -I..\..\emFile-PSoC\Code\Include\PSoC5\emf32OS -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+      <Tool Name="compiler" Command="arm-none-eabi-gcc.exe" Options="-mcpu=cortex-m3 -mthumb -I..\..\FreeRTOS\port-gcc-CortexM3\include -I..\..\FreeRTOS\include -I..\..\WiFiNINA-PSoC\include -I..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\osts -I..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5 -I..\..\common\include -I..\..\emFile-PSoC\Code\Include\PSoC5 -I..\..\emFile-PSoC\Code\Include\PSoC5\emf32OS -I..\..\QCBOR\inc -I. -IGenerated_Source\PSoC5 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
       <Tool Name="linker" Command="arm-none-eabi-gcc.exe" Options="-mcpu=cortex-m3 -mthumb -l m -L Generated_Source\PSoC5 -L ..\..\emWinGraphics-PSoC\LinkLibrary\PSoC5\GCC -L ..\..\emFile-PSoC\LinkLibrary\PSoC5\GCC ..\..\emWinGraphics-PSoC\LinkLibrary\PSoC5\GCC\libemWin_osts_cm3_gcc.a ..\..\emFile-PSoC\LinkLibrary\PSoC5\GCC\libemf32oslfn.a -Wl,-Map,${OutputDir}/${ProjectShortName}.map -T Generated_Source\PSoC5\cm3gcc_1.ld -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects" />
       <Tool Name="postbuild" Command="" Options="" />
     </Toolchain>
@@ -62,6 +62,13 @@
           <File BuildType="BUILD" Toolchain="">wifiTask.c</File>
           <File BuildType="BUILD" Toolchain="">tmp100.c</File>
           <File BuildType="BUILD" Toolchain="">eepromWrite.c</File>
+          <File BuildType="BUILD" Toolchain="">iotTask.c</File>
+          <File BuildType="BUILD" Toolchain="">..\..\QCBOR\src\ieee754.c</File>
+          <File BuildType="BUILD" Toolchain="">..\..\QCBOR\src\ieee754.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\QCBOR\src\qcbor_decode.c</File>
+          <File BuildType="BUILD" Toolchain="">..\..\QCBOR\src\qcbor_encode.c</File>
+          <File BuildType="BUILD" Toolchain="">..\..\QCBOR\src\UsefulBuf.c</File>
+          <File BuildType="BUILD" Toolchain="">convertTime.c</File>
           <File BuildType="BUILD" Toolchain="">cyapicallbacks.h</File>
           <File BuildType="BUILD" Toolchain="">device.h</File>
           <File BuildType="BUILD" Toolchain="">FreeRTOSConfig.h</File>
@@ -210,6 +217,9 @@
           <File BuildType="BUILD" Toolchain="">mcuData.h</File>
           <File BuildType="BUILD" Toolchain="">wifiQueue.h</File>
           <File BuildType="BUILD" Toolchain="">tmp100.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\QCBOR\inc\qcbor.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\QCBOR\inc\UsefulBuf.h</File>
+          <File BuildType="BUILD" Toolchain="">convertTime.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Workspace\MPPT-TEG-PSoc\MPPT-TEG-CPU\Core-CPU.cydsn">
@@ -516,12 +526,14 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDCARD_SPI0_CS.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\CLK_16M.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\CLK_16M.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PRS.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PRS.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PRS_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PRS_CONTROL.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PRS_CONTROL.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PRS_CONTROL_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\CLK_PPS.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\CLK_PPS.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PPS_HI.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PPS_HI.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PPS_HI_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PPS_LO.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PPS_LO.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PPS_LO_PM.c</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Workspace\MPPT-TEG-PSoc\MPPT-TEG-CPU\Core-CPU.cydsn\Export\ARM_GCC_Generic">

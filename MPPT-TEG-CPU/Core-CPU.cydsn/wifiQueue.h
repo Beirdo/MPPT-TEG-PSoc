@@ -38,6 +38,7 @@ typedef enum _wifiRequest {
     WIFI_CONNECT_TCP,
     WIFI_DISCONNECT_TCP,
     WIFI_SEND_TCP_DATA,
+    WIFI_TIMEOUT,
 } wifiRequest_t;
 
 typedef struct CY_PACKED_ATTR _wifiConnectTcpData {
@@ -71,6 +72,8 @@ extern QueueHandle_t wifiRequestQueue;
 
 int sendWifiRequest(wifiRequest_t type, SemaphoreHandle_t semaphore, uint8 *data, uint8 data_len, TickType_t timeout);
 wifiQueueItem_t getWifiResponse(SemaphoreHandle_t semaphore, TickType_t timeout);
+int isWifiConnected(void);
+int isWifiEnabled(void);
     
 #endif // __wifiQueue_h__
 

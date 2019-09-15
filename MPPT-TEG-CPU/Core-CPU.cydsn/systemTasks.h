@@ -13,6 +13,8 @@
 #ifndef __systemTasks_h__
 #define __systemTasks_h__
 
+#include <time.h>
+    
 #include "FreeRTOS.h"
 #include "task.h"
     
@@ -31,7 +33,12 @@ void doMcuSpiHandler(void *args);
 
 void setupWiFiTask(void);
 void doWiFiTask(void *args);
-    
+
+void setupIotTask(void);
+void doIotTask(void *args);
+
+int __secs_to_tm(long long t, struct tm *tm);
+
 #endif // __systemTasks_h__
 
 /* [] END OF FILE */

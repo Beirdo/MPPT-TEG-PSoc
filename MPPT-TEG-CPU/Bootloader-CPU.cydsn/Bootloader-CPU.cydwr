@@ -1825,6 +1825,7 @@
         <Data key="Port Format" value="12,2" />
       </Group>
     </Group>
+    <Group key="Unlocked Pins" />
   </Group>
   <Group key="PlaceDir">
     <Data key="count" value="0" />

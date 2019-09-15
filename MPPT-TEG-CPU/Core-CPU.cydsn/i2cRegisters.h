@@ -19,6 +19,8 @@ uint8 i2c_register_read(uint8 addr, uint8 regnum);
 void i2c_register_write(uint8 addr, uint8 regnum, uint8 value);
 uint16 i2c_register_read_msb16(uint8 addr, uint8 basereg);
 uint16 i2c_register_read_lsb16(uint8 addr, uint8 basereg);
+uint16 i2c_register_read16be(uint8 addr, uint8 regnum);
+void i2c_register_write16be(uint8 addr, uint8 regnum, uint16 value);
     
 #endif // __i2cRegister_h__
 

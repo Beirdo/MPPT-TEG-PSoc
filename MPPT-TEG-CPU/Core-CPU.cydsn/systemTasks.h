@@ -28,6 +28,9 @@ void doGUITask(void *args);
 
 void setupMcuSpiHandler(void);
 void doMcuSpiHandler(void *args);
+
+void setupWiFiTask(void);
+void doWiFiTask(void *args);
     
 #endif // __systemTasks_h__
 

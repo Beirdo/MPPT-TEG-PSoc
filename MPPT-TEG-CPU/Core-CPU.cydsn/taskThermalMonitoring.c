@@ -18,15 +18,16 @@
 #include "systemTasks.h"
 #include "utils.h"
 #include "max31760.h"
+#include "tmp100.h"
 #include "mcuData.h"
 
 #define THERMOCOUPLE_START 0
 #define THERMOCOUPLE_COUNT 3
 #define THERMISTOR_START (THERMOCOUPLE_START + THERMOCOUPLE_COUNT)
 #define THERMISTOR_COUNT 2
-#define TMP05_START (THERMISTOR_START + THERMISTOR_COUNT)
-#define TMP05_COUNT 4
-#define DIE_START (TMP05_START + TMP05_COUNT)
+#define TMP100_START (THERMISTOR_START + THERMISTOR_COUNT)
+#define TMP100_COUNT 8
+#define DIE_START (TMP100_START + TMP100_COUNT)
 #define DIE_COUNT 2
 #define FAN_CONTROLLER_START (DIE_START + DIE_COUNT)
 #define FAN_CONTROLLER_COUNT 2
@@ -50,21 +51,13 @@ int16 temperatures[TEMPERATURE_COUNT];  // 0.125C LSB
 uint16 fan_speed[2];  // RPM
 uint32 flow_rate;     // mL/min
 
-SemaphoreHandle_t needToReadTMP05;
 SemaphoreHandle_t fanOverrideFull;
 SemaphoreHandle_t shutdownPump;
 
-static int16 convert_temperature(uint16 raw_value);
+static uint16 spi_sensor_get_raw_value(int index);
+static int16 convert_temperature(uint16 raw_value, int shifts, uint32 mask_off_bits);
 void water_flow_clear(void);
 uint16 water_flow_read(void);
-
-void TMP05_EOC_ISR_Interrupt_InterruptCallback(void)
-{
-    // EOC for the TMP05 chain conversions
-    static BaseType_t preempted = pdFALSE;
-    xSemaphoreGiveFromISR(needToReadTMP05, &preempted);
-    portYIELD_FROM_ISR(preempted); 
-}
 
 #define FAN_ALERT 0x01
 #define FAN_FAIL 0x02
@@ -104,13 +97,23 @@ uint16 water_flow_read(void)
 
 void setupThermalMonitor(void)
 {
-    needToReadTMP05 = xSemaphoreCreateBinary();
     fanOverrideFull = xSemaphoreCreateBinary();
     shutdownPump = xSemaphoreCreateBinary();
     MAX31760_initialize();
+    TMP100_initialize();
     PUMP_ENABLE_Write(1);  // Turn on the circulation pump
     DUMP_VALVE_ENABLE_Write(0);  // Turn off dump valve
     water_flow_clear(); // Reset and enable the water flow counter
+}
+
+static uint16 spi_sensor_get_raw_value(int index) {
+    if (index >= SPI_SENSOR_COUNT) {
+        return 0;
+    }
+    
+    SENSOR_SELECT_Write(index);
+    SPIM_SENSORS_WriteTxData(0x0000);  // all of these sensors are send-only, but we need to TX to RX
+    return SPIM_SENSORS_ReadRxData();
 }
 
 void doTaskThermalMonitor(void *args)
@@ -120,10 +123,7 @@ void doTaskThermalMonitor(void *args)
     uint16 flow_reading = 0;
     const TickType_t xPeriod = pdMS_TO_TICKS(100);
     int i;
-    uint16 spi_sensor_value[SPI_SENSOR_COUNT];
-    int16 tmp05_value[TMP05_COUNT];
     int16 die_temp;
-    uint16 fan_temp[FAN_CONTROLLER_COUNT];
     int16 prevTempDiff = 0;
     int16 tempDiff = 0;
     int16 deltaTempDiff;
@@ -141,64 +141,50 @@ void doTaskThermalMonitor(void *args)
            into ticks.  xLastWakeTime is automatically updated within vTaskDelayUntil()
            so is not explicitly updated by the task. */
         vTaskDelayUntil(&xLastWakeTime, xPeriod); 
+                
+        // Convert all our temperatures into a common format (int13.3, LSB of 0.125C), 
+        // updating the externally visible table
         
-        // Let's do the SPI sensors first
-        for(i = 0; i < SPI_SENSOR_COUNT; i++) {
-            SENSOR_SELECT_Write(i);
-            SPIM_SENSORS_WriteTxData(0x0000);  // all of these sensors are send-only, but we need to TX to RX
-            spi_sensor_value[i] = SPIM_SENSORS_ReadRxData();
+        // Pull the thermocouple readings from SPI
+        for(i = THERMOCOUPLE_START; i < THERMOCOUPLE_START + THERMOCOUPLE_COUNT; i++) {
+            // Thermocouple range is 0 - 1023.75C, int11.2 (13bits including a dummy sign bit), left justified
+            // to convert to 1/8C...  value * 2
+            temperatures[i] = convert_temperature(spi_sensor_get_raw_value(i), 2, 0x0001);
         }
         
-        // Now pull the temperatures from the TMP05 chain if they are ready (already in 1/100C format!)
-        if(xSemaphoreTake(needToReadTMP05, 0) == pdPASS) {
-            for(i = 0; i < TMP05_COUNT; i++) {
-                tmp05_value[i] = TMP05_GetTemperature(i);
-            }
+        // Pull the thermistor readings from SPI
+        for(i = THERMISTOR_START; i < THERMISTOR_START + THERMISTOR_COUNT; i++) {
+            // Termistor readings have an LSB of 0.125C and are signed.  int8.3 format (11 bits total), left justified
+            // Just need to be right justified, retaining the sign
+            temperatures[i] = convert_temperature(spi_sensor_get_raw_value(i), 5, 0x0000);
         }
         
-        // Also let's get the die temperature
+        // Pull the TMP100 readings from I2C
+        for(i = 0; i < TMP100_COUNT; i++) {
+            // TMP100 readings have an LSB of 0.25C and are signed.  int8.2 (10 bits total), left justified, zero padded on right
+            temperatures[TMP100_START + i] = convert_temperature(TMP100_get_temperature(i), 5, 0x0000);
+        }
+        
+        // Pull the die temperature from the PSoC module (using the ADC)
+        // Die temperature is in degrees C
         DieTemp_GetTemp(&die_temp);
+        temperatures[DIE_START] = convert_temperature(die_temp, -3, 0x0007);
 
         // MCU already converted to 1/8C for us (after truncating!!)
         temperatures[INDEX_MCU_DIE] = mcu_system_data.die_temperature;
         
-        // Get fan controller temperatures and fan speeds
+        // Pull the fan controller temperatures via I2C
         for(i = 0; i < FAN_CONTROLLER_COUNT; i++) {
-            fan_temp[i] = MAX31760_read_temperature(i);
+            // Same format as the thermistors
+            temperatures[FAN_CONTROLLER_START + i] = convert_temperature(MAX31760_read_temperature(i), 5, 0x0000);
         }
-        
+
+        // Pull the fan speeds over I2C as well
         for(i = 0; i < 2; i++) {
             fan_speed[i] = MAX31760_read_fan_speed(i);
         }
-        
-                
-        // Convert all our temperatures into a common format (int16, LSB of 0.125C), 
-        // updating the externally visible table
-        for(i = THERMOCOUPLE_START; i < THERMOCOUPLE_START + THERMOCOUPLE_COUNT; i++) {
-            // Thermocouple range is 0 - 1023.75C, int11.2 (12bits, with a dummy sign bit), left justified
-            // to convert to 1/8C...  value * 2
-            temperatures[i] = ((spi_sensor_value[i] >> 3) & 0x0FFF) << 1;            
-        }
-        
-        for(i = THERMISTOR_START; i < THERMISTOR_START + THERMISTOR_COUNT; i++) {
-            // Termistor readings have an LSB of 0.125C and are signed.  int8.3 format (11 bits total), left justified
-            // Just need to be right justified, retaining the sign
-            temperatures[i] = convert_temperature(spi_sensor_value[i]);
-        }
-        
-        for(i = 0; i < TMP05_COUNT; i++) {
-            // Converting 1/100C to 1/8C, retaining sign, rounding to nearest 1/8.
-            temperatures[i+TMP05_START] = ((tmp05_value[i] << 3) + 50) / 100;
-        }
-        
-        // Die temperature is in degrees C
-        temperatures[DIE_START] = die_temp << 3;
-        
-        for(i = 0; i < FAN_CONTROLLER_COUNT; i++) {
-            // Same format as the thermistors
-            temperatures[FAN_CONTROLLER_START + i] = convert_temperature(fan_temp[i]);
-        }
-        
+
+        // Time to control the fan speed.
         if(xSemaphoreTake(fanOverrideFull, 0) == pdPASS) {
             // Our cold-side temperature has hit the threshold.  Blast the fan full speed.
             fan_pwm_value = 0xFF;
@@ -242,6 +228,7 @@ void doTaskThermalMonitor(void *args)
             }
         }
         
+        // Calculate the flow rate
         period = TICKS_TO_MS(xTaskGetTickCount() - xLastWakeTime);
         if(period) {  // should be about 100ms
             flow_reading = water_flow_read();  // pulse count (max per 100ms should be around 25)
@@ -251,9 +238,14 @@ void doTaskThermalMonitor(void *args)
     }
 }
 
-static int16 convert_temperature(uint16 raw_value) {
+static int16 convert_temperature(uint16 raw_value, int shifts, uint32 mask_off_bits) {
     int16 value = *(int16 *)&raw_value;
-    return value >> 5;
+    if (shifts < 0) {
+        value <<= -shifts;
+    } else {
+        value >>= shifts;
+    }
+    return value & ~mask_off_bits;
 }
 
 /* [] END OF FILE */

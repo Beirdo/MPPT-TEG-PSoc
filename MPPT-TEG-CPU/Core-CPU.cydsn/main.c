@@ -18,6 +18,7 @@
 
 void prvSetupHardware(void)
 {
+    EEPROM_Start();
     setupBacklightAdjust();
     setupThermalMonitor();
     setupMcuSpiHandler();
@@ -36,6 +37,7 @@ int main(void)
     xTaskCreate(doTaskThermalMonitor, "thermal-monitor", 100, NULL, 8, NULL);
     xTaskCreate(doMcuSpiHandler, "MCU-SPI", 100, NULL, 8, NULL);
     xTaskCreate(doGUITask, "gui", 100, NULL, 8, NULL);
+    xTaskCreate(doWiFiTask, "wifi", 100, NULL, 8, NULL);
     
     /* Start the created tasks running. */
     vTaskStartScheduler();

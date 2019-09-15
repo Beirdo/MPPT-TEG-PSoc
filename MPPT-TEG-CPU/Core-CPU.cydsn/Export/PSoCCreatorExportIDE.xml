@@ -59,6 +59,9 @@
           <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Source\PSoC4_5\FlexColor\LCDConf.h</File>
           <File BuildType="BUILD" Toolchain="">guiTask.c</File>
           <File BuildType="BUILD" Toolchain="">mcuSpiHandler.c</File>
+          <File BuildType="BUILD" Toolchain="">wifiTask.c</File>
+          <File BuildType="BUILD" Toolchain="">tmp100.c</File>
+          <File BuildType="BUILD" Toolchain="">eepromWrite.c</File>
           <File BuildType="BUILD" Toolchain="">cyapicallbacks.h</File>
           <File BuildType="BUILD" Toolchain="">device.h</File>
           <File BuildType="BUILD" Toolchain="">FreeRTOSConfig.h</File>
@@ -205,6 +208,8 @@
           <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\osts\GUIConf.h</File>
           <File BuildType="BUILD" Toolchain="">..\..\common\include\interprocessor.h</File>
           <File BuildType="BUILD" Toolchain="">mcuData.h</File>
+          <File BuildType="BUILD" Toolchain="">wifiQueue.h</File>
+          <File BuildType="BUILD" Toolchain="">tmp100.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Workspace\MPPT-TEG-PSoc\MPPT-TEG-CPU\Core-CPU.cydsn">
@@ -372,19 +377,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_ENABLE_REG.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_ENABLE_REG.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_ENABLE_REG_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\tmp05_in_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\tmp05_in.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\tmp05_in.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\tmp05_out_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\tmp05_out.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\tmp05_out.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\TMP05_CLK.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\TMP05_CLK.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\TMP05.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\TMP05.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\TMP05_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\TMP05_INT.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\TMP05_PVT.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LI_ION_ENABLE_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LI_ION_ENABLE.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LI_ION_ENABLE.h</File>
@@ -438,8 +430,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ResistiveTouch_ADC.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ResistiveTouch_ADC_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ResistiveTouch_ADC_INT.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\TMP05_EOC_ISR.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\TMP05_EOC_ISR.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ResistiveTouch_ADC_AMux.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ResistiveTouch_ADC_AMux.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ResistiveTouch_ADC_Ext_CP_Clk.c</File>
@@ -499,6 +489,8 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WIFI_CS_OVERRIDE.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WIFI_CS_OVERRIDE.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WIFI_CS_OVERRIDE_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPI_16M_CLK.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPI_16M_CLK.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPIS_DMA_dma.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPIS_DMA_dma.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\MCU_SPI_DONE.c</File>
@@ -507,8 +499,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDCARD_ConfigMMC_SPI.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDCARD_MMC_HW_SPI.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDCARD_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPIM_WIFI_IntClock.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPIM_WIFI_IntClock.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDCARD_SPI0.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDCARD_SPI0.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDCARD_SPI0_PM.c</File>
@@ -530,6 +520,12 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SDCARD_SPI0_CS.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\CLK_16M.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\CLK_16M.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PRS.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PRS.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PRS_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PRS_CONTROL.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PRS_CONTROL.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PRS_CONTROL_PM.c</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Workspace\MPPT-TEG-PSoc\MPPT-TEG-CPU\Core-CPU.cydsn\Export\ARM_GCC_Generic">

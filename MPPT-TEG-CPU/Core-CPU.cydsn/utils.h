@@ -31,6 +31,10 @@
     
 #define TICKS_TO_MS(x)  ((x) * 1000 / configTICK_RATE_HZ)
     
+#ifndef ustrlen
+#define ustrlen(x) (strlen((char *)(x)))
+#endif
+    
 #endif // __utils_h__
 
 /* [] END OF FILE */

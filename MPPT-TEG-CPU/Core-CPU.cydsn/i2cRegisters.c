@@ -47,4 +47,26 @@ uint16 i2c_register_read_lsb16(uint8 addr, uint8 basereg)
     return value;
 }
 
+uint16 i2c_register_read16be(uint8 addr, uint8 regnum)
+{
+    uint16 value;
+    I2C_MasterSendStart(addr, 0);
+    I2C_MasterWriteByte(regnum);
+    I2C_MasterSendRestart(addr, 1);
+    value = TO_BYTE_D(I2C_MasterReadByte(0));
+    value |= TO_BYTE_C(I2C_MasterReadByte(1));
+    I2C_MasterSendStop();
+    return value;
+}
+
+void i2c_register_write16be(uint8 addr, uint8 regnum, uint16 value)
+{
+    I2C_MasterSendStart(addr, 0);
+    I2C_MasterWriteByte(regnum);
+    I2C_MasterWriteByte(BYTE_D(value));
+    I2C_MasterWriteByte(BYTE_C(value));
+    I2C_MasterSendStop();
+}
+
+
 /* [] END OF FILE */

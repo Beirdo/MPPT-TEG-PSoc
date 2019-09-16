@@ -6,7 +6,7 @@
     <Toolchain Name="ARM GCC Generic" Selected="True">
       <Tool Name="prebuild" Command="" Options="" />
       <Tool Name="assembler" Command="arm-none-eabi-as.exe" Options="-mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -alh=${OutputDir}/${CompileFile}.lst -g -W" />
-      <Tool Name="compiler" Command="arm-none-eabi-gcc.exe" Options="-mcpu=cortex-m0 -mthumb -I..\..\common\include -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+      <Tool Name="compiler" Command="arm-none-eabi-gcc.exe" Options="-mcpu=cortex-m0 -mthumb -I..\..\common\include -I..\..\FreeRTOS\include -I..\..\FreeRTOS\port-gcc-CortexM0 -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
       <Tool Name="linker" Command="arm-none-eabi-gcc.exe" Options="-mcpu=cortex-m0 -mthumb -L Generated_Source\PSoC4 -Wl,-Map,${OutputDir}/${ProjectShortName}.map -T Generated_Source\PSoC4\cm0gcc_1.ld -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects" />
       <Tool Name="postbuild" Command="" Options="" />
     </Toolchain>
@@ -40,11 +40,46 @@
           <File BuildType="BUILD" Toolchain="">tca9534.c</File>
           <File BuildType="BUILD" Toolchain="">tegchannel.c</File>
           <File BuildType="BUILD" Toolchain="">ina219.c</File>
+          <File BuildType="BUILD" Toolchain="">..\..\FreeRTOS\port-gcc-CortexM0\port.c</File>
+          <File BuildType="BUILD" Toolchain="">..\..\FreeRTOS\MemMang\heap_1.c</File>
+          <File BuildType="BUILD" Toolchain="">tegControl.c</File>
           <File BuildType="BUILD" Toolchain="">cyapicallbacks.h</File>
           <File BuildType="BUILD" Toolchain="">tegchannel.h</File>
           <File BuildType="BUILD" Toolchain="">tca9534.h</File>
           <File BuildType="BUILD" Toolchain="">ina219.h</File>
           <File BuildType="BUILD" Toolchain="">..\..\common\include\interprocessor.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\FreeRTOS\include\croutine.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\FreeRTOS\include\deprecated_definitions.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\FreeRTOS\include\event_groups.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\FreeRTOS\include\FreeRTOS.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\FreeRTOS\include\list.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\FreeRTOS\include\message_buffer.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\FreeRTOS\include\mpu_prototypes.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\FreeRTOS\include\mpu_wrappers.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\FreeRTOS\include\portable.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\FreeRTOS\include\projdefs.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\FreeRTOS\include\queue.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\FreeRTOS\include\semphr.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\FreeRTOS\include\stack_macros.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\FreeRTOS\include\StackMacros.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\FreeRTOS\include\stream_buffer.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\FreeRTOS\include\task.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\FreeRTOS\include\timers.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\FreeRTOS\port-gcc-CortexM0\portmacro.h</File>
+          <File BuildType="BUILD" Toolchain="">systemTasks.h</File>
+          <File BuildType="BUILD" Toolchain="">FreeRTOSConfig.h</File>
+          <File BuildType="BUILD" Toolchain="">device.h</File>
+        </Files>
+      </Folder>
+      <Folder BuildType="STRICT" Path="C:\Workspace\MPPT-TEG-PSoc\MPPT-TEG-MCU\MCU-Core.cydsn">
+        <Files Root="C:\Workspace\MPPT-TEG-PSoc\MPPT-TEG-MCU\MCU-Core.cydsn">
+          <File BuildType="BUILD" Toolchain="">..\..\FreeRTOS\croutine.c</File>
+          <File BuildType="BUILD" Toolchain="">..\..\FreeRTOS\event_groups.c</File>
+          <File BuildType="BUILD" Toolchain="">..\..\FreeRTOS\list.c</File>
+          <File BuildType="BUILD" Toolchain="">..\..\FreeRTOS\queue.c</File>
+          <File BuildType="BUILD" Toolchain="">..\..\FreeRTOS\stream_buffer.c</File>
+          <File BuildType="BUILD" Toolchain="">..\..\FreeRTOS\tasks.c</File>
+          <File BuildType="BUILD" Toolchain="">..\..\FreeRTOS\timers.c</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Workspace\MPPT-TEG-PSoc\MPPT-TEG-MCU\MCU-Core.cydsn\Generated_Source\PSoC4">

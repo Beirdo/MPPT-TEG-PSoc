@@ -72,6 +72,7 @@
           <File BuildType="BUILD" Toolchain="">taskChargingMonitor.c</File>
           <File BuildType="BUILD" Toolchain="">ina219.c</File>
           <File BuildType="BUILD" Toolchain="">tca9534.c</File>
+          <File BuildType="BUILD" Toolchain="">fsTask.c</File>
           <File BuildType="BUILD" Toolchain="">cyapicallbacks.h</File>
           <File BuildType="BUILD" Toolchain="">device.h</File>
           <File BuildType="BUILD" Toolchain="">FreeRTOSConfig.h</File>
@@ -228,6 +229,7 @@
           <File BuildType="BUILD" Toolchain="">chargingMonitor.h</File>
           <File BuildType="BUILD" Toolchain="">ina219.h</File>
           <File BuildType="BUILD" Toolchain="">tca9534.h</File>
+          <File BuildType="BUILD" Toolchain="">FSQueue.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Workspace\MPPT-TEG-PSoc\MPPT-TEG-CPU\Core-CPU.cydsn">

@@ -40,6 +40,8 @@ void doIotTask(void *args);
 void setupChargingMonitor(void);
 void doTaskChargingMonitor(void *args);
 
+void setupFSTask(void);
+void doFSTask(void *args);
 
 #endif // __systemTasks_h__
 

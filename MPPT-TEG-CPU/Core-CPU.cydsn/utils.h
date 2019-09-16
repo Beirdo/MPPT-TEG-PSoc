@@ -16,7 +16,7 @@
 #define min(x, y) ((x) < (y) ? (x) : (y))
 #define max(x, y) ((x) > (y) ? (x) : (y))
 #define clamp(x, y, z) min(max((x), (y)), (z))
-#define abs(x) ((x) < 0 ? -(x) : (x))
+#define _abs(x) ((x) < 0 ? -(x) : (x))
     
 // 32-bit word => ABCD, 16 bit word => CD
 #define BYTE_A(x)  (((x) >> 24) & 0xFF)

@@ -25,6 +25,7 @@ void prvSetupHardware(void)
     setupGUITask();
     setupIotTask();
     setupChargingMonitor();
+    setupFSTask();
     
     CyGlobalIntEnable;
 }
@@ -42,6 +43,7 @@ int main(void)
     xTaskCreate(doWiFiTask, "WiFi", 100, NULL, 8, NULL);
     xTaskCreate(doIotTask, "IOT", 100, NULL, 8, NULL);
     xTaskCreate(doTaskChargingMonitor, "charging-monitor", 100, NULL, 8, NULL);
+    xTaskCreate(doFSTask, "FAT32-FS", 100, NULL, 8, NULL);
 
     
     /* Start the created tasks running. */
@@ -71,3 +73,12 @@ void vApplicationMallocFailedHook( void )
 }
 
 /* [] END OF FILE */
+/*
+    case 0u:
+        if (CARD_DETECT_Read()) {
+            result = FS_MEDIA_NOT_PRESENT;
+        } else {
+            result = FS_MEDIA_IS_PRESENT;
+        }
+        break;
+*/

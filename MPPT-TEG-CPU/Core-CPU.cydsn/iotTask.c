@@ -19,6 +19,7 @@
 #include "iotDefines.h"
 #include "eepromContents.h"
 #include "chargingMonitor.h"
+#include "FSQueue.h"
 
 #include "FreeRTOS.h"
 #include "semphr.h"
@@ -31,6 +32,7 @@
 
 static const int idiot_check_now = 1568536025; // 9/15/2019 1:27AM PST
 SemaphoreHandle_t wifiCommandSemaphore;
+SemaphoreHandle_t fsCommandSemaphore;
 uint8 cbor_buffer[WIFI_SOCKET_BUFFER_SIZE];
 uint32 remote_ip;
 uint16 remote_port;
@@ -41,6 +43,7 @@ static int cbor_encode_system_data(uint32 now, UsefulBufC *output);
 
 void setupIotTask(void) {
     wifiCommandSemaphore = xSemaphoreCreateBinary();
+    fsCommandSemaphore = xSemaphoreCreateBinary();
 }
 
 void doIotTask(void *args) {
@@ -166,6 +169,8 @@ void doIotTask(void *args) {
                 }
                 // Write to logfile
                 if (sdcard_detected) {
+                    sendFSRequest(now, i, fsCommandSemaphore, (uint8 *)Encoded.ptr, Encoded.len, pdMS_TO_TICKS(20));
+                    getFSResponse(fsCommandSemaphore, pdMS_TO_TICKS(100));
                 }
             }
         }
@@ -183,6 +188,8 @@ void doIotTask(void *args) {
             }
             // Write to logfile
             if (sdcard_detected) {
+                sendFSRequest(now, i, fsCommandSemaphore, (uint8 *)Encoded.ptr, Encoded.len, pdMS_TO_TICKS(20));
+                getFSResponse(fsCommandSemaphore, pdMS_TO_TICKS(100));
             }
         }
     }

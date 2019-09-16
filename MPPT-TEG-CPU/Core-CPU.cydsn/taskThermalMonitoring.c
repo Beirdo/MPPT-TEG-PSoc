@@ -178,7 +178,7 @@ void doTaskThermalMonitor(void *args)
             tempDiff = temperatures[INDEX_COLD_SIDE] - temperatures[INDEX_AMBIENT_AIR];
             deltaTempDiff = tempDiff - prevTempDiff;
             
-            if(abs(deltaTempDiff) < 4) { // within 0.5C, slow the fan
+            if(_abs(deltaTempDiff) < 4) { // within 0.5C, slow the fan
                 deltaPwm = - FAN_PWM_DELTA;
             } else if(deltaTempDiff > 5 << 3) { // differential rose 5C or more, speed up quickly
                 deltaPwm = 4 * FAN_PWM_DELTA;

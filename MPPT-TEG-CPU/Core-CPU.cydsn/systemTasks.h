@@ -37,7 +37,9 @@ void doWiFiTask(void *args);
 void setupIotTask(void);
 void doIotTask(void *args);
 
-int __secs_to_tm(long long t, struct tm *tm);
+void setupChargingMonitor(void);
+void doTaskChargingMonitor(void *args);
+
 
 #endif // __systemTasks_h__
 

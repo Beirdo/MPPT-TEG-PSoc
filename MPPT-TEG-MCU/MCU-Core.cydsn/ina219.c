@@ -12,7 +12,7 @@
 
 #include "project.h"
 #include "ina219.h"
-#include "tegchannel.h"
+#include "interprocessor.h"
 
 #define INA219_COUNT 3
 

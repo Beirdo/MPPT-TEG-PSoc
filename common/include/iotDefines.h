@@ -51,6 +51,7 @@ typedef enum _iotKeys {
     IOT_SYS_LIION_POWERGOOD,
     IOT_SYS_LIION_STAT1,
     IOT_SYS_LIION_STAT2,
+    IOT_SYS_LIION_STATE,
     IOT_SYS_LEAD1_VOLTAGE,
     IOT_SYS_LEAD1_CURRENT,
     IOT_SYS_LEAD1_POWER,
@@ -60,6 +61,7 @@ typedef enum _iotKeys {
     IOT_SYS_LEAD1_POWERGOOD,
     IOT_SYS_LEAD1_STAT1,
     IOT_SYS_LEAD1_STAT2,
+    IOT_SYS_LEAD1_STATE,
     IOT_SYS_LEAD2_VOLTAGE,
     IOT_SYS_LEAD2_CURRENT,
     IOT_SYS_LEAD2_POWER,
@@ -69,6 +71,7 @@ typedef enum _iotKeys {
     IOT_SYS_LEAD2_POWERGOOD,
     IOT_SYS_LEAD2_STAT1,
     IOT_SYS_LEAD2_STAT2,
+    IOT_SYS_LEAD2_STATE,
 } iotKeys_t;
     
 #endif // __iotDefines_h__

@@ -103,9 +103,9 @@ static uint16 spi_sensor_get_raw_value(int index) {
 void doTaskThermalMonitor(void *args)
 {
     TickType_t xLastWakeTime;
+    const TickType_t xPeriod = pdMS_TO_TICKS(100);
     uint16 period;
     uint16 flow_reading = 0;
-    const TickType_t xPeriod = pdMS_TO_TICKS(100);
     int i;
     int16 die_temp;
     int16 prevTempDiff = 0;

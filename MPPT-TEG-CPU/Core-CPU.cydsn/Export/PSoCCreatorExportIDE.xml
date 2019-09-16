@@ -69,6 +69,9 @@
           <File BuildType="BUILD" Toolchain="">..\..\QCBOR\src\qcbor_encode.c</File>
           <File BuildType="BUILD" Toolchain="">..\..\QCBOR\src\UsefulBuf.c</File>
           <File BuildType="BUILD" Toolchain="">convertTime.c</File>
+          <File BuildType="BUILD" Toolchain="">taskChargingMonitor.c</File>
+          <File BuildType="BUILD" Toolchain="">ina219.c</File>
+          <File BuildType="BUILD" Toolchain="">tca9534.c</File>
           <File BuildType="BUILD" Toolchain="">cyapicallbacks.h</File>
           <File BuildType="BUILD" Toolchain="">device.h</File>
           <File BuildType="BUILD" Toolchain="">FreeRTOSConfig.h</File>
@@ -222,6 +225,9 @@
           <File BuildType="BUILD" Toolchain="">..\..\QCBOR\inc\UsefulBuf.h</File>
           <File BuildType="BUILD" Toolchain="">convertTime.h</File>
           <File BuildType="BUILD" Toolchain="">thermalMonitoring.h</File>
+          <File BuildType="BUILD" Toolchain="">chargingMonitor.h</File>
+          <File BuildType="BUILD" Toolchain="">ina219.h</File>
+          <File BuildType="BUILD" Toolchain="">tca9534.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Workspace\MPPT-TEG-PSoc\MPPT-TEG-CPU\Core-CPU.cydsn">

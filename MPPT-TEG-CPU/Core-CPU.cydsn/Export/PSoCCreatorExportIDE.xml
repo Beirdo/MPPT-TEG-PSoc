@@ -324,16 +324,9 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_1_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_1.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SS_1.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LIGHT_SENSOR_IRQ.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LIGHT_SENSOR_IRQ.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LIGHT_SENSOR_INT_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LIGHT_SENSOR_INT.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LIGHT_SENSOR_INT.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\CARD_DETECT_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\CARD_DETECT.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\CARD_DETECT.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\CARD_DETECT_IRQ.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\CARD_DETECT_IRQ.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ESPRST_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ESPRST.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ESPRST.h</File>
@@ -397,25 +390,12 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_ENABLE_REG.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_ENABLE_REG.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM_ENABLE_REG_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LI_ION_ENABLE_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LI_ION_ENABLE.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LI_ION_ENABLE.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PUMP_ENABLE_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PUMP_ENABLE.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PUMP_ENABLE.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ON_BATT_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ON_BATT.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ON_BATT.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\CHARGING_INT_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\CHARGING_INT.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\CHARGING_INT.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LI_ION_INT_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LI_ION_INT.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LI_ION_INT.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\CHARGING_IRQ.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\CHARGING_IRQ.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LI_ION_IRQ.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LI_ION_IRQ.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\DESULFATE_PWM_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\DESULFATE_PWM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\DESULFATE_PWM.h</File>

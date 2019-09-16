@@ -18,6 +18,7 @@
 #include "thermalMonitoring.h"
 #include "iotDefines.h"
 #include "eepromContents.h"
+#include "chargingMonitor.h"
 
 #include "FreeRTOS.h"
 #include "semphr.h"
@@ -31,6 +32,9 @@
 static const int idiot_check_now = 1568536025; // 9/15/2019 1:27AM PST
 SemaphoreHandle_t wifiCommandSemaphore;
 uint8 cbor_buffer[WIFI_SOCKET_BUFFER_SIZE];
+uint32 remote_ip;
+uint16 remote_port;
+uint8 remote_mode;
 
 static int cbor_encode_channel(uint32 now, int index, UsefulBufC *output);
 static int cbor_encode_system_data(uint32 now, UsefulBufC *output);
@@ -48,6 +52,8 @@ void doIotTask(void *args) {
     int need_now = 0;
     int wifi_connected = 0;
     int wifi_enabled = 0;
+    int remote_configured = 0;
+    int sdcard_detected = 0;
     uint8 socket = 0xFF;
     wifiQueueItem_t item;
     int i;
@@ -106,11 +112,21 @@ void doIotTask(void *args) {
             }
         }
         
-        if (wifi_connected && socket == 0xFF) {
+        if (!remote_configured) {
+            remote_ip = eeprom_contents->wifi_remote_ip;
+            remote_port = eeprom_contents->wifi_remote_port;
+            remote_mode = eeprom_contents->wifi_remote_mode;
+            
+            if (remote_ip != 0xFFFFFFFF && remote_port != 0xFFFF && remote_mode != 0xFF) {
+                remote_configured = 1;
+            }
+        }
+        
+        if (wifi_connected && socket == 0xFF && remote_configured) {
             wifiConnectTcpData_t connectRequest;
-            connectRequest.ip = 0x7F000001; // Localhost for the moment, will be coming from EEPROM
-            connectRequest.port = 1234;  // will be coming from EEPROM
-            connectRequest.mode = TLS_MODE; // will be coming from EEPROM
+            connectRequest.ip = remote_ip; // hostnames take too much space
+            connectRequest.port = remote_port;
+            connectRequest.mode = remote_mode;
             if (sendWifiRequest(WIFI_CONNECT_TCP, wifiCommandSemaphore, (uint8 *)&connectRequest, sizeof(connectRequest), pdMS_TO_TICKS(10))) {
                 item = getWifiResponse(wifiCommandSemaphore, xPeriodLong);
                 if (item.request_type != WIFI_TIMEOUT) {
@@ -130,6 +146,9 @@ void doIotTask(void *args) {
             need_now = 0;
         }
         
+        // Check if an SD card is in.
+        sdcard_detected = !(CARD_DETECT_Read());  // Active low signal
+        
         // Time to generate our CBOR output.  If the RTC is not correct, we will get seconds since reboot, and we will only
         // log to the SD card.  If the wifi is connected and our socket is connected and we have RTC, we will also send the
         // data out to the IOT collector over wifi.
@@ -146,6 +165,8 @@ void doIotTask(void *args) {
                     }
                 }
                 // Write to logfile
+                if (sdcard_detected) {
+                }
             }
         }
 
@@ -161,6 +182,8 @@ void doIotTask(void *args) {
                 }
             }
             // Write to logfile
+            if (sdcard_detected) {
+            }
         }
     }
 }
@@ -199,7 +222,7 @@ static int cbor_encode_channel(uint32 now, int index, UsefulBufC *output) {
 
 static int cbor_encode_system_data(uint32 now, UsefulBufC *output) {
     QCBOREncodeContext EC;
-    int i;
+    int i, j, k;
 
     QCBOREncode_Init(&EC, UsefulBuf_FROM_BYTE_ARRAY(cbor_buffer));
 
@@ -218,6 +241,30 @@ static int cbor_encode_system_data(uint32 now, UsefulBufC *output) {
     QCBOREncode_AddUInt64ToMapN(&EC, IOT_SYS_FLOW_RATE, flow_rate);
     QCBOREncode_AddBoolToMapN(&EC, IOT_SYS_12V_POWERGOOD, PGOOD_12V_Read());
     QCBOREncode_AddBoolToMapN(&EC, IOT_SYS_ON_BATT, ON_BATT_Read());
+    QCBOREncode_AddUInt64ToMapN(&EC, IOT_SYS_24V_VOLTAGE, ina_readings[INA_RAIL_24V].voltage);
+    QCBOREncode_AddUInt64ToMapN(&EC, IOT_SYS_24V_CURRENT, ina_readings[INA_RAIL_24V].current);
+    QCBOREncode_AddUInt64ToMapN(&EC, IOT_SYS_24V_POWER, ina_readings[INA_RAIL_24V].power);
+    for (i = 0, j = IOT_SYS_LEAD1_VOLTAGE; i < MAX_BATTERIES; i++) {
+        uint8 capacity = 0;
+        QCBOREncode_AddUInt64ToMapN(&EC, j++, ina_readings[INA_LEAD_BATTERY1 + i].voltage);
+        QCBOREncode_AddUInt64ToMapN(&EC, j++, ina_readings[INA_LEAD_BATTERY1 + i].current);
+        QCBOREncode_AddUInt64ToMapN(&EC, j++, ina_readings[INA_LEAD_BATTERY1 + i].power);
+        for (k = CHARGER_ENABLED; k < CHARGER_DESULFATE; k++) {
+            QCBOREncode_AddBoolToMapN(&EC, j++, get_charger_bit(i, k));
+        }
+        QCBOREncode_AddUInt64ToMapN(&EC, j++, chargerStatus[i]);
+        if (i == BATTERY_LIION) {
+            continue;
+        }
+            
+        QCBOREncode_AddBoolToMapN(&EC, j++, get_charger_bit(i, k++));
+        if (get_charger_bit(i, k++)) {
+            capacity = 9;
+        } else if (get_charger_bit(i, k++)) {
+            capacity = 20;
+        }
+        QCBOREncode_AddUInt64ToMapN(&EC, j++, capacity);
+    }
 
     QCBOREncode_CloseMap(&EC);
 

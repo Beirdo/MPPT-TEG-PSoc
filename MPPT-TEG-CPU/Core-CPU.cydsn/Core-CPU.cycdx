@@ -2,9 +2,9 @@
 <blockRegMap version="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://cypress.com/xsd/cyblockregmap cyblockregmap.xsd" xmlns="http://cypress.com/xsd/cyblockregmap">
   <block name="ESPRST" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="FAN_STATUS_REG" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-    <register name="FAN_STATUS_REG_STATUS_REG" address="0x40006468" bitWidth="8" desc="" hidden="false" />
-    <register name="FAN_STATUS_REG_MASK_REG" address="0x40006488" bitWidth="8" desc="" hidden="false" />
-    <register name="FAN_STATUS_REG_STATUS_AUX_CTL_REG" address="0x40006498" bitWidth="8" desc="" hidden="false">
+    <register name="FAN_STATUS_REG_STATUS_REG" address="0x4000646B" bitWidth="8" desc="" hidden="false" />
+    <register name="FAN_STATUS_REG_MASK_REG" address="0x4000648B" bitWidth="8" desc="" hidden="false" />
+    <register name="FAN_STATUS_REG_STATUS_AUX_CTL_REG" address="0x4000649B" bitWidth="8" desc="" hidden="false">
       <field name="FIFO0" from="5" to="5" access="RW" resetVal="" desc="FIFO0 clear" hidden="false">
         <value name="ENABLED" value="1" desc="Enable counter" />
         <value name="DISABLED" value="0" desc="Disable counter" />
@@ -43,13 +43,13 @@
     <block name="ZeroTerminal_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="vmCompare" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="PWMUDB" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <register name="DESULFATE_PWMGEN_COMPARE_Reg_" address="0x40006428" bitWidth="8" desc="UDB.D0 - Assigned Compare Value" hidden="false" />
-    <register name="DESULFATE_PWMGEN_Control_Reg" address="0x4000647B" bitWidth="8" desc="UDB Control Register - Assigned Control Register Value" hidden="false">
+    <register name="DESULFATE_PWMGEN_COMPARE_Reg_" address="0x40006529" bitWidth="8" desc="UDB.D0 - Assigned Compare Value" hidden="false" />
+    <register name="DESULFATE_PWMGEN_Control_Reg" address="0x4000657B" bitWidth="8" desc="UDB Control Register - Assigned Control Register Value" hidden="false">
       <field name="CTRL_ENABLE" from="7" to="7" access="RW" resetVal="" desc="Enable the PWM" hidden="false" />
       <field name="CTRL_CMPMODE2" from="5" to="3" access="RW" resetVal="" desc="Compare mode 2" hidden="false" />
       <field name="CTRL_CMPMODE1" from="2" to="0" access="RW" resetVal="" desc="Compare mode 1" hidden="false" />
     </register>
-    <register name="DESULFATE_PWMGEN_STATUS_AUX_CTRL" address="0x40006498" bitWidth="8" desc="UDB Auxilliary Control Register" hidden="false">
+    <register name="DESULFATE_PWMGEN_STATUS_AUX_CTRL" address="0x40006599" bitWidth="8" desc="UDB Auxilliary Control Register" hidden="false">
       <field name="FIFO0_CLR" from="0" to="0" access="RW" resetVal="" desc="FIFO0 clear" hidden="false">
         <value name="E_FIFO_CLR_0" value="0" desc="Normal FIFO operation" />
         <value name="E_FIFO_CLR_1" value="1" desc="Clear FIFO state" />
@@ -135,7 +135,7 @@
   <block name="SPI_8M_CLK" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="SS_2e" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="PWM_ENABLE_REG" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-    <register name="PWM_ENABLE_REG_CONTROL_REG" address="0x4000647A" bitWidth="8" desc="" hidden="false" />
+    <register name="PWM_ENABLE_REG_CONTROL_REG" address="0x40006479" bitWidth="8" desc="" hidden="false" />
   </block>
   <block name="SS_2d" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="CTS_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
@@ -152,15 +152,15 @@
     <block name="ZeroTerminal_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="CounterUDB" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="int_vm" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <register name="PPS_HI_COUNTER" address="0x40006406" bitWidth="16" desc="UDB.A0 - Current Counter Value" hidden="false" />
-    <register name="PPS_HI_PERIOD" address="0x40006426" bitWidth="16" desc="UDB.D0 - Assigned Period" hidden="false" />
-    <register name="PPS_HI_COMPARE" address="0x40006436" bitWidth="16" desc="UDB.D1 - Assigned Compare Value" hidden="false" />
-    <register name="PPS_HI_Control_Reg" address="0x40006478" bitWidth="8" desc="UDB Control Register - Assigned Control Register Value" hidden="false">
+    <register name="PPS_HI_COUNTER" address="0x4000640C" bitWidth="16" desc="UDB.A0 - Current Counter Value" hidden="false" />
+    <register name="PPS_HI_PERIOD" address="0x4000642C" bitWidth="16" desc="UDB.D0 - Assigned Period" hidden="false" />
+    <register name="PPS_HI_COMPARE" address="0x4000643C" bitWidth="16" desc="UDB.D1 - Assigned Compare Value" hidden="false" />
+    <register name="PPS_HI_Control_Reg" address="0x4000647B" bitWidth="8" desc="UDB Control Register - Assigned Control Register Value" hidden="false">
       <field name="CTRL_ENABLE" from="7" to="7" access="RW" resetVal="" desc="Enable Counter" hidden="false" />
       <field name="CTRL_CAPMODE" from="4" to="3" access="RW" resetVal="" desc="Capture mode" hidden="false" />
       <field name="CTRL_CMPMODE" from="2" to="0" access="RW" resetVal="" desc="Compare mode" hidden="false" />
     </register>
-    <register name="PPS_HI_STATUS_MASK" address="0x40006484" bitWidth="8" desc="UDB Status bits Interrupt Mask Enable Register" hidden="false">
+    <register name="PPS_HI_STATUS_MASK" address="0x4000648D" bitWidth="8" desc="UDB Status bits Interrupt Mask Enable Register" hidden="false">
       <field name="COUNTER_STS_CMP" from="0" to="0" access="RW" resetVal="" desc="Compare output status" hidden="false" />
       <field name="COUNTER_STS_A0ZERO" from="1" to="1" access="RW" resetVal="" desc="A0 Zero ouput status" hidden="false" />
       <field name="COUNTER_STS_OVERFLOW" from="2" to="2" access="RW" resetVal="" desc="Overflow status " hidden="false" />
@@ -169,7 +169,7 @@
       <field name="COUNTER_STS_FIFO_FULL" from="5" to="5" access="RW" resetVal="" desc="FIFO Full Status " hidden="false" />
       <field name="COUNTER_STS_FIFO_NEMPTY" from="6" to="6" access="RW" resetVal="" desc="FIFO Not Empty Status " hidden="false" />
     </register>
-    <register name="PPS_HI_STATUS_AUX_CTRL" address="0x40006494" bitWidth="8" desc="UDB Auxilliary Control Register" hidden="false">
+    <register name="PPS_HI_STATUS_AUX_CTRL" address="0x4000649D" bitWidth="8" desc="UDB Auxilliary Control Register" hidden="false">
       <field name="FIFO0_CLR" from="0" to="0" access="RW" resetVal="" desc="FIFO0 clear" hidden="false">
         <value name="E_FIFO_CLR_0" value="0" desc="Normal FIFO operation" />
         <value name="E_FIFO_CLR_1" value="1" desc="Clear FIFO state" />
@@ -285,15 +285,10 @@
     <block name="ZeroTerminal_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="CounterUDB" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="int_vm" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <register name="WATER_FLOW_COUNT_COUNTER" address="0x40006404" bitWidth="16" desc="UDB.A0 - Current Counter Value" hidden="false" />
-    <register name="WATER_FLOW_COUNT_PERIOD" address="0x40006424" bitWidth="16" desc="UDB.D0 - Assigned Period" hidden="false" />
-    <register name="WATER_FLOW_COUNT_COMPARE" address="0x40006434" bitWidth="16" desc="UDB.D1 - Assigned Compare Value" hidden="false" />
-    <register name="WATER_FLOW_COUNT_Control_Reg" address="0x40006476" bitWidth="8" desc="UDB Control Register - Assigned Control Register Value" hidden="false">
-      <field name="CTRL_ENABLE" from="7" to="7" access="RW" resetVal="" desc="Enable Counter" hidden="false" />
-      <field name="CTRL_CAPMODE" from="4" to="3" access="RW" resetVal="" desc="Capture mode" hidden="false" />
-      <field name="CTRL_CMPMODE" from="2" to="0" access="RW" resetVal="" desc="Compare mode" hidden="false" />
-    </register>
-    <register name="WATER_FLOW_COUNT_STATUS_MASK" address="0x40006486" bitWidth="8" desc="UDB Status bits Interrupt Mask Enable Register" hidden="false">
+    <register name="WATER_FLOW_COUNT_COUNTER" address="0x40006408" bitWidth="16" desc="UDB.A0 - Current Counter Value" hidden="false" />
+    <register name="WATER_FLOW_COUNT_PERIOD" address="0x40006428" bitWidth="16" desc="UDB.D0 - Assigned Period" hidden="false" />
+    <register name="WATER_FLOW_COUNT_COMPARE" address="0x40006438" bitWidth="16" desc="UDB.D1 - Assigned Compare Value" hidden="false" />
+    <register name="WATER_FLOW_COUNT_STATUS_MASK" address="0x40006489" bitWidth="8" desc="UDB Status bits Interrupt Mask Enable Register" hidden="false">
       <field name="COUNTER_STS_CMP" from="0" to="0" access="RW" resetVal="" desc="Compare output status" hidden="false" />
       <field name="COUNTER_STS_A0ZERO" from="1" to="1" access="RW" resetVal="" desc="A0 Zero ouput status" hidden="false" />
       <field name="COUNTER_STS_OVERFLOW" from="2" to="2" access="RW" resetVal="" desc="Overflow status " hidden="false" />
@@ -302,7 +297,7 @@
       <field name="COUNTER_STS_FIFO_FULL" from="5" to="5" access="RW" resetVal="" desc="FIFO Full Status " hidden="false" />
       <field name="COUNTER_STS_FIFO_NEMPTY" from="6" to="6" access="RW" resetVal="" desc="FIFO Not Empty Status " hidden="false" />
     </register>
-    <register name="WATER_FLOW_COUNT_STATUS_AUX_CTRL" address="0x40006496" bitWidth="8" desc="UDB Auxilliary Control Register" hidden="false">
+    <register name="WATER_FLOW_COUNT_STATUS_AUX_CTRL" address="0x40006499" bitWidth="8" desc="UDB Auxilliary Control Register" hidden="false">
       <field name="FIFO0_CLR" from="0" to="0" access="RW" resetVal="" desc="FIFO0 clear" hidden="false">
         <value name="E_FIFO_CLR_0" value="0" desc="Normal FIFO operation" />
         <value name="E_FIFO_CLR_1" value="1" desc="Clear FIFO state" />
@@ -328,11 +323,16 @@
         <value name="E_CNT_START1" value="1" desc="Enable counter" />
       </field>
     </register>
+    <register name="WATER_FLOW_COUNT_Control_Reg" address="0x40006579" bitWidth="8" desc="UDB Control Register - Assigned Control Register Value" hidden="false">
+      <field name="CTRL_ENABLE" from="7" to="7" access="RW" resetVal="" desc="Enable Counter" hidden="false" />
+      <field name="CTRL_CAPMODE" from="4" to="3" access="RW" resetVal="" desc="Capture mode" hidden="false" />
+      <field name="CTRL_CMPMODE" from="2" to="0" access="RW" resetVal="" desc="Compare mode" hidden="false" />
+    </register>
   </block>
   <block name="BUS_CLK_SPIS_SYNC" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="PUMP_ENABLE" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="WATER_FLOW" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-    <register name="WATER_FLOW_CONTROL_REG" address="0x40006474" bitWidth="8" desc="" hidden="false" />
+    <register name="WATER_FLOW_CONTROL_REG" address="0x40006478" bitWidth="8" desc="" hidden="false" />
   </block>
   <block name="not_8" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="SPIS_DMA" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
@@ -424,16 +424,16 @@
     <block name="BSPIS" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="not_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="VirtualMux_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <register name="SPIS_MCU_TX_DATA" address="0x40006400" bitWidth="8" desc="SPIS TX Data" hidden="false" />
-    <register name="SPIS_MCU_RX_DATA" address="0x40006400" bitWidth="8" desc="SPIS RX Data" hidden="false" />
-    <register name="SPIS_MCU_TXSTATUS" address="0x40006461" bitWidth="8" desc="SPIS TX Status Register" hidden="false">
+    <register name="SPIS_MCU_TX_DATA" address="0x40006407" bitWidth="8" desc="SPIS TX Data" hidden="false" />
+    <register name="SPIS_MCU_RX_DATA" address="0x40006407" bitWidth="8" desc="SPIS RX Data" hidden="false" />
+    <register name="SPIS_MCU_TXSTATUS" address="0x40006467" bitWidth="8" desc="SPIS TX Status Register" hidden="false">
       <field name="SPI_Done" from="0" to="0" access="R" resetVal="" desc="Set when all of the data in the transmit FIFO has been sent. Set when Byte/Word Complete                           has been set and TX Data FIFO is empty" hidden="false" />
       <field name="TX_FIFO_Not_Full" from="1" to="1" access="R" resetVal="" desc="Set when the TX Data FIFO is not full" hidden="false" />
       <field name="TX_FIFO_Empty" from="2" to="2" access="R" resetVal="" desc="Set when the TX Data FIFO is empty" hidden="false" />
       <field name="Byte_Word_Complete" from="6" to="6" access="R" resetVal="" desc="Set when a byte/word transmit has completed" hidden="false" />
       <field name="Interrupt" from="7" to="7" access="R" resetVal="" desc="Set when interrupt occurs" hidden="false" />
     </register>
-    <register name="SPIS_MCU_RXSTATUS" address="0x4000656A" bitWidth="8" desc="SPIS RX Status Register" hidden="false">
+    <register name="SPIS_MCU_RXSTATUS" address="0x40006564" bitWidth="8" desc="SPIS RX Status Register" hidden="false">
       <field name="RX_FIFO_Not_Empty" from="3" to="3" access="R" resetVal="" desc="Set when the RX Data FIFO is not empty. That is, at least one byte/word is in the RX FIFO" hidden="false" />
       <field name="RX_FIFO_Empty" from="4" to="4" access="R" resetVal="" desc="Set when the RX Data FIFO is empty" hidden="false" />
       <field name="RX_Buf_Overrun" from="5" to="5" access="R" resetVal="" desc="Set when RX Data has overrun the 4 byte/word FIFO without being moved to the RX buffer                           cmemory array (if one exists)" hidden="false" />
@@ -527,12 +527,12 @@
     </register>
   </block>
   <block name="Rx_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="MPU_MOSI" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="MCU_MOSI" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="SCLK_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="MISO_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="MOSI_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="MPU_SS" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="MPU_SCLK" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="MCU_SS" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="MCU_SCLK" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="RTC" BASE="0x0" SIZE="0x0" desc="RTC" visible="true" hidden="false">
     <block name="isr" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="gsRef_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
@@ -561,11 +561,14 @@
     </register>
   </block>
   <block name="UART" BASE="0x0" SIZE="0x0" desc="UART" visible="true" hidden="false">
-    <block name="RXInternalInterrupt" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="TXInternalInterrupt" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="BUART" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="VirtualMux_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <register name="RX_UART_RX_STATUS" address="0x40006465" bitWidth="8" desc="RX status register" hidden="false">
+    <block name="RXInternalInterrupt" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="BUART" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <register name="RX_UART_RX_ADDRESS1" address="0x4000642E" bitWidth="8" desc="RX Address1 Register" hidden="false" />
+    <register name="RX_UART_RX_ADDRESS2" address="0x4000643E" bitWidth="8" desc="RX Address2 Register" hidden="false" />
+    <register name="RX_UART_RX_DATA" address="0x4000644E" bitWidth="8" desc="RX Data Register" hidden="false" />
+    <register name="RX_UART_RX_STATUS" address="0x40006460" bitWidth="8" desc="RX status register" hidden="false">
       <field name="UART_RX_STS_MRKSPC" from="0" to="0" access="R" resetVal="" desc="" hidden="false" />
       <field name="UART_RX_STS_BREAK" from="1" to="1" access="R" resetVal="" desc="" hidden="false" />
       <field name="UART_RX_STS_PAR_ERROR" from="2" to="2" access="R" resetVal="" desc="" hidden="false" />
@@ -574,11 +577,8 @@
       <field name="UART_RX_STS_FIFO_NOTEMPTY" from="5" to="5" access="R" resetVal="" desc="" hidden="false" />
       <field name="UART_RX_STS_ADDR_MATCH" from="6" to="6" access="R" resetVal="" desc="" hidden="false" />
     </register>
-    <register name="RX_UART_RX_ADDRESS1" address="0x40006528" bitWidth="8" desc="RX Address1 Register" hidden="false" />
-    <register name="RX_UART_RX_ADDRESS2" address="0x40006538" bitWidth="8" desc="RX Address2 Register" hidden="false" />
-    <register name="TX_UART_TX_DATA" address="0x40006547" bitWidth="8" desc="TX Data Register" hidden="false" />
-    <register name="RX_UART_RX_DATA" address="0x40006548" bitWidth="8" desc="RX Data Register" hidden="false" />
-    <register name="TX_UART_TX_STATUS" address="0x40006566" bitWidth="8" desc="TX status register" hidden="false">
+    <register name="TX_UART_TX_DATA" address="0x40006545" bitWidth="8" desc="TX Data Register" hidden="false" />
+    <register name="TX_UART_TX_STATUS" address="0x40006565" bitWidth="8" desc="TX status register" hidden="false">
       <field name="UART_TX_STS_COMPLETE" from="0" to="0" access="R" resetVal="" desc="" hidden="false" />
       <field name="UART_TX_STS_FIFO_EMPTY" from="1" to="1" access="R" resetVal="" desc="" hidden="false" />
       <field name="UART_TX_STS_FIFO_FULL" from="2" to="2" access="R" resetVal="" desc="" hidden="false" />
@@ -605,7 +605,7 @@
   <block name="D" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="SS_2a" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="SENSOR_SELECT" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-    <register name="SENSOR_SELECT_CONTROL_REG" address="0x40006471" bitWidth="8" desc="" hidden="false" />
+    <register name="SENSOR_SELECT_CONTROL_REG" address="0x40006476" bitWidth="8" desc="" hidden="false" />
   </block>
   <block name="SS_2b" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="DieTemp" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />

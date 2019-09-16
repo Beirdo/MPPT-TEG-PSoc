@@ -19,7 +19,7 @@
         <register>
           <name>FAN_STATUS_REG_STATUS_REG</name>
           <description>No description available</description>
-          <addressOffset>0x40006468</addressOffset>
+          <addressOffset>0x4000646B</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -28,7 +28,7 @@
         <register>
           <name>FAN_STATUS_REG_MASK_REG</name>
           <description>No description available</description>
-          <addressOffset>0x40006488</addressOffset>
+          <addressOffset>0x4000648B</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -37,7 +37,7 @@
         <register>
           <name>FAN_STATUS_REG_STATUS_AUX_CTL_REG</name>
           <description>No description available</description>
-          <addressOffset>0x40006498</addressOffset>
+          <addressOffset>0x4000649B</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -174,7 +174,7 @@
         <register>
           <name>DESULFATE_PWMGEN_COMPARE_Reg_</name>
           <description>UDB.D0 - Assigned Compare Value</description>
-          <addressOffset>0x40006428</addressOffset>
+          <addressOffset>0x40006529</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -183,7 +183,7 @@
         <register>
           <name>DESULFATE_PWMGEN_Control_Reg</name>
           <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x4000647B</addressOffset>
+          <addressOffset>0x4000657B</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -215,7 +215,7 @@
         <register>
           <name>DESULFATE_PWMGEN_STATUS_AUX_CTRL</name>
           <description>UDB Auxilliary Control Register</description>
-          <addressOffset>0x40006498</addressOffset>
+          <addressOffset>0x40006599</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -499,7 +499,7 @@
         <register>
           <name>PWM_ENABLE_REG_CONTROL_REG</name>
           <description>No description available</description>
-          <addressOffset>0x4000647A</addressOffset>
+          <addressOffset>0x40006479</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -520,7 +520,7 @@
         <register>
           <name>PPS_HI_COUNTER</name>
           <description>UDB.A0 - Current Counter Value</description>
-          <addressOffset>0x40006406</addressOffset>
+          <addressOffset>0x4000640C</addressOffset>
           <size>16</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -529,7 +529,7 @@
         <register>
           <name>PPS_HI_PERIOD</name>
           <description>UDB.D0 - Assigned Period</description>
-          <addressOffset>0x40006426</addressOffset>
+          <addressOffset>0x4000642C</addressOffset>
           <size>16</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -538,7 +538,7 @@
         <register>
           <name>PPS_HI_COMPARE</name>
           <description>UDB.D1 - Assigned Compare Value</description>
-          <addressOffset>0x40006436</addressOffset>
+          <addressOffset>0x4000643C</addressOffset>
           <size>16</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -547,7 +547,7 @@
         <register>
           <name>PPS_HI_Control_Reg</name>
           <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x40006478</addressOffset>
+          <addressOffset>0x4000647B</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -579,7 +579,7 @@
         <register>
           <name>PPS_HI_STATUS_MASK</name>
           <description>UDB Status bits Interrupt Mask Enable Register</description>
-          <addressOffset>0x40006484</addressOffset>
+          <addressOffset>0x4000648D</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -639,7 +639,7 @@
         <register>
           <name>PPS_HI_STATUS_AUX_CTRL</name>
           <description>UDB Auxilliary Control Register</description>
-          <addressOffset>0x40006494</addressOffset>
+          <addressOffset>0x4000649D</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1068,7 +1068,7 @@
         <register>
           <name>WATER_FLOW_COUNT_COUNTER</name>
           <description>UDB.A0 - Current Counter Value</description>
-          <addressOffset>0x40006404</addressOffset>
+          <addressOffset>0x40006408</addressOffset>
           <size>16</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1077,7 +1077,7 @@
         <register>
           <name>WATER_FLOW_COUNT_PERIOD</name>
           <description>UDB.D0 - Assigned Period</description>
-          <addressOffset>0x40006424</addressOffset>
+          <addressOffset>0x40006428</addressOffset>
           <size>16</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1086,48 +1086,16 @@
         <register>
           <name>WATER_FLOW_COUNT_COMPARE</name>
           <description>UDB.D1 - Assigned Compare Value</description>
-          <addressOffset>0x40006434</addressOffset>
+          <addressOffset>0x40006438</addressOffset>
           <size>16</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
           <resetMask>0</resetMask>
         </register>
         <register>
-          <name>WATER_FLOW_COUNT_Control_Reg</name>
-          <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x40006476</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>CTRL_ENABLE</name>
-              <description>Enable Counter</description>
-              <lsb>7</lsb>
-              <msb>7</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CTRL_CAPMODE</name>
-              <description>Capture mode</description>
-              <lsb>3</lsb>
-              <msb>4</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CTRL_CMPMODE</name>
-              <description>Compare mode</description>
-              <lsb>0</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
           <name>WATER_FLOW_COUNT_STATUS_MASK</name>
           <description>UDB Status bits Interrupt Mask Enable Register</description>
-          <addressOffset>0x40006486</addressOffset>
+          <addressOffset>0x40006489</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1187,7 +1155,7 @@
         <register>
           <name>WATER_FLOW_COUNT_STATUS_AUX_CTRL</name>
           <description>UDB Auxilliary Control Register</description>
-          <addressOffset>0x40006496</addressOffset>
+          <addressOffset>0x40006499</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1309,6 +1277,38 @@
             </field>
           </fields>
         </register>
+        <register>
+          <name>WATER_FLOW_COUNT_Control_Reg</name>
+          <description>UDB Control Register - Assigned Control Register Value</description>
+          <addressOffset>0x40006579</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>CTRL_ENABLE</name>
+              <description>Enable Counter</description>
+              <lsb>7</lsb>
+              <msb>7</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CTRL_CAPMODE</name>
+              <description>Capture mode</description>
+              <lsb>3</lsb>
+              <msb>4</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CTRL_CMPMODE</name>
+              <description>Compare mode</description>
+              <lsb>0</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
       </registers>
     </peripheral>
     <peripheral>
@@ -1324,7 +1324,7 @@
         <register>
           <name>WATER_FLOW_CONTROL_REG</name>
           <description>No description available</description>
-          <addressOffset>0x40006474</addressOffset>
+          <addressOffset>0x40006478</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1658,7 +1658,7 @@
         <register>
           <name>SPIS_MCU_TX_DATA</name>
           <description>SPIS TX Data</description>
-          <addressOffset>0x40006400</addressOffset>
+          <addressOffset>0x40006407</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1667,7 +1667,7 @@
         <register>
           <name>SPIS_MCU_RX_DATA</name>
           <description>SPIS RX Data</description>
-          <addressOffset>0x40006400</addressOffset>
+          <addressOffset>0x40006407</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1676,7 +1676,7 @@
         <register>
           <name>SPIS_MCU_TXSTATUS</name>
           <description>SPIS TX Status Register</description>
-          <addressOffset>0x40006461</addressOffset>
+          <addressOffset>0x40006467</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1722,7 +1722,7 @@
         <register>
           <name>SPIS_MCU_RXSTATUS</name>
           <description>SPIS RX Status Register</description>
-          <addressOffset>0x4000656A</addressOffset>
+          <addressOffset>0x40006564</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -2319,9 +2319,36 @@
       </addressBlock>
       <registers>
         <register>
+          <name>RX_UART_RX_ADDRESS1</name>
+          <description>RX Address1 Register</description>
+          <addressOffset>0x4000642E</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>RX_UART_RX_ADDRESS2</name>
+          <description>RX Address2 Register</description>
+          <addressOffset>0x4000643E</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>RX_UART_RX_DATA</name>
+          <description>RX Data Register</description>
+          <addressOffset>0x4000644E</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
           <name>RX_UART_RX_STATUS</name>
           <description>RX status register</description>
-          <addressOffset>0x40006465</addressOffset>
+          <addressOffset>0x40006460</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -2379,36 +2406,9 @@
           </fields>
         </register>
         <register>
-          <name>RX_UART_RX_ADDRESS1</name>
-          <description>RX Address1 Register</description>
-          <addressOffset>0x40006528</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>RX_UART_RX_ADDRESS2</name>
-          <description>RX Address2 Register</description>
-          <addressOffset>0x40006538</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
           <name>TX_UART_TX_DATA</name>
           <description>TX Data Register</description>
-          <addressOffset>0x40006547</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>RX_UART_RX_DATA</name>
-          <description>RX Data Register</description>
-          <addressOffset>0x40006548</addressOffset>
+          <addressOffset>0x40006545</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -2417,7 +2417,7 @@
         <register>
           <name>TX_UART_TX_STATUS</name>
           <description>TX status register</description>
-          <addressOffset>0x40006566</addressOffset>
+          <addressOffset>0x40006565</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -2468,7 +2468,7 @@
         <register>
           <name>SENSOR_SELECT_CONTROL_REG</name>
           <description>No description available</description>
-          <addressOffset>0x40006471</addressOffset>
+          <addressOffset>0x40006476</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>

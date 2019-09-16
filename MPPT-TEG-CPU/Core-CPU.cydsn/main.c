@@ -24,6 +24,7 @@ void prvSetupHardware(void)
     setupMcuSpiHandler();
     setupGUITask();
     setupIotTask();
+    setupChargingMonitor();
     
     CyGlobalIntEnable;
 }
@@ -40,6 +41,7 @@ int main(void)
     xTaskCreate(doGUITask, "gui", 100, NULL, 8, NULL);
     xTaskCreate(doWiFiTask, "WiFi", 100, NULL, 8, NULL);
     xTaskCreate(doIotTask, "IOT", 100, NULL, 8, NULL);
+    xTaskCreate(doTaskChargingMonitor, "charging-monitor", 100, NULL, 8, NULL);
 
     
     /* Start the created tasks running. */

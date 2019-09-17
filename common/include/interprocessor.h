@@ -14,7 +14,10 @@
     
 #include "project.h"
     
-#define TEG_CHANNEL_COUNT 8
+#define INTERFACE_BOARD_COUNT 2
+#define INTERFACE_COUNT_PER_BOARD 4
+#define TEG_CHANNEL_COUNT (INTERFACE_BOARD_COUNT * INTERFACE_COUNT_PER_BOARD)
+#define INTERFACE_MASK ((uint8)(0xFF >> (8 - INTERFACE_COUNT_PER_BOARD)))
     
 typedef struct CY_PACKED_ATTR _ina219_reading {
     uint16 voltage;
@@ -50,6 +53,9 @@ typedef struct CY_PACKED_ATTR _teg_channel {
     
     // output value (0-256)
     uint8 PWMval;
+    
+    // Temperature at the two switching inductors
+    uint16 temperatures[2];
 } teg_channel_t;
     
 typedef struct CY_PACKED_ATTR _system_data {

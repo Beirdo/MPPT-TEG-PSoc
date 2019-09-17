@@ -43,11 +43,17 @@
           <File BuildType="BUILD" Toolchain="">..\..\FreeRTOS\port-gcc-CortexM0\port.c</File>
           <File BuildType="BUILD" Toolchain="">..\..\FreeRTOS\MemMang\heap_1.c</File>
           <File BuildType="BUILD" Toolchain="">tegControl.c</File>
+          <File BuildType="BUILD" Toolchain="">..\..\common\src\utils.c</File>
+          <File BuildType="BUILD" Toolchain="">..\..\common\src\i2cRegisters.c</File>
+          <File BuildType="BUILD" Toolchain="">tmp100.c</File>
+          <File BuildType="BUILD" Toolchain="">tca9546.c</File>
           <File BuildType="BUILD" Toolchain="">cyapicallbacks.h</File>
           <File BuildType="BUILD" Toolchain="">tegchannel.h</File>
           <File BuildType="BUILD" Toolchain="">tca9534.h</File>
           <File BuildType="BUILD" Toolchain="">ina219.h</File>
           <File BuildType="BUILD" Toolchain="">..\..\common\include\interprocessor.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\common\include\utils.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\common\include\i2cRegisters.h</File>
           <File BuildType="BUILD" Toolchain="">..\..\FreeRTOS\include\croutine.h</File>
           <File BuildType="BUILD" Toolchain="">..\..\FreeRTOS\include\deprecated_definitions.h</File>
           <File BuildType="BUILD" Toolchain="">..\..\FreeRTOS\include\event_groups.h</File>
@@ -69,6 +75,8 @@
           <File BuildType="BUILD" Toolchain="">systemTasks.h</File>
           <File BuildType="BUILD" Toolchain="">FreeRTOSConfig.h</File>
           <File BuildType="BUILD" Toolchain="">device.h</File>
+          <File BuildType="BUILD" Toolchain="">tmp100.h</File>
+          <File BuildType="BUILD" Toolchain="">tca9546.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Workspace\MPPT-TEG-PSoc\MPPT-TEG-MCU\MCU-Core.cydsn">

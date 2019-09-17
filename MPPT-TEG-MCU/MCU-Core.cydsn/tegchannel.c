@@ -14,6 +14,9 @@
 #include "tegchannel.h"
 #include "tca9534.h"
 #include "ina219.h"
+#include "tca9546.h"
+#include "tmp100.h"
+#include "utils.h"
 
 teg_channel_t teg_channels[TEG_CHANNEL_COUNT];
 uint8 enables = 0;
@@ -23,7 +26,6 @@ uint16 deltaPMax = 1500;
 uint16 huntDeltaI = 100;
 
 #define PWM_MAX_COUNT 256
-#define ABS(x)  ((x) < 0 ? -(x) : (x))
 
 typedef void timerPWMFunc_t(uint32);
 timerPWMFunc_t *writeCompareBufFunc[] = {
@@ -90,10 +92,14 @@ int processChannel(teg_channel_t *ch, uint8 newEnables) {
     ch->prevPin = ch->input.power;
     
     // We need to read all our current, voltage and power readings from the INA219 chips for the channel
-    ch->input = INA219_read(INA219_INPUT_ADDR, i);
-    ch->middle = INA219_read(INA219_MID_ADDR, i);
-    ch->output = INA219_read(INA219_OUTPUT_ADDR, i);
-    INA219_disconnect();
+    ch->input = INA219_read(i, INA219_INPUT);
+    ch->middle = INA219_read(i, INA219_MID);
+    ch->output = INA219_read(i, INA219_OUTPUT);
+    
+    // Also read the two TMP100 sensors, and convert to int13.3 (0.125C LSB, right justified)
+    ch->temperatures[0] = convert_temperature(TMP100_get_temperature(i, 0), 5, 0);
+    ch->temperatures[1] = convert_temperature(TMP100_get_temperature(i, 1), 5, 0);
+    TCA9546_reset();
     
     // Calculate the deltas
     deltaI = ch->input.current - ch->prevIin;

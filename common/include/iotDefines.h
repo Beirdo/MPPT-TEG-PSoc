@@ -30,7 +30,9 @@ typedef enum _iotKeys {
     IOT_TEG_OUTPUT_POWER,
     IOT_TEG_VOPEN,
     IOT_TEG_ISHORT,
-    IOT_TEG_PWM_VALUE,  // 17
+    IOT_TEG_PWM_VALUE,
+    IOT_TEG_TEMPERATURE_INPUT,
+    IOT_TEG_TEMPERATURE_OUTPUT, // 19 
     IOT_SYS_TEMPERATURE_BASE = 20,  // 3 thermocouple, 2 thermistor, 8 TMP100, 2 die temps, 2 fan controller temps = 17 total
     IOT_SYS_INPUT_FAN_SPEED = 40,
     IOT_SYS_OUTPUT_FAN_SPEED,

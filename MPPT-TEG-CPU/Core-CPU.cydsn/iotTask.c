@@ -222,6 +222,8 @@ static int cbor_encode_channel(uint32 now, int index, UsefulBufC *output) {
     QCBOREncode_AddUInt64ToMapN(&EC, IOT_TEG_VOPEN, ch->Vopen);
     QCBOREncode_AddUInt64ToMapN(&EC, IOT_TEG_ISHORT, ch->Ishort);
     QCBOREncode_AddUInt64ToMapN(&EC, IOT_TEG_PWM_VALUE, ch->PWMval);
+    QCBOREncode_AddInt64ToMapN(&EC, IOT_TEG_TEMPERATURE_INPUT, ch->temperatures[0]);
+    QCBOREncode_AddInt64ToMapN(&EC, IOT_TEG_TEMPERATURE_OUTPUT, ch->temperatures[1]);
     QCBOREncode_CloseMap(&EC);
 
     return (QCBOREncode_Finish(&EC, output) == QCBOR_SUCCESS);

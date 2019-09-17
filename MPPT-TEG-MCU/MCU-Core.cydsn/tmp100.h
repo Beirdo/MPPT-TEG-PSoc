@@ -15,8 +15,8 @@
 
 #include "project.h"
     
-#define MAX_TMP100_COUNT 8
 #define TMP100_BASE_ADDR 0x48
+#define TMP100_PER_INTERFACE 2
     
 #define TMP100_TEMPERATURE_REG 0  // WORD Reads
 #define TMP100_CONFIG_REG 1
@@ -24,7 +24,7 @@
 #define TMP100_THIGH_REG 3
     
 void TMP100_initialize(void);
-int16 TMP100_get_temperature(int index);
+int16 TMP100_get_temperature(int interface, int index);
     
 #endif // __tmp100_h__
 

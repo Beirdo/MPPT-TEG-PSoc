@@ -13,6 +13,8 @@
 #ifndef __utils_h__
 #define __utils_h__
 
+#include "project.h"
+    
 #define min(x, y) ((x) < (y) ? (x) : (y))
 #define max(x, y) ((x) > (y) ? (x) : (y))
 #define clamp(x, y, z) min(max((x), (y)), (z))
@@ -40,6 +42,8 @@
 #ifndef ustrlen
 #define ustrlen(x) (strlen((char *)(x)))
 #endif
+
+int16 convert_temperature(uint16 raw_value, int shifts, uint32 mask_off_bits);
     
 #endif // __utils_h__
 

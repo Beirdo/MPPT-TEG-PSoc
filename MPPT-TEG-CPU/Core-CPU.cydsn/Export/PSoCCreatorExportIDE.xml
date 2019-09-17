@@ -39,7 +39,6 @@
           <File BuildType="BUILD" Toolchain="">main.c</File>
           <File BuildType="BUILD" Toolchain="">taskBacklightAdjust.c</File>
           <File BuildType="BUILD" Toolchain="">ltr303.c</File>
-          <File BuildType="BUILD" Toolchain="">i2cRegisters.c</File>
           <File BuildType="BUILD" Toolchain="">taskThermalMonitoring.c</File>
           <File BuildType="BUILD" Toolchain="">..\..\FreeRTOS\port-gcc-CortexM3\port.c</File>
           <File BuildType="BUILD" Toolchain="">..\..\FreeRTOS\MemMang\heap_4.c</File>
@@ -60,7 +59,6 @@
           <File BuildType="BUILD" Toolchain="">guiTask.c</File>
           <File BuildType="BUILD" Toolchain="">mcuSpiHandler.c</File>
           <File BuildType="BUILD" Toolchain="">wifiTask.c</File>
-          <File BuildType="BUILD" Toolchain="">tmp100.c</File>
           <File BuildType="BUILD" Toolchain="">eepromWrite.c</File>
           <File BuildType="BUILD" Toolchain="">iotTask.c</File>
           <File BuildType="BUILD" Toolchain="">..\..\QCBOR\src\ieee754.c</File>
@@ -73,14 +71,14 @@
           <File BuildType="BUILD" Toolchain="">ina219.c</File>
           <File BuildType="BUILD" Toolchain="">tca9534.c</File>
           <File BuildType="BUILD" Toolchain="">fsTask.c</File>
+          <File BuildType="BUILD" Toolchain="">..\..\common\src\utils.c</File>
+          <File BuildType="BUILD" Toolchain="">..\..\common\src\i2cRegisters.c</File>
           <File BuildType="BUILD" Toolchain="">cyapicallbacks.h</File>
           <File BuildType="BUILD" Toolchain="">device.h</File>
           <File BuildType="BUILD" Toolchain="">FreeRTOSConfig.h</File>
           <File BuildType="BUILD" Toolchain="">systemTasks.h</File>
           <File BuildType="BUILD" Toolchain="">eepromContents.h</File>
           <File BuildType="BUILD" Toolchain="">ltr303.h</File>
-          <File BuildType="BUILD" Toolchain="">utils.h</File>
-          <File BuildType="BUILD" Toolchain="">i2cRegisters.h</File>
           <File BuildType="BUILD" Toolchain="">..\..\FreeRTOS\include\croutine.h</File>
           <File BuildType="BUILD" Toolchain="">..\..\FreeRTOS\include\deprecated_definitions.h</File>
           <File BuildType="BUILD" Toolchain="">..\..\FreeRTOS\include\event_groups.h</File>
@@ -219,9 +217,10 @@
           <File BuildType="BUILD" Toolchain="">..\..\emWinGraphics-PSoC\Code\Include\PSoC4_5\osts\GUIConf.h</File>
           <File BuildType="BUILD" Toolchain="">..\..\common\include\interprocessor.h</File>
           <File BuildType="BUILD" Toolchain="">..\..\common\include\iotDefines.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\common\include\utils.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\common\include\i2cRegisters.h</File>
           <File BuildType="BUILD" Toolchain="">mcuData.h</File>
           <File BuildType="BUILD" Toolchain="">wifiQueue.h</File>
-          <File BuildType="BUILD" Toolchain="">tmp100.h</File>
           <File BuildType="BUILD" Toolchain="">..\..\QCBOR\inc\qcbor.h</File>
           <File BuildType="BUILD" Toolchain="">..\..\QCBOR\inc\UsefulBuf.h</File>
           <File BuildType="BUILD" Toolchain="">convertTime.h</File>

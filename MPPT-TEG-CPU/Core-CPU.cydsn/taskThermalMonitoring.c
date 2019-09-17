@@ -18,7 +18,6 @@
 #include "systemTasks.h"
 #include "utils.h"
 #include "max31760.h"
-#include "tmp100.h"
 #include "mcuData.h"
 #include "thermalMonitoring.h"
 
@@ -39,7 +38,6 @@ SemaphoreHandle_t fanOverrideFull;
 SemaphoreHandle_t shutdownPump;
 
 static uint16 spi_sensor_get_raw_value(int index);
-static int16 convert_temperature(uint16 raw_value, int shifts, uint32 mask_off_bits);
 void water_flow_clear(void);
 uint16 water_flow_read(void);
 
@@ -84,7 +82,6 @@ void setupThermalMonitor(void)
     fanOverrideFull = xSemaphoreCreateBinary();
     shutdownPump = xSemaphoreCreateBinary();
     MAX31760_initialize();
-    TMP100_initialize();
     PUMP_ENABLE_Write(1);  // Turn on the circulation pump
     DUMP_VALVE_ENABLE_Write(0);  // Turn off dump valve
     water_flow_clear(); // Reset and enable the water flow counter
@@ -129,37 +126,31 @@ void doTaskThermalMonitor(void *args)
         // updating the externally visible table
         
         // Pull the thermocouple readings from SPI
-        for(i = THERMOCOUPLE_START; i < THERMOCOUPLE_START + THERMOCOUPLE_COUNT; i++) {
+        for(i = TEMP_THERMOCOUPLE_SOURCE; i <= TEMP_THERMOCOUPLE_COLD_SIDE; i++) {
             // Thermocouple range is 0 - 1023.75C, int11.2 (13bits including a dummy sign bit), left justified
             // to convert to 1/8C...  value * 2
             temperatures[i] = convert_temperature(spi_sensor_get_raw_value(i), 2, 0x0001);
         }
         
         // Pull the thermistor readings from SPI
-        for(i = THERMISTOR_START; i < THERMISTOR_START + THERMISTOR_COUNT; i++) {
+        for(i = TEMP_THERMISTOR_FAN_INTAKE; i <= TEMP_THERMISTOR_FAN_OUTFLOW; i++) {
             // Termistor readings have an LSB of 0.125C and are signed.  int8.3 format (11 bits total), left justified
             // Just need to be right justified, retaining the sign
             temperatures[i] = convert_temperature(spi_sensor_get_raw_value(i), 5, 0x0000);
         }
         
-        // Pull the TMP100 readings from I2C
-        for(i = 0; i < TMP100_COUNT; i++) {
-            // TMP100 readings have an LSB of 0.25C and are signed.  int8.2 (10 bits total), left justified, zero padded on right
-            temperatures[TMP100_START + i] = convert_temperature(TMP100_get_temperature(i), 5, 0x0000);
-        }
-        
         // Pull the die temperature from the PSoC module (using the ADC)
         // Die temperature is in degrees C
         DieTemp_GetTemp(&die_temp);
-        temperatures[DIE_START] = convert_temperature(die_temp, -3, 0x0007);
+        temperatures[TEMP_DIE_CPU] = convert_temperature(die_temp, -3, 0x0007);
 
         // MCU already converted to 1/8C for us (after truncating!!)
-        temperatures[INDEX_MCU_DIE] = mcu_system_data.die_temperature;
+        temperatures[TEMP_DIE_MCU] = mcu_system_data.die_temperature;
         
         // Pull the fan controller temperatures via I2C
         for(i = 0; i < FAN_CONTROLLER_COUNT; i++) {
             // Same format as the thermistors
-            temperatures[FAN_CONTROLLER_START + i] = convert_temperature(MAX31760_read_temperature(i), 5, 0x0000);
+            temperatures[TEMP_FAN_CONTROLLER_LOCAL + i] = convert_temperature(MAX31760_read_temperature(i), 5, 0x0000);
         }
 
         // Pull the fan speeds over I2C as well
@@ -175,7 +166,7 @@ void doTaskThermalMonitor(void *args)
             // Using cold-side temperature (heat sink) and ambient air temperature, create a control loop controlling the
             // fan RPM via PWM.
             prevTempDiff = tempDiff;
-            tempDiff = temperatures[INDEX_COLD_SIDE] - temperatures[INDEX_AMBIENT_AIR];
+            tempDiff = temperatures[TEMP_THERMOCOUPLE_COLD_SIDE] - temperatures[TEMP_THERMISTOR_FAN_INTAKE];
             deltaTempDiff = tempDiff - prevTempDiff;
             
             if(_abs(deltaTempDiff) < 4) { // within 0.5C, slow the fan
@@ -201,16 +192,16 @@ void doTaskThermalMonitor(void *args)
         }
 
         if(!emergency_shutdown) {
-            if(temperatures[INDEX_HOT_SIDE] >= HOT_SIDE_HOT_THRESHOLD) {
+            if(temperatures[TEMP_THERMOCOUPLE_HOT_SIDE] >= HOT_SIDE_HOT_THRESHOLD) {
                 PUMP_ENABLE_Write(0);   // Hot side is getting too hot, stop circulation
                 pump_on = 1;
-            } else if(temperatures[INDEX_HOT_SIDE] >= HOT_SIDE_WARM_THRESHOLD) {
+            } else if(temperatures[TEMP_THERMOCOUPLE_HOT_SIDE] >= HOT_SIDE_WARM_THRESHOLD) {
                 DUMP_VALVE_ENABLE_Write(1);
                 dump_valve_open = 1;
             } else {
                 PUMP_ENABLE_Write(1);   // Ensure we turn the circulating pump on
                 pump_on = 1;
-                if(temperatures[INDEX_HOT_SIDE] <= HOT_SIDE_COOL_THRESHOLD) {
+                if(temperatures[TEMP_THERMOCOUPLE_HOT_SIDE] <= HOT_SIDE_COOL_THRESHOLD) {
                     DUMP_VALVE_ENABLE_Write(0);
                     dump_valve_open = 0;
                 }
@@ -225,16 +216,6 @@ void doTaskThermalMonitor(void *args)
             flow_rate = ((uint32)(flow_reading) * 60000000) / (uint32)(period * 485);   // output is mL/min
         }
     }
-}
-
-static int16 convert_temperature(uint16 raw_value, int shifts, uint32 mask_off_bits) {
-    int16 value = *(int16 *)&raw_value;
-    if (shifts < 0) {
-        value <<= -shifts;
-    } else {
-        value >>= shifts;
-    }
-    return value & ~mask_off_bits;
 }
 
 /* [] END OF FILE */

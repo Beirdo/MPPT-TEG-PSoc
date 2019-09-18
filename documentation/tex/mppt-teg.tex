@@ -1,0 +1,164 @@
+\documentclass{report}
+
+\def\glossaryname{Glossary}
+\def\theglossary{\chapter{\glossaryname} \begin{infomap}}
+\def\endtheglossary{\end{infomap}}
+
+\makeglossary
+
+\begin{document}
+\pagenumbering{roman}
+\title {Design documentation for MPPT-TEG design}
+\author {Gavin Hurlbut \\ Originally written starting September 17, 2019}
+\maketitle
+\tableofcontents
+\eject
+\listoffigures
+\listoftables
+\eject
+
+\setcounter{chapter}{0}
+\renewcommand\chaptername{\space}
+\renewcommand\thechapter{}
+
+\chapter{Introduction}
+I have for a while now been interested in alternate energy sources.  This 
+comes to head particulary when I'm being ``off the grid'' for a time, which
+usually means while camping.  I like to get away from it all and go camping, but
+being as how I am a geek at nature, I usually end up bringing electronics like
+my cell phone and even my laptop with me.  Coding up a pet project while lying
+in a hammock enjoying nature is very tempting.  The problem is:  I end up
+running out of battery power far too fast.
+
+While stumbling around the web looking for trouble... er ideas... I stumbled
+across a site where this enterprising dude made a hot water system that
+operated with no power, using the heat of the campfire and convection (and 
+siphoning) to circulate water through a coil of copper tubing that he built
+his campfire on top of.  He had spectacular results, heating a large cooler 
+full of water nearly to a boil.
+
+I was also reading about how using a thermo-electric cooling (TEC) device in
+reverse as a thermo-electric generator (TEG) was possible.  This is done using
+the corollary of the Peltier effect (which cools one side of a bi-metal 
+junction and heats the other when electricity is applied), which is known as 
+the Seebeck effect.  The Seebeck effect is described as "a phenomenon in which
+a temperature difference between two dissimilar electrical conductors or
+semiconductors produces a voltage difference between the two substances." \cite{WI}.
+
+This set my engineering mind in motion, and I began to design a power generation
+unit that would use the hot water heated by the campfire (or other means if
+necessary), and use it to generate power by presenting a (hopefully) large
+temperature differential across TEG units.  To do this, I would need to have
+another closed-circuit water flow that extracts heat from the hot water ``tank''
+source reservoir using an immersion wort chiller coil (from homebrewing), and
+pumping it through watercooled heat-exchange blocks that were directly attachedi
+to the ``hot'' side of the TEG, and then recycled back into another reservoir,
+where the input of the wort chiller can then cycle it through again.  Thei
+``cold'' side of the TEG is attached to a large heatsink with air blowing
+across it.  For safety to keep the TEG from overflowing, I plan to use a 
+solenoid-controlled valve to divert the hot water right back into the reservoir
+rather than passing it through the heat exchangers on the TEG units.  I also
+have the pump controlled by the CPU so it can be shut right off.
+
+From the multiple TEG units, I want to charge lead-acid batteries (either 
+deep-cycle batteries or sealed gel-cells) and also lithium-ion batteries (18650
+format) that would be used for bootstrapping the system.  This requires a common
+bus that all cells are powering, which might cause me issues with load-sharing,
+but we shall see.
+
+I also decided (as I am an engineer after all) that I needed copious monitoring,
+including many temperature sensors, and also, if possible the flow rate of the
+circulating water, and also voltages, currents, etc all over the place.  And,
+of course, I want to have an LCD screen on there to display the measurements
+and a WiFi connection to do an IoT-type connection via my cellphone.
+
+I found a nice "Thermo-electric cooling" device on Amazon that I should be able
+to leverage with minimal work to work in this way.  It has 8 TEG units
+installed (4 on each side of the square heatsink with a fan blowing through
+the middle.
+
+As I am used to using Atmel MCUs (AVR, especially) I was thinking of using
+Arduino for the control, but I remembered that I was recently introduced to 
+the Cypress PSoC series, with the newer ones using ARM Cortex M-series CPU
+cores.  Challenge accepted.  My design is based around two PSoC devices: a PSoC
+4L series one to do the MPPT calculations and generate the corresponding PWM
+control waveforms and phased clock for the second DC-DC converter, and a PSoC
+5LP device that wrangles the large pile of data and publishes it in CBOR format
+to a custom IoT server, and also writes it to an SD card, and has a touchscreen
+LCD GUI.
+
+\eject
+\setcounter{page}{1}
+\pagestyle{headings}
+\pagenumbering{arabic}
+
+\setcounter{chapter}{0}
+\renewcommand\chaptername{Chapter}
+\renewcommand\thechapter{\arabic{chapter}}
+
+\chapter{DC-DC Design Calculations}
+\section{MPPT DC-DC converter}
+
+The first DC-DC converter is to extract the most power possible fromt the TEG
+module.  This power point is at a voltage half-way between $V_{short}$ and
+$V_{open}$, and a current half-way between $I_{open}$ and $I_{short}$.  As
+$V_{short} = 0V$ and $I_{open} = 0A$, this value can be easily estimated via
+linear regression as the V/I relationship at any operating point (temperature
+differential) is a linear slope down from an Y-intercept of $V_{open}$ down to
+an X-intercept of $I_{short}$.  Given any two points along that line, we can
+calculate the two intercepts, and thus calculate the expected MPPT point.
+
+This DC-DC converter is a boost converter that aims to convert to a maximum
+voltage of 18V, but will do so by controlling the current flow to maximize the
+power.  This is not the normal mode used in a boost controller, and to protect
+the output filter capacitors, an 18V zener diode is in place to ensure the 
+voltage cannot swing too high.  As we are aiming for a ``constant'' V/I poin t
+depending on the thermal difference across the TEG, and also on its
+characteristics, the output voltage may vary.
+
+\section{Output DC-DC Converter}
+
+To be able to harness all of the TEG units at the same time, the voltage
+output of each must be at the same level.  Even this isn't simple to arrange
+as the normal ``simple'' method to gang supplies together is to feed into the
+common bus using diodes, and the tolerance in the forward voltage drop in the
+diodes makes it unlikely that the multiple feeds will be at the exact same
+voltage which will cause some sources to take ``full'' load, and some to take
+nearly none.  To mitigate this, I will be taking the feedback for the second
+DC-DC converter directly from the output bus (after diodes) if possible.
+
+This output DC-DC converter (per TEG channel) is another boost converter.  This time the input/output characteristics are more the normal case for a converter,
+so it was easier to model.  Essentially, we will be converting 9-18V input to a
+regulated 24V output, and then tying all of the 24V outputs together onto a 
+24V bus.  The battery chargers (and local power supplies) will be regulated
+down off the 24V bus primarily.
+
+\section{+12V DC-DC Converter}
+
+The +12V supply is used for 3 external things: the fans on the heat sink, the
+water pump, and the solenoid on the dump valve.  As the primary purpose of this
+design is to charge 12V lead-acid batteries, I am feeding the 12V rail (via
+diodes) from the 12V DC-DC converter, and from both attached 12V lead-acid
+batteries.  The idea is that once we are charging, the batteries should be at
+around 13.2V and will thus be sourcing all of the load on the 12V rail.
+
+\section{+3.3V DC-DC Converter}
+
+The +3.3V supply runs nearly all of the electronics in the design.  The DC-DC
+converter is sourced (via diodes) from the lithium-ion battery or from the +24V
+rail.  This allows for a bootstrapping of the system to get it up to speed
+before any significant power can be generated, and also allows it to shutdown
+nicely.  Once the +24V rail exceeds the LiIon battery (about 4.6V) the
+system electronic load should be coming from the +24V rail.
+
+\section{+5V DC-DC Converter}
+
+The +5V supply is also sourced in the same way as the +3.3V rail.  Not much
+of the design uses +5V (mostly in the battery charging bits).
+
+\eject
+\addcontentsline{toc}{chapter}{Bibliography}
+\nocite{*}
+\bibliography{\jobname}
+\bibliographystyle{alpha}
+\end{document}

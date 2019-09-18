@@ -1,0 +1,60 @@
+OUTPUTS       =	${DOCUMENT}.ps ${DOCUMENT}.pdf ${DOCUMENT}.dvi
+OTHEROUTPUTS  = ${DOCUMENT}*.gif
+BYPRODUCTS    =	${DOCUMENT}.dvi ${DOCUMENT}.log ${DOCUMENT}.aux \
+		${DOCUMENT}.haux ${DOCUMENT}.image.tex ${DOCUMENT}.toc \
+		${DOCUMENT}.lof ${DOCUMENT}.lot
+
+
+.SUFFIXES:	.dvi .tex .ps .pdf .html .bib .bbl .bibdone .gxf .gls .glodone .aux .idx .ind
+
+.tex.dvi:
+	latex $<
+	latex $<
+
+.bib.bbl:
+	touch $*.bibdone
+	bibtex $*
+	latex $*
+
+.gdf.gxs:
+	touch $*.glodone
+	-glosstex $*.aux $<
+
+.idx.ind:
+	makeindex $<
+	latex $*
+
+.tex.aux:
+	latex $<
+
+.dvi.ps:
+	dvips -Pcmz -Pamz -o $@ $<
+
+.ps.pdf:
+	ps2pdf13 $< $@
+
+.tex.html:
+	hevea -exec xxdate.exe -o $@ $<
+	if [ -f $(basename $<).image.tex ] ; then imagen $(basename $<) ; fi
+
+all:	Makefile ${OUTPUTS} ${FIGURES}
+
+${DOCUMENT}.gxs:	${DOCUMENT}.aux ${DOCUMENT}.gdf ${DOCUMENT}.glodone
+
+${DOCUMENT}.dvi:	${DOCUMENT}.tex ${DOCUMENT}.bbl ${DOCUMENT}.gxs
+
+${DOCUMENT}.bbl:	${DOCUMENT}.bib ${DOCUMENT}.bibdone
+
+${DOCUMENT}.bibdone ${DOCUMENT}.glodone:
+
+clean:	clean-byproducts
+	-${RM} ${OUTPUTS} ${OTHEROUTPUTS}
+
+clean-byproducts:
+	-${RM} ${BYPRODUCTS}
+
+publish:
+	../../templates/publish-document ${DOCUMENT}
+
+index.html:
+	../../templates/make-index-html ${DOCUMENT}

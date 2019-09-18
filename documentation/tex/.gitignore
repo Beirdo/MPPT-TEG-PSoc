@@ -1,0 +1,14 @@
+*.dvi
+*.ps
+*.aux
+*.bbl
+*.bibdone
+*.blg
+*.glo
+*.glodone
+*.gxg
+*.gxs
+*.lof
+*.lot
+*.pdf
+*.toc

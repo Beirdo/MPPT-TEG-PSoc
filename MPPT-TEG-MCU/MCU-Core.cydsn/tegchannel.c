@@ -25,7 +25,7 @@ uint16 Vmax = 15400;
 uint16 deltaPMax = 1500;
 uint16 huntDeltaI = 100;
 
-#define PWM_MAX_COUNT 256
+#define PWM_MAX_COUNT 100
 
 typedef void timerPWMFunc_t(uint32);
 timerPWMFunc_t *writeCompareBufFunc[] = {
